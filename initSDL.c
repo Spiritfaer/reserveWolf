@@ -97,7 +97,7 @@ int8_t 	ft_INIT(t_SDL *sdlT)
 	if (ft_initSdl(sdlT) > 0 && ++result)
 		if (ft_initMix(sdlT) > 0 && ++result)
 			if (ft_initTtf(sdlT) > 0 && ++result)
-				if (ft_initImg(sdlT) > && ++result)
+				if (ft_initImg(sdlT) > 0 && ++result)
 				;
 	if (result != 4)
 		result = 0;

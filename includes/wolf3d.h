@@ -165,7 +165,7 @@ typedef struct		s_SDL
 #define GAME 0x000002
 
 void				readArgv(int argc, AR argv, t_arg *arg);
-int8_t			 	ft_initSDL(t_SDL *sdlT);
+int8_t			 	ft_INIT(t_SDL *sdlT);
 int8_t				ft_make_map(t_SDL *sdlT);
 int8_t 				ft_errors(const char *error);
 void				ft_revers_list(t_list **head);

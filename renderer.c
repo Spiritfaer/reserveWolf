@@ -50,6 +50,33 @@ SDL_Surface*	loadTexture(char *name, SDL_PixelFormat *pFormat)
 
 void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG)
 {
+	int16_t x;
+	SDL_PixelFormat pFormat;
+
+	x = 7;
+	char *path[8] = {"pics/greystone.png",
+					 "pics/wood.png",
+					 "pics/eagle.png",
+					 "pics/purplestone.png",
+					 "pics/redbrick.png",
+					 "pics/mossy.png",
+					 "pics/bluestone.png",
+					 "pics/colorstone.png"};
+	setPixFor(&pFormat);
+	while (x >= 0)
+	{
+		tex[x] = loadTexture(path[x], &pFormat);
+		x--;
+	}
+	*menuBG = loadTexture("pics/wall.png", &pFormat);
+	texT->pixel = NULL;
+	texT->pixel2 = NULL;
+	texT->texWidth = 64;
+	texT->texHeight = 64;
+}
+/*
+void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG)
+{
 	int imgFlags;
 	int16_t x;
 	SDL_PixelFormat pFormat;
@@ -78,7 +105,7 @@ void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG)
 	texT->texWidth = 64;
 	texT->texHeight = 64;
 }
-
+*/
 void	setMusic(t_SDL *sdlT)
 {
 	sdlT->numTrack = 0;

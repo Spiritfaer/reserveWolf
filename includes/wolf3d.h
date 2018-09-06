@@ -154,9 +154,7 @@ typedef struct		s_SDL
 	TTF_Font		*gFont;
 }					t_SDL;
 
-//#define DEF_SCREEN_WIDTH 960
 #define DEF_SCREEN_WIDTH 1440
-//#define DEF_SCREEN_HEIGHT 560
 #define DEF_SCREEN_HEIGHT 840
 #define AR const char**
 
@@ -196,7 +194,7 @@ void				InitRay(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x);
 uint32_t			deepColor(Uint32 clearColor, t_ray *ray);
 uint32_t			deepColorWall(Uint32 clearColor, int y, t_ray *ray, t_map *mapT);
 void 				floorCast(t_ray *ray, t_tex *texT, t_cam *camT, t_floor *floorT);
-void floorAdd(t_floor *floor, t_ray *ray, t_SDL *sdlT, t_cam *camT);
+void				floorAdd(t_floor *floor, t_ray *ray, t_SDL *sdlT, t_cam *camT);
 
 
 

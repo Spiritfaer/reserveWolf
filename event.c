@@ -20,6 +20,7 @@ void	ft_move(t_SDL *sdlT, t_cam *cam, t_time *t)
 		if(sdlT->mapT.map[(int)cam->pos.X][(int)(cam->pos.Y - cam->dir.Y * t->moveSpeed)] == false)
 			cam->pos.Y -= cam->dir.Y * t->moveSpeed;
 	}
+
 }
 
 void	ft_rotate(t_SDL *sdlT, t_cam *cam, t_time *t)
@@ -27,7 +28,7 @@ void	ft_rotate(t_SDL *sdlT, t_cam *cam, t_time *t)
 	double oldDirX;
 	double oldPlaneX;
 
-	if (sdlT->currentKey[SDL_SCANCODE_RIGHT])
+	if (sdlT->currentKey[SDL_SCANCODE_RIGHT] || sdlT->currentKey[SDL_SCANCODE_D])
 	{
 		oldDirX = cam->dir.X;
 		cam->dir.X = cam->dir.X * cos(-t->rotSpeed) - cam->dir.Y * sin(-t->rotSpeed);
@@ -37,7 +38,7 @@ void	ft_rotate(t_SDL *sdlT, t_cam *cam, t_time *t)
 		cam->plane.X = cam->plane.X * cos(-t->rotSpeed) - cam->plane.Y * sin(-t->rotSpeed);
 		cam->plane.Y = oldPlaneX * sin(-t->rotSpeed) + cam->plane.Y * cos(-t->rotSpeed);
 	}
-	if (sdlT->currentKey[SDL_SCANCODE_LEFT])
+	if (sdlT->currentKey[SDL_SCANCODE_LEFT] || sdlT->currentKey[SDL_SCANCODE_A])
 	{
 		oldDirX = cam->dir.X;
 		cam->dir.X = cam->dir.X * cos(t->rotSpeed) - cam->dir.Y * sin(t->rotSpeed);
@@ -49,6 +50,57 @@ void	ft_rotate(t_SDL *sdlT, t_cam *cam, t_time *t)
 	}
 }
 
+void	audioSetings(t_SDL *sdlT)
+{
+	if (sdlT->event.type == SDL_KEYDOWN)
+	{
+		if (sdlT->currentKey[SDL_SCANCODE_P])
+		{
+			if (Mix_PausedMusic() == 1)
+				Mix_ResumeMusic();
+			else
+				Mix_PauseMusic();
+		}
+		if (sdlT->currentKey[SDL_SCANCODE_KP_MULTIPLY])
+		{
+			if (sdlT->numTrack == 1)
+				sdlT->numTrack = 0;
+			else
+				sdlT->numTrack = 1;
+			Mix_PlayMusic(sdlT->music[sdlT->numTrack], -1);
+		}
+	}
+	if (sdlT->currentKey[SDL_SCANCODE_KP_PLUS])
+	{
+		sdlT->volume += 1;
+		if (sdlT->volume > 100)
+			sdlT->volume = 100;
+		Mix_VolumeMusic(sdlT->volume);
+	}
+	if (sdlT->currentKey[SDL_SCANCODE_KP_MINUS])
+	{
+		sdlT->volume -= 1;
+		if (sdlT->volume <= 0)
+			sdlT->volume = 0;
+		Mix_VolumeMusic(sdlT->volume);
+	}
+}
+
+void 	gameSetings(t_SDL *sdlT)
+{
+	if (sdlT->event.type == SDL_KEYDOWN)
+	{
+		if (sdlT->currentKey[SDL_SCANCODE_TAB])
+		{
+			if (sdlT->flag == GAME)
+				sdlT->flag = MENU;
+			else
+				sdlT->flag = GAME;
+			SDL_Delay(150);
+		}
+	}
+}
+
 void	event(t_SDL *sdlT, t_cam *cam, t_time *time)
 {
 	SDL_PollEvent(&sdlT->event);
@@ -57,6 +109,11 @@ void	event(t_SDL *sdlT, t_cam *cam, t_time *time)
 		sdlT->loop = false;
 	if (sdlT->event.type == SDL_QUIT)
 		sdlT->loop = false;
-	ft_move(sdlT, cam, time);
-	ft_rotate(sdlT, cam, time);
+	gameSetings(sdlT);
+	if (sdlT->flag == GAME)
+	{
+		audioSetings(sdlT);
+		ft_move(sdlT, cam, time);
+		ft_rotate(sdlT, cam, time);
+	}
 }

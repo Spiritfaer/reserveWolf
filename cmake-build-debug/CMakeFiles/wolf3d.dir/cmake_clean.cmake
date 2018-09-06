@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wolf3d.dir/raycast.c.o"
   "CMakeFiles/wolf3d.dir/drawing.c.o"
   "CMakeFiles/wolf3d.dir/event.c.o"
+  "CMakeFiles/wolf3d.dir/flor.c.o"
   "wolf3d.pdb"
   "wolf3d"
 )

@@ -38,11 +38,52 @@ void	drawWall(SDL_Renderer *render, uint16_t x, t_ray *ray)
 		color /= 2;
 	ray->wall.color.red = (uint8_t)((color >> 16) & 0xFF);
 	ray->wall.color.green = (uint8_t)((color >> 8) & 0xFF);
-	ray->wall.color.blue = (uint8_t)((color >> 0) & 0xFF);
+	ray->wall.color.blue = (uint8_t)((color) & 0xFF);
 	SDL_SetRenderDrawColor(render, ray->wall.color.red, ray->wall.color.green, ray->wall.color.blue, 0xFF);
 	SDL_RenderDrawLine(render, x, ray->wall.drawStart, x, ray->wall.drawEnd);
 }
 
+uint32_t	deepColor(Uint32 clearColor, t_ray *ray)
+{
+	Uint32	deepColor;
+	int		cof;
+
+	cof = 3;
+	ray->wall.color.red = (uint8_t)((clearColor >> 16) & 0xFF);
+	ray->wall.color.green = (uint8_t)((clearColor >> 8) & 0xFF);
+	ray->wall.color.blue = (uint8_t)((clearColor) & 0xFF);
+	if (ray->perpWallDist > cof)
+	{
+		ray->wall.color.red = (uint8_t)(((clearColor & 0xFF0000) >> 16) / (1 + (ray->perpWallDist - cof) / 2));
+		ray->wall.color.green = (uint8_t)(((clearColor & 0xFF00) >> 8) / (1 + (ray->perpWallDist - cof) / 2));
+		ray->wall.color.blue = (uint8_t)((clearColor & 0xFF) / (1 + (ray->perpWallDist - cof) / 2));
+	}
+	deepColor = (ray->wall.color.red << 16) | (ray->wall.color.green << 8) | ray->wall.color.blue;
+	return (deepColor);
+}
+
+uint32_t	deepColorWall(Uint32 clearColor, int y, t_ray *ray, t_map *mapT)
+{
+	double centre;
+	double end;
+	double cof;
+	Uint32	deepColor;
+
+	ray->wall.color.red = (uint8_t)((clearColor >> 16) & 0xFF);
+	ray->wall.color.green = (uint8_t)((clearColor >> 8) & 0xFF);
+	ray->wall.color.blue = (uint8_t)((clearColor) & 0xFF);
+	centre = mapT->PixelSizeH / 2;
+	end = mapT->PixelSizeH - (centre * 0.5);
+	cof = ((double)y - centre) / end;
+	if (y > mapT->PixelSizeH / 2)
+	{
+		ray->wall.color.red = (uint8_t)(((clearColor & 0xFF0000) >> 16) * (cof));
+		ray->wall.color.green = (uint8_t)(((clearColor & 0xFF00) >> 8) * (cof));
+		ray->wall.color.blue = (uint8_t)((clearColor & 0xFF) * (cof));
+	}
+	deepColor = (ray->wall.color.red << 16) | (ray->wall.color.green << 8) | ray->wall.color.blue;
+	return (deepColor);
+}
 void drawTextureWall(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
 {
 	if (ray->side == 0)
@@ -63,6 +104,7 @@ void drawTextureWall(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
 		sdlT->texT.texY = ((sdlT->texT.d * sdlT->texT.texWidth) / ray->wall.lineHeight) / 256;
 		sdlT->texT.pixel = (uint32_t*)sdlT->textures[ray->texture]->pixels;
 		Uint32 color = (uint32_t)sdlT->texT.pixel[(sdlT->texT.texHeight * sdlT->texT.texY + sdlT->texT.texX)];
+		color = deepColor(color, ray);
 		if(ray->side == 1)
 			color = (color >> 1) & 8355711;
 		sdlT->texT.pixel2[sdlT->mapT.PixelSizeW * y + x] = color;

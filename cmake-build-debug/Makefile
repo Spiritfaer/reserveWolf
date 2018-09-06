@@ -177,6 +177,33 @@ event.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.s
 .PHONY : event.c.s
 
+flor.o: flor.c.o
+
+.PHONY : flor.o
+
+# target to build an object file
+flor.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.o
+.PHONY : flor.c.o
+
+flor.i: flor.c.i
+
+.PHONY : flor.i
+
+# target to preprocess a source file
+flor.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.i
+.PHONY : flor.c.i
+
+flor.s: flor.c.s
+
+.PHONY : flor.s
+
+# target to generate assembly for a file
+flor.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.s
+.PHONY : flor.c.s
+
 foo.o: foo.c.o
 
 .PHONY : foo.o
@@ -408,6 +435,9 @@ help:
 	@echo "... event.o"
 	@echo "... event.i"
 	@echo "... event.s"
+	@echo "... flor.o"
+	@echo "... flor.i"
+	@echo "... flor.s"
 	@echo "... foo.o"
 	@echo "... foo.i"
 	@echo "... foo.s"

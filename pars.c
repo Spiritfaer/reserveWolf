@@ -95,6 +95,8 @@ int8_t		ft_make_map(t_SDL *sdlT)
 	if (!mapping(&sdlT->mapT))
 		return (0);
 	close(fd);
+#ifdef DEBUG
 	print_map(&sdlT->mapT);
+#endif
 	return (1);
 }

@@ -48,7 +48,7 @@ SDL_Surface*	loadTexture(char *name, SDL_PixelFormat *pFormat)
 	return (optimizedSurface);
 }
 
-void	makeTexture(SDL_Surface **tex, t_tex *texT)
+void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG)
 {
 	int imgFlags;
 	int16_t x;
@@ -57,13 +57,13 @@ void	makeTexture(SDL_Surface **tex, t_tex *texT)
 	x = 7;
 	imgFlags = IMG_INIT_PNG;
 	char *path[8] = {"pics/greystone.png",
-			"pics/wood.png",
-			"pics/eagle.png",
-			"pics/purplestone.png",
-			"pics/redbrick.png",
-			"pics/mossy.png",
-			"pics/bluestone.png",
-			"pics/colorstone.png"};
+					 "pics/wood.png",
+					 "pics/eagle.png",
+					 "pics/purplestone.png",
+					 "pics/redbrick.png",
+					 "pics/mossy.png",
+					 "pics/bluestone.png",
+					 "pics/colorstone.png"};
 	if (!(IMG_Init(imgFlags) & imgFlags))
 		ft_errors("IMG Init error!");
 	setPixFor(&pFormat);
@@ -72,44 +72,70 @@ void	makeTexture(SDL_Surface **tex, t_tex *texT)
 		tex[x] = loadTexture(path[x], &pFormat);
 		x--;
 	}
+	*menuBG = loadTexture("pics/wall.png", &pFormat);
 	texT->pixel = NULL;
 	texT->pixel2 = NULL;
 	texT->texWidth = 64;
 	texT->texHeight = 64;
 }
 
+void	setMusic(t_SDL *sdlT)
+{
+	sdlT->numTrack = 0;
+	sdlT->music[0] = Mix_LoadMUS("sound/Future_City_Funk.mp3");
+	sdlT->music[1] = Mix_LoadMUS("sound/Itty_Bitty_8_Bit.mp3");
+	sdlT->volume = 20;
+
+	if (!sdlT->music[0])
+		printf("Failed to load beat music! SDL_mixer Error: %s\n", Mix_GetError());
+	else
+		Mix_PlayMusic(sdlT->music[sdlT->numTrack], -1);
+	Mix_VolumeMusic(sdlT->volume);
+}
+
 void 	ft_process(t_SDL *sdlT)
 {
-	t_cam cam;
+	t_cam camT;
 	t_ray ray;
 	t_time time;
-	uint16_t x;
+	t_floor floor;
+	SDL_Color gColor = {0, 0, 0, 0};
 
-	makeTexture(sdlT->textures, &sdlT->texT);
-	setCam(&cam);
-
+	makeTexture(sdlT->textures, &sdlT->texT, &sdlT->menuBG);
+	setCam(&camT);
+	setMusic(sdlT);
 	while (sdlT->loop)
 	{
-		SDL_Surface *buffer = SDL_CreateRGBSurface(0,sdlT->mapT.PixelSizeW, sdlT->mapT.PixelSizeH, 32, 0, 0, 0, 0);
-		clearFloor(sdlT);
-		sdlT->texT.pixel2 = buffer->pixels;
-		x = 0;
-		while (x < sdlT->mapT.PixelSizeW)
+		sdlT->buffer = SDL_CreateRGBSurface(0,sdlT->mapT.PixelSizeW, sdlT->mapT.PixelSizeH, 32, 0, 0, 0, 0);
+		sdlT->texT.pixel2 = sdlT->buffer->pixels;
+		sdlT->x = 0;
+		if (sdlT->flag & MENU)
 		{
-			InitRay(sdlT, &cam, &ray, x);
-			Ray(&cam, &ray);
-			Cast(&ray, &sdlT->mapT);
-			Wall(&cam, &ray, sdlT->mapT.PixelSizeH);
-			drawTextureWall(sdlT, &cam, &ray, x);
-			x++;
+			sdlT->preRender = SDL_CreateTextureFromSurface(sdlT->renderer, sdlT->menuBG);
+			SDL_RenderCopy(sdlT->renderer, sdlT->preRender, 0, 0);
+
+		}
+		else if (sdlT->flag & GAME)
+		{
+			while (sdlT->x < sdlT->mapT.PixelSizeW)
+			{
+				InitRay(sdlT, &camT, &ray, sdlT->x);
+				Ray(&camT, &ray);
+				Cast(&ray, &sdlT->mapT);
+				Wall(&camT, &ray, sdlT->mapT.PixelSizeH);
+				drawTextureWall(sdlT, &camT, &ray, sdlT->x);
+				floorCast(&ray, &sdlT->texT, &camT, &floor);
+				floorAdd(&floor, &ray, sdlT, &camT);
+				sdlT->x++;
+			}
+			sdlT->preRender = SDL_CreateTextureFromSurface(sdlT->renderer, sdlT->buffer);
+			SDL_RenderCopy(sdlT->renderer, sdlT->preRender, 0, 0);
 		}
 
-		SDL_Texture *tex = SDL_CreateTextureFromSurface(sdlT->renderer, buffer);
-		SDL_RenderCopy(sdlT->renderer, tex, 0, 0);
-		SDL_DestroyTexture(tex);
-		SDL_FreeSurface(buffer);
+		SDL_DestroyTexture(sdlT->preRender);
+		SDL_FreeSurface(sdlT->buffer);
 		setTime(&time);
-		event(sdlT, &cam, &time);
+		event(sdlT, &camT, &time);
 		SDL_RenderPresent(sdlT->renderer);
 		SDL_RenderClear(sdlT->renderer);
 	}

@@ -195,9 +195,9 @@ uint32_t			deepColor(Uint32 clearColor, t_ray *ray);
 uint32_t			deepColorWall(Uint32 clearColor, int y, t_ray *ray, t_map *mapT);
 void 				floorCast(t_ray *ray, t_tex *texT, t_cam *camT, t_floor *floorT);
 void				floorAdd(t_floor *floor, t_ray *ray, t_SDL *sdlT, t_cam *camT);
-
-
-
+void				setPixFor(SDL_PixelFormat *pFormat);
+void				setMusic(t_SDL *sdlT);
+void 				ft_helper(void);
 
 
 #endif

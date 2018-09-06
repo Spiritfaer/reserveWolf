@@ -672,7 +672,7 @@ SDL_ttf.h
 wolf3d.h
 /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.0/initSDL.c
+/Users/istalevs/CLionProjects/wolf3d_V1.0/init.c
 includes/wolf3d.h
 /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
 
@@ -699,6 +699,10 @@ includes/wolf3d.h
 /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
 
 /Users/istalevs/CLionProjects/wolf3d_V1.0/renderer.c
+includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
+
+/Users/istalevs/CLionProjects/wolf3d_V1.0/setStruct.c
 includes/wolf3d.h
 /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
 

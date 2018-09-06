@@ -205,7 +205,7 @@ CMakeFiles/wolf3d.dir/foo.c.o
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
  /Users/istalevs/CLionProjects/wolf3d_V1.0/foo.c
  /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
-CMakeFiles/wolf3d.dir/initSDL.c.o
+CMakeFiles/wolf3d.dir/init.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_assert.h
@@ -255,7 +255,7 @@ CMakeFiles/wolf3d.dir/initSDL.c.o
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
  /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.0/initSDL.c
+ /Users/istalevs/CLionProjects/wolf3d_V1.0/init.c
 CMakeFiles/wolf3d.dir/list.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -563,3 +563,54 @@ CMakeFiles/wolf3d.dir/renderer.c.o
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
  /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
  /Users/istalevs/CLionProjects/wolf3d_V1.0/renderer.c
+CMakeFiles/wolf3d.dir/setStruct.c.o
+ ../libft/libft.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_assert.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_atomic.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_audio.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_blendmode.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_clipboard.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_config.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_cpuinfo.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_endian.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_error.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_events.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_filesystem.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_gamecontroller.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_gesture.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_haptic.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_hints.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_joystick.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_keyboard.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_keycode.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_loadso.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_log.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_main.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_messagebox.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_mouse.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_mutex.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_pixels.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_platform.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_power.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_quit.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_rect.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_render.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_rwops.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_scancode.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_shape.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_stdinc.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_surface.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_system.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_thread.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_timer.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_touch.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_version.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL_video.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/begin_code.h
+ /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/close_code.h
+ /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
+ /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
+ /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
+ /Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/wolf3d_V1.0/setStruct.c

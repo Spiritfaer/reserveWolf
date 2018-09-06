@@ -231,32 +231,32 @@ foo.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/foo.c.s
 .PHONY : foo.c.s
 
-initSDL.o: initSDL.c.o
+init.o: init.c.o
 
-.PHONY : initSDL.o
+.PHONY : init.o
 
 # target to build an object file
-initSDL.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/initSDL.c.o
-.PHONY : initSDL.c.o
+init.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.o
+.PHONY : init.c.o
 
-initSDL.i: initSDL.c.i
+init.i: init.c.i
 
-.PHONY : initSDL.i
+.PHONY : init.i
 
 # target to preprocess a source file
-initSDL.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/initSDL.c.i
-.PHONY : initSDL.c.i
+init.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.i
+.PHONY : init.c.i
 
-initSDL.s: initSDL.c.s
+init.s: init.c.s
 
-.PHONY : initSDL.s
+.PHONY : init.s
 
 # target to generate assembly for a file
-initSDL.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/initSDL.c.s
-.PHONY : initSDL.c.s
+init.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.s
+.PHONY : init.c.s
 
 list.o: list.c.o
 
@@ -420,6 +420,33 @@ renderer.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/renderer.c.s
 .PHONY : renderer.c.s
 
+setStruct.o: setStruct.c.o
+
+.PHONY : setStruct.o
+
+# target to build an object file
+setStruct.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.o
+.PHONY : setStruct.c.o
+
+setStruct.i: setStruct.c.i
+
+.PHONY : setStruct.i
+
+# target to preprocess a source file
+setStruct.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.i
+.PHONY : setStruct.c.i
+
+setStruct.s: setStruct.c.s
+
+.PHONY : setStruct.s
+
+# target to generate assembly for a file
+setStruct.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.s
+.PHONY : setStruct.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -441,9 +468,9 @@ help:
 	@echo "... foo.o"
 	@echo "... foo.i"
 	@echo "... foo.s"
-	@echo "... initSDL.o"
-	@echo "... initSDL.i"
-	@echo "... initSDL.s"
+	@echo "... init.o"
+	@echo "... init.i"
+	@echo "... init.s"
 	@echo "... list.o"
 	@echo "... list.i"
 	@echo "... list.s"
@@ -462,6 +489,9 @@ help:
 	@echo "... renderer.o"
 	@echo "... renderer.i"
 	@echo "... renderer.s"
+	@echo "... setStruct.o"
+	@echo "... setStruct.i"
+	@echo "... setStruct.s"
 .PHONY : help
 
 

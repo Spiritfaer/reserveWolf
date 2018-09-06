@@ -105,7 +105,7 @@
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/includes/wolf3d.h">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/initSDL.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/init.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/list.c">
@@ -124,6 +124,9 @@
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/renderer.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/setStruct.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/CMakeLists.txt">

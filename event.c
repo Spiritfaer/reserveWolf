@@ -93,11 +93,42 @@ void 	gameSetings(t_SDL *sdlT)
 		if (sdlT->currentKey[SDL_SCANCODE_TAB])
 		{
 			if (sdlT->flag == GAME)
+			{
+				sdlT->menuFlag = 0;
 				sdlT->flag = MENU;
+			}
 			else
 				sdlT->flag = GAME;
 			SDL_Delay(150);
 		}
+	}
+}
+
+void	gameMenuEvent(t_SDL *sdlT)
+{
+	if (sdlT->event.type == SDL_KEYDOWN)
+	{
+		if (sdlT->currentKey[SDL_SCANCODE_UP])
+		{
+			sdlT->menuFlag--;
+			SDL_Delay(100);
+		}
+		if (sdlT->currentKey[SDL_SCANCODE_DOWN])
+		{
+			sdlT->menuFlag++;
+			SDL_Delay(100);
+		}
+		sdlT->menuFlag = (sdlT->menuFlag < 0) ? (short)0 : sdlT->menuFlag;
+		sdlT->menuFlag = (sdlT->menuFlag > 2) ? (short)2 : sdlT->menuFlag;
+	}
+	if (sdlT->currentKey[SDL_SCANCODE_RETURN] || sdlT->currentKey[SDL_SCANCODE_KP_ENTER])
+	{
+		if (sdlT->menuFlag == 0)
+			sdlT->flag = GAME;
+		else if (sdlT->menuFlag == 1)
+			system("say 'meow'");
+		else if (sdlT->menuFlag == 2)
+			sdlT->loop = false;
 	}
 }
 
@@ -115,5 +146,9 @@ void	event(t_SDL *sdlT, t_cam *cam, t_time *time)
 		audioSetings(sdlT);
 		ft_move(sdlT, cam, time);
 		ft_rotate(sdlT, cam, time);
+	}
+	else if (sdlT->flag == MENU)
+	{
+		gameMenuEvent(sdlT);
 	}
 }

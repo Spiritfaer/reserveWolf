@@ -130,6 +130,16 @@ typedef struct		s_tex
 	uint32_t		*pixel2;
 }					t_tex;
 
+typedef struct		s_text
+{
+	t_v2i			wh;
+	t_v2i			pos;
+	char 			*str;
+	SDL_Rect		renderQuad;
+	SDL_Texture		*match;
+	SDL_Texture		*mismatch;
+}					t_text;
+
 typedef struct		s_SDL
 {
 	SDL_Window		*window;
@@ -152,6 +162,8 @@ typedef struct		s_SDL
 	int32_t			flag;
 	SDL_Surface		*menuBG;
 	TTF_Font		*gFont;
+	t_text			words[4];
+	int16_t 		menuFlag;
 }					t_SDL;
 
 #define DEF_SCREEN_WIDTH 1440

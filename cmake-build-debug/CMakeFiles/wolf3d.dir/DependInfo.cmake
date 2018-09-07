@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/drawing.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/event.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.0/flor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/flor.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.0/floor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/floor.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/foo.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/init.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/init.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/list.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/list.c.o"

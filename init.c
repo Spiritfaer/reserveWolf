@@ -23,6 +23,8 @@ int8_t	ft_initSdl(t_SDL *sdlT)
 				SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 			sdlT->textures = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * 8);
 			sdlT->loop = 1;
+			sdlT->flag = MENU;
+			sdlT->menuFlag = 0;
 		}
 	}
 	return (result);

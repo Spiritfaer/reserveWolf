@@ -177,32 +177,32 @@ event.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.s
 .PHONY : event.c.s
 
-flor.o: flor.c.o
+floor.o: floor.c.o
 
-.PHONY : flor.o
+.PHONY : floor.o
 
 # target to build an object file
-flor.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.o
-.PHONY : flor.c.o
+floor.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.o
+.PHONY : floor.c.o
 
-flor.i: flor.c.i
+floor.i: floor.c.i
 
-.PHONY : flor.i
+.PHONY : floor.i
 
 # target to preprocess a source file
-flor.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.i
-.PHONY : flor.c.i
+floor.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.i
+.PHONY : floor.c.i
 
-flor.s: flor.c.s
+floor.s: floor.c.s
 
-.PHONY : flor.s
+.PHONY : floor.s
 
 # target to generate assembly for a file
-flor.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/flor.c.s
-.PHONY : flor.c.s
+floor.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.s
+.PHONY : floor.c.s
 
 foo.o: foo.c.o
 
@@ -462,9 +462,9 @@ help:
 	@echo "... event.o"
 	@echo "... event.i"
 	@echo "... event.s"
-	@echo "... flor.o"
-	@echo "... flor.i"
-	@echo "... flor.s"
+	@echo "... floor.o"
+	@echo "... floor.i"
+	@echo "... floor.s"
 	@echo "... foo.o"
 	@echo "... foo.i"
 	@echo "... foo.s"

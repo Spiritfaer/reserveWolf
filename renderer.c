@@ -49,7 +49,61 @@ void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG)
 	texT->texHeight = 64;
 }
 
+void	makeText(t_SDL *sdlT)
+{
+	char *str[] = {"START GAME", "SETTINGS", "QUIT"};
+	char *font = "font/wolfenstein.ttf";
+	SDL_Surface *tmp = NULL;
+	int16_t i = 0;
+	SDL_Color black = {0, 0, 0, 0};
+	SDL_Color red = {200, 0, 0, 0};
+	TTF_Font *gFont = TTF_OpenFont(font, 88);
+	TTF_Font *gFontBig = TTF_OpenFont(font, 150);
+	while (i < 3)
+	{
+		tmp = TTF_RenderText_Blended(gFont, str[i], black);
+		TTF_SizeText(gFont, str[i], &sdlT->words[i].renderQuad.w, &sdlT->words[i].renderQuad.h);
+		sdlT->words[i].renderQuad.y = 200 + i * 100;
+		sdlT->words[i].renderQuad.x = (int)((sdlT->mapT.PixelSizeW / 4) * 2.5);
+		sdlT->words[i].match = SDL_CreateTextureFromSurface(sdlT->renderer, tmp);
+		SDL_FreeSurface(tmp);
+		tmp = TTF_RenderText_Blended(gFont, str[i], red);
+		sdlT->words[i].mismatch = SDL_CreateTextureFromSurface(sdlT->renderer, tmp);
+		SDL_FreeSurface(tmp);
+		i++;
+	}
+	tmp = TTF_RenderText_Blended(gFont, "_%", red);
+	TTF_SizeText(gFontBig, "_%", &sdlT->words[3].renderQuad.w, &sdlT->words[3].renderQuad.h);
+	sdlT->words[3].match = SDL_CreateTextureFromSurface(sdlT->renderer, tmp);
+	sdlT->words[3].renderQuad.y = (int)(sdlT->mapT.PixelSizeH / 2.5) - sdlT->words[3].renderQuad.h / 2;
+	sdlT->words[3].renderQuad.x = (int)(sdlT->mapT.PixelSizeW / 3.2) - sdlT->words[3].renderQuad.w / 2;
+	SDL_FreeSurface(tmp);
+	TTF_CloseFont(gFont);
+	TTF_CloseFont(gFontBig);
+}
 
+void	drawMenu(t_SDL *sdlT)
+{
+	SDL_RenderCopy(sdlT->renderer, sdlT->words[3].match, NULL, &sdlT->words[3].renderQuad);
+	if (sdlT->menuFlag == 0)
+	{
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[0].match, NULL, &sdlT->words[0].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[1].mismatch, NULL, &sdlT->words[1].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[2].mismatch, NULL, &sdlT->words[2].renderQuad);
+	}
+	else if (sdlT->menuFlag == 1)
+	{
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[0].mismatch, NULL, &sdlT->words[0].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[1].match, NULL, &sdlT->words[1].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[2].mismatch, NULL, &sdlT->words[2].renderQuad);
+	}
+	else if (sdlT->menuFlag == 2)
+	{
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[0].mismatch, NULL, &sdlT->words[0].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[1].mismatch, NULL, &sdlT->words[1].renderQuad);
+		SDL_RenderCopy(sdlT->renderer, sdlT->words[2].match, NULL, &sdlT->words[2].renderQuad);
+	}
+}
 
 void 	ft_process(t_SDL *sdlT)
 {
@@ -57,9 +111,9 @@ void 	ft_process(t_SDL *sdlT)
 	t_ray ray;
 	t_time time;
 	t_floor floor;
-	SDL_Color gColor = {0, 0, 0, 0};
 
 	makeTexture(sdlT->textures, &sdlT->texT, &sdlT->menuBG);
+	makeText(sdlT);
 	setCam(&camT);
 	setMusic(sdlT);
 	while (sdlT->loop)
@@ -69,9 +123,10 @@ void 	ft_process(t_SDL *sdlT)
 		sdlT->x = 0;
 		if (sdlT->flag & MENU)
 		{
-			sdlT->preRender = SDL_CreateTextureFromSurface(sdlT->renderer, sdlT->menuBG);
+			SDL_SetRenderDrawColor(sdlT->renderer, 0xFF, 0xFF, 0xFF, 0);
+			SDL_RenderClear(sdlT->renderer);
 			SDL_RenderCopy(sdlT->renderer, sdlT->preRender, 0, 0);
-
+			drawMenu(sdlT);
 		}
 		else if (sdlT->flag & GAME)
 		{
@@ -89,7 +144,6 @@ void 	ft_process(t_SDL *sdlT)
 			sdlT->preRender = SDL_CreateTextureFromSurface(sdlT->renderer, sdlT->buffer);
 			SDL_RenderCopy(sdlT->renderer, sdlT->preRender, 0, 0);
 		}
-
 		SDL_DestroyTexture(sdlT->preRender);
 		SDL_FreeSurface(sdlT->buffer);
 		setTime(&time);

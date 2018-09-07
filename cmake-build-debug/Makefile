@@ -177,6 +177,33 @@ event.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.s
 .PHONY : event.c.s
 
+event_control.o: event_control.c.o
+
+.PHONY : event_control.o
+
+# target to build an object file
+event_control.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.o
+.PHONY : event_control.c.o
+
+event_control.i: event_control.c.i
+
+.PHONY : event_control.i
+
+# target to preprocess a source file
+event_control.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.i
+.PHONY : event_control.c.i
+
+event_control.s: event_control.c.s
+
+.PHONY : event_control.s
+
+# target to generate assembly for a file
+event_control.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.s
+.PHONY : event_control.c.s
+
 floor.o: floor.c.o
 
 .PHONY : floor.o
@@ -311,6 +338,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/main.c.s
 .PHONY : main.c.s
+
+make.o: make.c.o
+
+.PHONY : make.o
+
+# target to build an object file
+make.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.o
+.PHONY : make.c.o
+
+make.i: make.c.i
+
+.PHONY : make.i
+
+# target to preprocess a source file
+make.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.i
+.PHONY : make.c.i
+
+make.s: make.c.s
+
+.PHONY : make.s
+
+# target to generate assembly for a file
+make.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.s
+.PHONY : make.c.s
 
 map.o: map.c.o
 
@@ -462,6 +516,9 @@ help:
 	@echo "... event.o"
 	@echo "... event.i"
 	@echo "... event.s"
+	@echo "... event_control.o"
+	@echo "... event_control.i"
+	@echo "... event_control.s"
 	@echo "... floor.o"
 	@echo "... floor.i"
 	@echo "... floor.s"
@@ -477,6 +534,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... make.o"
+	@echo "... make.i"
+	@echo "... make.s"
 	@echo "... map.o"
 	@echo "... map.i"
 	@echo "... map.s"

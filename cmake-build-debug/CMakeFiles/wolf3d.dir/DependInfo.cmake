@@ -6,11 +6,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/drawing.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/event.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.0/event_control.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/event_control.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/floor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/floor.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/foo.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/init.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/init.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/list.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/list.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/main.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/main.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.0/make.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/make.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/map.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/map.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/pars.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/pars.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.0/raycast.c" "/Users/istalevs/CLionProjects/wolf3d_V1.0/cmake-build-debug/CMakeFiles/wolf3d.dir/raycast.c.o"

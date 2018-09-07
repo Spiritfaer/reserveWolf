@@ -4,40 +4,40 @@
 
 #include "includes/wolf3d.h"
 
-void	InitRay(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
+void	InitRay(t_sdl *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
 {
-	cam->camX = 2 * x / (double)sdlT->mapT.PixelSizeW - 1;
-	cam->rayDir.X = cam->dir.X + cam->plane.X * cam->camX;
-	cam->rayDir.Y = cam->dir.Y + cam->plane.Y * cam->camX;
-	ray->map.X = (int32_t)cam->pos.X;
-	ray->map.Y = (int32_t)cam->pos.Y;
+	cam->cam_x = 2 * x / (double)sdlT->m_t.pxl_s_W - 1;
+	cam->r_dir.x = cam->dir.x + cam->plane.x * cam->cam_x;
+	cam->r_dir.y = cam->dir.y + cam->plane.y * cam->cam_x;
+	ray->map.x = (int32_t)cam->pos.x;
+	ray->map.y = (int32_t)cam->pos.y;
 	ray->hit = 0;
 	ray->side = 0;
-	ray->deltaDist.X = fabs(1 / cam->rayDir.X);
-	ray->deltaDist.Y = fabs(1 / cam->rayDir.Y);
+	ray->delt_d.x = fabs(1 / cam->r_dir.x);
+	ray->delt_d.y = fabs(1 / cam->r_dir.y);
 }
 
 void	Ray(t_cam *cam, t_ray *ray)
 {
-	if (cam->rayDir.X < 0)
+	if (cam->r_dir.x < 0)
 	{
-		ray->step.X = -1;
-		ray->sideDist.X = (cam->pos.X - ray->map.X) * ray->deltaDist.X;
+		ray->step.x = -1;
+		ray->side_d.x = (cam->pos.x - ray->map.x) * ray->delt_d.x;
 	}
 	else
 	{
-		ray->step.X = 1;
-		ray->sideDist.X = (ray->map.X + 1.0 - cam->pos.X) * ray->deltaDist.X;
+		ray->step.x = 1;
+		ray->side_d.x = (ray->map.x + 1.0 - cam->pos.x) * ray->delt_d.x;
 	}
-	if (cam->rayDir.Y < 0)
+	if (cam->r_dir.y < 0)
 	{
-		ray->step.Y = -1;
-		ray->sideDist.Y = (cam->pos.Y - ray->map.Y) * ray->deltaDist.Y;
+		ray->step.y = -1;
+		ray->side_d.y = (cam->pos.y - ray->map.y) * ray->delt_d.y;
 	}
 	else
 	{
-		ray->step.Y = 1;
-		ray->sideDist.Y = (ray->map.Y + 1.0 - cam->pos.Y) * ray->deltaDist.Y;
+		ray->step.y = 1;
+		ray->side_d.y = (ray->map.y + 1.0 - cam->pos.y) * ray->delt_d.y;
 	}
 }
 
@@ -45,20 +45,20 @@ void	Cast(t_ray *ray, t_map *mapT)
 {
 	while (ray->hit == 0)
 	{
-		if (ray->sideDist.X < ray->sideDist.Y)
+		if (ray->side_d.x < ray->side_d.y)
 		{
-			ray->sideDist.X += ray->deltaDist.X;
-			ray->map.X += ray->step.X;
+			ray->side_d.x += ray->delt_d.x;
+			ray->map.x += ray->step.x;
 			ray->side = 0;
 		}
 		else
 		{
-			ray->sideDist.Y += ray->deltaDist.Y;
-			ray->map.Y += ray->step.Y;
+			ray->side_d.y += ray->delt_d.y;
+			ray->map.y += ray->step.y;
 			ray->side = 1;
 		}
-		if (mapT->map[ray->map.X][ray->map.Y] > 0)
+		if (mapT->map[ray->map.x][ray->map.y] > 0)
 			ray->hit = 1;
 	}
-	ray->texture = mapT->map[ray->map.X][ray->map.Y];
+	ray->texture = mapT->map[ray->map.x][ray->map.y];
 }

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project(wolf3d C)
 
 set(CMAKE_C_STANDARD 99)
-#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror")
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ft_wall -Wextra -Werror")
 
 include_directories(libft src)
 include_directories(~/.brew/Cellar/sdl2/2.0.8/include/SDL2/)
@@ -20,7 +20,7 @@ link_directories(~/.brew/Cellar/sdl2_ttf/2.0.14/lib/)
 
 set(SOURCE_FILES main.c includes/wolf3d.h
 		foo.c init.c list.c pars.c map.c renderer.c raycast.c drawing.c event.c floor.c
-		setStruct.c)
+		setStruct.c make.c event_control.c)
 add_executable(wolf3d ${SOURCE_FILES})
 
 target_link_libraries(wolf3d -lft

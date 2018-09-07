@@ -27,7 +27,7 @@ int8_t		checkWidthMap(t_list *head, int16_t mapW)
 	while (tmp)
 	{
 		if (mapW != (int16_t)ft_splitter(tmp->content, ' '))
-			return (ft_errors("error incorect mapW!\n"));
+			return (ft_errors("error incorect map_w!\n"));
 		tmp = tmp->next;
 	}
 	return (1);
@@ -40,22 +40,22 @@ void		ft_remap(t_map *mapT)
 	t_list	*tmp;
 
 	tmp = mapT->head;
-	if (!tmp || !(mapT->map = (int16_t**)malloc(sizeof(int16_t*) * (mapT->mapH + 1))))
+	if (!tmp || !(mapT->map = (int16_t**)malloc(sizeof(int16_t*) * (mapT->map_h + 1))))
 		return ;
-	point.Y = 0;
-	while (point.Y < mapT->mapH)
+	point.y = 0;
+	while (point.y < mapT->map_h)
 	{
-		point.X = 0;
+		point.x = 0;
 		str = ft_strsplit(tmp->content, ' ');
-		mapT->map[point.Y] = (int16_t*)malloc(sizeof(int16_t) * mapT->mapW);
-		while (point.X < mapT->mapW)
+		mapT->map[point.y] = (int16_t*)malloc(sizeof(int16_t) * mapT->map_w);
+		while (point.x < mapT->map_w)
 		{
-			mapT->map[point.Y][point.X] = (int16_t)ft_atoi(str[point.X]);
-			point.X++;
+			mapT->map[point.y][point.x] = (int16_t)ft_atoi(str[point.x]);
+			point.x++;
 		}
 		tmp = ft_smooth(&tmp);
 		ft_split_del(str);
-		point.Y++;
+		point.y++;
 	}
 }
 
@@ -78,24 +78,24 @@ void		fixMap(t_map *mapT)
 {
 	t_v2i		i;
 
-	i.Y = 0;
-	while (i.Y < mapT->mapH)
+	i.y = 0;
+	while (i.y < mapT->map_h)
 	{
-		i.X = 0;
-		while (i.X < mapT->mapW)
+		i.x = 0;
+		while (i.x < mapT->map_w)
 		{
-			if (i.Y == 0)
-				while (i.X < mapT->mapW - 1)
-					mapT->map[i.Y][i.X++] = 1;
-			if (i.Y == (mapT->mapH - 1))
-				while (i.X < mapT->mapW - 1)
-					mapT->map[i.Y][i.X++] = 1;
-			if (!checkTexture(mapT->map[i.Y][i.X]))
-				mapT->map[i.Y][i.X] = 0;
-			if (i.X == 0 || i.X == mapT->mapW - 1)
-				mapT->map[i.Y][i.X] = 1;
-			i.X++;
+			if (i.y == 0)
+				while (i.x < mapT->map_w - 1)
+					mapT->map[i.y][i.x++] = 1;
+			if (i.y == (mapT->map_h - 1))
+				while (i.x < mapT->map_w - 1)
+					mapT->map[i.y][i.x++] = 1;
+			if (!checkTexture(mapT->map[i.y][i.x]))
+				mapT->map[i.y][i.x] = 0;
+			if (i.x == 0 || i.x == mapT->map_w - 1)
+				mapT->map[i.y][i.x] = 1;
+			i.x++;
 		}
-		i.Y++;
+		i.y++;
 	}
 }

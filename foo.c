@@ -1,15 +1,8 @@
 #include "includes/wolf3d.h"
 
-
-int8_t ft_errors(const char *error)
-{
-	ft_putstr_fd(error, 2);
-	return (-1);
-}
-
 void print_arg(t_arg ar)
 {
-	printf("mapT - %s\nWidth - %d\nHeight - %d\n", ar.mapName, ar.screenW, ar.screenH);
+	printf("m_t - %s\nWidth - %d\nHeight - %d\n", ar.map_name, ar.screen_w, ar.screen_h);
 	if (ar.flag & MAPN)
 		printf("Map + ");
 	else
@@ -28,15 +21,15 @@ void	print_map(t_map *mapT)
 {
 	t_v2i	i = {0, 0};
 
-	while (i.Y < mapT->mapH)
+	while (i.y < mapT->map_h)
 	{
-		i.X = 0;
-		while (i.X < mapT->mapW)
+		i.x = 0;
+		while (i.x < mapT->map_w)
 		{
-			printf("%d ", mapT->map[i.Y][i.X]);
-			i.X++;
+			printf("%d ", mapT->map[i.y][i.x]);
+			i.x++;
 		}
 		printf("\n");
-		i.Y++;
+		i.y++;
 	}
 }

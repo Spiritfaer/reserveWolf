@@ -32,61 +32,60 @@
 
 typedef struct		s_rgb
 {
-	uint8_t			red;
-	uint8_t			green;
-	uint8_t 		blue;
+	uint8_t			r;
+	uint8_t			g;
+	uint8_t 		b;
 }					t_rgb;
 
 typedef struct		s_wall
 {
-	int32_t			drawStart;
-	int32_t			drawEnd;
-	t_rgb			color;
-	int32_t			lineHeight;
+	int32_t			draw_start;
+	int32_t			draw_end;
+	t_rgb			clr;
+	int32_t			line_h;
 }					t_wall;
 
 typedef struct		s_v2d
 {
-	double			X;
-	double			Y;
+	double			x;
+	double			y;
 }					t_v2d;
 
 typedef struct		s_v2i
 {
-	int32_t			X;
-	int32_t			Y;
+	int32_t			x;
+	int32_t			y;
 }					t_v2i;
 
 typedef struct		s_arg {
-	const char		*mapName;
-	Uint16 			screenW;
-	Uint16			screenH;
+	const char		*map_name;
+	Uint16 			screen_w;
+	Uint16			screen_h;
 	Uint8			flag;
 }					t_arg;
 
 typedef struct		s_map {
 	t_list			*head;
 	int16_t			**map;
-	int16_t			mapW;
-	int16_t 		mapH;
-	int16_t			PixelSizeW;
-	int16_t			PixelSizeH;
-	uint16_t 		sizeMap;
+	int16_t			map_w;
+	int16_t 		map_h;
+	int16_t			pxl_s_W;
+	int16_t			pxl_s_h;
 }					t_map;
 
 typedef struct		s_time
 {
 	double 			time;
-	double 			oldTime;
-	double 			frameTime;
-	double			moveSpeed;
-	double 			rotSpeed;
+	double 			old_time;
+	double 			frame_time;
+	double			move_speed;
+	double 			rot_speed;
 }					t_time;
 
 typedef struct		s_cam
 {
-	double 			camX;
-	t_v2d			rayDir;
+	double 			cam_x;
+	t_v2d			r_dir;
 	t_v2d			pos;
 	t_v2d			dir;
 	t_v2d			plane;
@@ -96,75 +95,69 @@ typedef struct		s_ray
 {
 	t_v2i			map;
 	t_v2i			step;
-	t_v2d			sideDist;
-	t_v2d			deltaDist;
+	t_v2d			side_d;
+	t_v2d			delt_d;
 	int8_t			hit;
 	int8_t			side;
 	int16_t			texture;
-	double			perpWallDist;
+	double			pwd;
 	t_wall			wall;
 }					t_ray;
 
 typedef struct		s_floor
 {
-	t_v2d			fWall;
-	t_v2d			fCur;
-	t_v2i			fTex;
-	double 			distWall;
-	double			currentDist;
+	t_v2d			f_wall;
+	t_v2d			f_cur;
+	t_v2i			f_tex;
+	double 			d_wall;
+	double			cur_dist;
 	double			weight;
-
-	int16_t			floorTexX;
-	int16_t 		floorTexY;
 }					t_floor;
 
 typedef struct		s_tex
 {
-	double 			wallX;
+	double 			wall_x;
 	int32_t			d;
 	int32_t			texX;
 	int32_t			texY;
-	int16_t			texWidth;
-	int16_t			texHeight;
+	int16_t			tex_w;
+	int16_t			tex_h;
 	uint32_t		*pixel;
 	uint32_t		*pixel2;
 }					t_tex;
 
 typedef struct		s_text
 {
-	t_v2i			wh;
-	t_v2i			pos;
-	char 			*str;
-	SDL_Rect		renderQuad;
-	SDL_Texture		*match;
-	SDL_Texture		*mismatch;
+	SDL_Rect		r_q;
+	SDL_Texture		*bl;
+	SDL_Texture		*red;
 }					t_text;
 
-typedef struct		s_SDL
+typedef struct		s_sdl
 {
 	SDL_Window		*window;
-	SDL_Renderer	*renderer;
+	SDL_Renderer	*ren;
 	SDL_Event		event;
-	const uint8_t	*currentKey;
+	const uint8_t	*cur_key;
 	SDL_Surface		**textures;
-	t_tex			texT;
+	t_tex			tex_t;
 	int8_t			loop;
-	t_arg			argvT;
-	t_map			mapT;
-	Uint16 			numTrack;
+	t_arg			argv_t;
+	t_map			m_t;
+	Uint16 			num_track;
 	Mix_Music		*music[2];
 	Mix_Chunk		*move;
 	int16_t			volume;
 	SDL_Surface		*buffer;
-	SDL_Texture		*preRender;
+	SDL_Texture		*pre_ren;
 	uint16_t		x;
 	uint32_t		color;
 	int32_t			flag;
-	SDL_Surface		*menuBG;
+	SDL_Surface		*menu_bg;
 	TTF_Font		*gFont;
-	t_text			words[4];
-	int16_t 		menuFlag;
-}					t_SDL;
+	t_text			wrds[4];
+	int16_t 		menu_f;
+}					t_sdl;
 
 #define DEF_SCREEN_WIDTH 1440
 #define DEF_SCREEN_HEIGHT 840
@@ -177,8 +170,8 @@ typedef struct		s_SDL
 #define GAME 0x000002
 
 void				readArgv(int argc, AR argv, t_arg *arg);
-int8_t			 	ft_INIT(t_SDL *sdlT);
-int8_t				ft_make_map(t_SDL *sdlT);
+int8_t			 	ft_INIT(t_sdl *sdlT);
+int8_t				makeMap(t_sdl *sdlT);
 int8_t 				ft_errors(const char *error);
 void				ft_revers_list(t_list **head);
 void				print_map(t_map *mapT);
@@ -190,26 +183,33 @@ void				fixMap(t_map *mapT);
 void 				ft_split_del(char **head);
 //---------------------------------------------------------------------------------------------
 
-void 				ft_process(t_SDL *sdlT);
+void 				ft_process(t_sdl *sdlT);
 void				Ray(t_cam *cam, t_ray *ray);
 void				Cast(t_ray *ray, t_map *mapT);
-void				Wall(t_cam *cam, t_ray *ray, int16_t pixelHeight);
+void				ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h);
 void				setCam(t_cam *cam);
 void				drawWall(SDL_Renderer *render, uint16_t x, t_ray *ray);
 void				setTime(t_time *t);
-void				event(t_SDL *sdlT, t_cam *cam, t_time *time);
+void				event(t_sdl *sdl_t, t_cam *cam, t_time *time);
 
-void				ft_end(t_SDL *sdlT);
+void				ft_end(t_sdl *sdlT);
 void				ft_print_list(t_list *head);
-void				drawTextureWall(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x);
-void				InitRay(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x);
-uint32_t			deepColor(Uint32 clearColor, t_ray *ray);
-uint32_t			deepColorWall(Uint32 clearColor, int y, t_ray *ray, t_map *mapT);
+void				ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x);
+void				InitRay(t_sdl *sdlT, t_cam *cam, t_ray *ray, uint16_t x);
+uint32_t			ft_d_color(Uint32 in_c, t_ray *ray);
+uint32_t			ft_d_c_wall(Uint32 in_c, int y, t_ray *ray, t_map *m_t);
 void 				floorCast(t_ray *ray, t_tex *texT, t_cam *camT, t_floor *floorT);
-void				floorAdd(t_floor *floor, t_ray *ray, t_SDL *sdlT, t_cam *camT);
+void				floorAdd(t_floor *floor, t_ray *ray, t_sdl *sdlT, t_cam *camT);
 void				setPixFor(SDL_PixelFormat *pFormat);
-void				setMusic(t_SDL *sdlT);
+void				setMusic(t_sdl *sdlT);
 void 				ft_helper(void);
+void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG);
+void	makeText(t_sdl *sdlT);
+t_list		*ft_pars_file(int16_t fd);
+int8_t		mapping(t_map *mapT);
+void	ft_move(t_sdl *sdl_t, t_cam *cam, t_time *t);
+void	ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
+void	ft_audio_v(t_sdl *sdl_t);
 
 
 #endif

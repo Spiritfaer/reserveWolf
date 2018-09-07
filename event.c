@@ -1,154 +1,122 @@
-//
-// Created by Igor STALEVSKIY on 8/19/18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   event.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/07 11:48:46 by istalevs          #+#    #+#             */
+/*   Updated: 2018/09/07 11:48:47 by istalevs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/wolf3d.h"
 
-void	ft_move(t_SDL *sdlT, t_cam *cam, t_time *t)
+void	ft_audio_v(t_sdl *sdl_t)
 {
-	if (sdlT->currentKey[SDL_SCANCODE_UP] || sdlT->currentKey[SDL_SCANCODE_W])
+	if (sdl_t->cur_key[SDL_SCANCODE_KP_PLUS])
 	{
-		if (sdlT->mapT.map[(int)(cam->pos.X + cam->dir.X * t->moveSpeed)][(int)cam->pos.Y] == false)
-			cam->pos.X += cam->dir.X * t->moveSpeed;
-		if (sdlT->mapT.map[(int)cam->pos.X][(int)(cam->pos.Y + cam->dir.Y * t->moveSpeed)] == false)
-			cam->pos.Y += cam->dir.Y * t->moveSpeed;
+		sdl_t->volume += 1;
+		if (sdl_t->volume > 100)
+			sdl_t->volume = 100;
+		Mix_VolumeMusic(sdl_t->volume);
 	}
-	if (sdlT->currentKey[SDL_SCANCODE_DOWN] || sdlT->currentKey[SDL_SCANCODE_S])
+	if (sdl_t->cur_key[SDL_SCANCODE_KP_MINUS])
 	{
-		if(sdlT->mapT.map[(int)(cam->pos.X - cam->dir.X * t->moveSpeed)][(int)cam->pos.Y] == false)
-			cam->pos.X -= cam->dir.X * t->moveSpeed;
-		if(sdlT->mapT.map[(int)cam->pos.X][(int)(cam->pos.Y - cam->dir.Y * t->moveSpeed)] == false)
-			cam->pos.Y -= cam->dir.Y * t->moveSpeed;
-	}
-
-}
-
-void	ft_rotate(t_SDL *sdlT, t_cam *cam, t_time *t)
-{
-	double oldDirX;
-	double oldPlaneX;
-
-	if (sdlT->currentKey[SDL_SCANCODE_RIGHT] || sdlT->currentKey[SDL_SCANCODE_D])
-	{
-		oldDirX = cam->dir.X;
-		cam->dir.X = cam->dir.X * cos(-t->rotSpeed) - cam->dir.Y * sin(-t->rotSpeed);
-		cam->dir.Y = oldDirX * sin(-t->rotSpeed) + cam->dir.Y * cos(-t->rotSpeed);
-
-		oldPlaneX = cam->plane.X;
-		cam->plane.X = cam->plane.X * cos(-t->rotSpeed) - cam->plane.Y * sin(-t->rotSpeed);
-		cam->plane.Y = oldPlaneX * sin(-t->rotSpeed) + cam->plane.Y * cos(-t->rotSpeed);
-	}
-	if (sdlT->currentKey[SDL_SCANCODE_LEFT] || sdlT->currentKey[SDL_SCANCODE_A])
-	{
-		oldDirX = cam->dir.X;
-		cam->dir.X = cam->dir.X * cos(t->rotSpeed) - cam->dir.Y * sin(t->rotSpeed);
-		cam->dir.Y = oldDirX * sin(t->rotSpeed) + cam->dir.Y * cos(t->rotSpeed);
-
-		oldPlaneX = cam->plane.X;
-		cam->plane.X = cam->plane.X * cos(t->rotSpeed) - cam->plane.Y * sin(t->rotSpeed);
-		cam->plane.Y = oldPlaneX * sin(t->rotSpeed) + cam->plane.Y * cos(t->rotSpeed);
+		sdl_t->volume -= 1;
+		if (sdl_t->volume <= 0)
+			sdl_t->volume = 0;
+		Mix_VolumeMusic(sdl_t->volume);
 	}
 }
 
-void	audioSetings(t_SDL *sdlT)
+void	ft_audio_s(t_sdl *sdl_t)
 {
-	if (sdlT->event.type == SDL_KEYDOWN)
+	if (sdl_t->event.type == SDL_KEYDOWN)
 	{
-		if (sdlT->currentKey[SDL_SCANCODE_P])
+		if (sdl_t->cur_key[SDL_SCANCODE_P])
 		{
 			if (Mix_PausedMusic() == 1)
 				Mix_ResumeMusic();
 			else
 				Mix_PauseMusic();
 		}
-		if (sdlT->currentKey[SDL_SCANCODE_KP_MULTIPLY])
+		if (sdl_t->cur_key[SDL_SCANCODE_KP_MULTIPLY])
 		{
-			if (sdlT->numTrack == 1)
-				sdlT->numTrack = 0;
+			if (sdl_t->num_track == 1)
+				sdl_t->num_track = 0;
 			else
-				sdlT->numTrack = 1;
-			Mix_PlayMusic(sdlT->music[sdlT->numTrack], -1);
+				sdl_t->num_track = 1;
+			Mix_PlayMusic(sdl_t->music[sdl_t->num_track], -1);
 		}
-	}
-	if (sdlT->currentKey[SDL_SCANCODE_KP_PLUS])
-	{
-		sdlT->volume += 1;
-		if (sdlT->volume > 100)
-			sdlT->volume = 100;
-		Mix_VolumeMusic(sdlT->volume);
-	}
-	if (sdlT->currentKey[SDL_SCANCODE_KP_MINUS])
-	{
-		sdlT->volume -= 1;
-		if (sdlT->volume <= 0)
-			sdlT->volume = 0;
-		Mix_VolumeMusic(sdlT->volume);
 	}
 }
 
-void 	gameSetings(t_SDL *sdlT)
+void	ft_game_s(t_sdl *sdl_t)
 {
-	if (sdlT->event.type == SDL_KEYDOWN)
+	if (sdl_t->event.type == SDL_KEYDOWN)
 	{
-		if (sdlT->currentKey[SDL_SCANCODE_TAB])
+		if (sdl_t->cur_key[SDL_SCANCODE_TAB])
 		{
-			if (sdlT->flag == GAME)
+			if (sdl_t->flag == GAME)
 			{
-				sdlT->menuFlag = 0;
-				sdlT->flag = MENU;
+				sdl_t->menu_f = 0;
+				sdl_t->flag = MENU;
 			}
 			else
-				sdlT->flag = GAME;
+				sdl_t->flag = GAME;
 			SDL_Delay(150);
 		}
 	}
 }
 
-void	gameMenuEvent(t_SDL *sdlT)
+void	ft_game_menu_e(t_sdl *sdl_t)
 {
-	if (sdlT->event.type == SDL_KEYDOWN)
+	if (sdl_t->event.type == SDL_KEYDOWN)
 	{
-		if (sdlT->currentKey[SDL_SCANCODE_UP])
+		if (sdl_t->cur_key[SDL_SCANCODE_UP])
 		{
-			sdlT->menuFlag--;
+			sdl_t->menu_f--;
 			SDL_Delay(100);
 		}
-		if (sdlT->currentKey[SDL_SCANCODE_DOWN])
+		if (sdl_t->cur_key[SDL_SCANCODE_DOWN])
 		{
-			sdlT->menuFlag++;
+			sdl_t->menu_f++;
 			SDL_Delay(100);
 		}
-		sdlT->menuFlag = (sdlT->menuFlag < 0) ? (short)0 : sdlT->menuFlag;
-		sdlT->menuFlag = (sdlT->menuFlag > 2) ? (short)2 : sdlT->menuFlag;
+		sdl_t->menu_f = (sdl_t->menu_f < 0) ? (short)0 : sdl_t->menu_f;
+		sdl_t->menu_f = (sdl_t->menu_f > 2) ? (short)2 : sdl_t->menu_f;
 	}
-	if (sdlT->currentKey[SDL_SCANCODE_RETURN] || sdlT->currentKey[SDL_SCANCODE_KP_ENTER])
+	if (sdl_t->cur_key[SDL_SCANCODE_RETURN]
+		|| sdl_t->cur_key[SDL_SCANCODE_KP_ENTER])
 	{
-		if (sdlT->menuFlag == 0)
-			sdlT->flag = GAME;
-		else if (sdlT->menuFlag == 1)
+		if (sdl_t->menu_f == 0)
+			sdl_t->flag = GAME;
+		else if (sdl_t->menu_f == 1)
 			system("say 'meow'");
-		else if (sdlT->menuFlag == 2)
-			sdlT->loop = false;
+		else if (sdl_t->menu_f == 2)
+			sdl_t->loop = false;
 	}
 }
 
-void	event(t_SDL *sdlT, t_cam *cam, t_time *time)
+void	event(t_sdl *sdl_t, t_cam *cam, t_time *time)
 {
-	SDL_PollEvent(&sdlT->event);
-	sdlT->currentKey = SDL_GetKeyboardState(NULL);
-	if (sdlT->currentKey[SDL_SCANCODE_ESCAPE])
-		sdlT->loop = false;
-	if (sdlT->event.type == SDL_QUIT)
-		sdlT->loop = false;
-	gameSetings(sdlT);
-	if (sdlT->flag == GAME)
+	SDL_PollEvent(&sdl_t->event);
+	sdl_t->cur_key = SDL_GetKeyboardState(NULL);
+	if (sdl_t->cur_key[SDL_SCANCODE_ESCAPE])
+		sdl_t->loop = false;
+	if (sdl_t->event.type == SDL_QUIT)
+		sdl_t->loop = false;
+	ft_game_s(sdl_t);
+	if (sdl_t->flag == GAME)
 	{
-		audioSetings(sdlT);
-		ft_move(sdlT, cam, time);
-		ft_rotate(sdlT, cam, time);
+		ft_audio_s(sdl_t);
+		ft_audio_v(sdl_t);
+		ft_move(sdl_t, cam, time);
+		ft_rotate(sdl_t, cam, time);
 	}
-	else if (sdlT->flag == MENU)
+	else if (sdl_t->flag == MENU)
 	{
-		gameMenuEvent(sdlT);
+		ft_game_menu_e(sdl_t);
 	}
 }

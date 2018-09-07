@@ -2,7 +2,7 @@ NAME = libft.a
 HEADER = *.h
 SOURCE = *.c
 OBJECT = *.o
-FLAG_G = -Wall -Wextra -Werror
+FLAG_G = -ft_wall -Wextra -Werror
 
 all: $(NAME)
 

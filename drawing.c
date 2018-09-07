@@ -1,112 +1,113 @@
-//
-// Created by Igor STALEVSKIY on 8/18/18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   drawing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/07 11:13:12 by istalevs          #+#    #+#             */
+/*   Updated: 2018/09/07 11:13:17 by istalevs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/wolf3d.h"
 
-void	Wall(t_cam *cam, t_ray *ray, int16_t pixelHeight)
+void		ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h)
 {
 	if (ray->side == 0)
-		ray->perpWallDist = (ray->map.X - cam->pos.X + (1 - ray->step.X) / 2) / cam->rayDir.X;
+		ray->pwd = (ray->map.x - cam->pos.x + (1 - ray->step.x) / 2)
+					/ cam->r_dir.x;
 	else
-		ray->perpWallDist = (ray->map.Y - cam->pos.Y + (1 - ray->step.Y) / 2) / cam->rayDir.Y;
-
-	ray->wall.lineHeight = (int32_t)(pixelHeight / ray->perpWallDist);
-	ray->wall.drawStart = -ray->wall.lineHeight / 2 + pixelHeight / 2;
-	if (ray->wall.drawStart < 0)
-		ray->wall.drawStart = 0;
-
-	ray->wall.drawEnd = ray->wall.lineHeight / 2 + pixelHeight / 2;
-	if (ray->wall.drawEnd >= pixelHeight)
-		ray->wall.drawEnd = pixelHeight - 1;
+		ray->pwd = (ray->map.y - cam->pos.y + (1 - ray->step.y) / 2)
+					/ cam->r_dir.y;
+	ray->wall.line_h = (int32_t)(pxl_h / ray->pwd);
+	ray->wall.draw_start = -ray->wall.line_h / 2 + pxl_h / 2;
+	if (ray->wall.draw_start < 0)
+		ray->wall.draw_start = 0;
+	ray->wall.draw_end = ray->wall.line_h / 2 + pxl_h / 2;
+	if (ray->wall.draw_end >= pxl_h)
+		ray->wall.draw_end = pxl_h - 1;
 }
 
-void	drawWall(SDL_Renderer *render, uint16_t x, t_ray *ray)
+uint32_t	ft_d_color(Uint32 in_c, t_ray *ray)
 {
-	int color;
-
-	color = GREEN;
-	if (ray->texture == (int16_t)1)
-		color = RED;
-	else if (ray->texture == (int16_t)2)
-		color = GREEN;
-	else if (ray->texture == (int16_t)3)
-		color = BLUE;
-	else if (ray->texture == (int16_t)4)
-		color = WHITE;
-	if (ray->side == 1)
-		color /= 2;
-	ray->wall.color.red = (uint8_t)((color >> 16) & 0xFF);
-	ray->wall.color.green = (uint8_t)((color >> 8) & 0xFF);
-	ray->wall.color.blue = (uint8_t)((color) & 0xFF);
-	SDL_SetRenderDrawColor(render, ray->wall.color.red, ray->wall.color.green, ray->wall.color.blue, 0xFF);
-	SDL_RenderDrawLine(render, x, ray->wall.drawStart, x, ray->wall.drawEnd);
-}
-
-uint32_t	deepColor(Uint32 clearColor, t_ray *ray)
-{
-	Uint32	deepColor;
+	Uint32	out_c;
 	int		cof;
 
 	cof = 3;
-	ray->wall.color.red = (uint8_t)((clearColor >> 16) & 0xFF);
-	ray->wall.color.green = (uint8_t)((clearColor >> 8) & 0xFF);
-	ray->wall.color.blue = (uint8_t)((clearColor) & 0xFF);
-	if (ray->perpWallDist > cof)
+	ray->wall.clr.r = (uint8_t)((in_c >> 16) & 0xFF);
+	ray->wall.clr.g = (uint8_t)((in_c >> 8) & 0xFF);
+	ray->wall.clr.b = (uint8_t)((in_c) & 0xFF);
+	if (ray->pwd > cof)
 	{
-		ray->wall.color.red = (uint8_t)(((clearColor & 0xFF0000) >> 16) / (1 + (ray->perpWallDist - cof) / 2));
-		ray->wall.color.green = (uint8_t)(((clearColor & 0xFF00) >> 8) / (1 + (ray->perpWallDist - cof) / 2));
-		ray->wall.color.blue = (uint8_t)((clearColor & 0xFF) / (1 + (ray->perpWallDist - cof) / 2));
+		ray->wall.clr.r = (uint8_t)(((in_c & 0xFF0000) >> 16)
+								/ (1 + (ray->pwd - cof) / 2));
+		ray->wall.clr.g = (uint8_t)(((in_c & 0xFF00) >> 8)
+								/ (1 + (ray->pwd - cof) / 2));
+		ray->wall.clr.b = (uint8_t)((in_c & 0xFF)
+								/ (1 + (ray->pwd - cof) / 2));
 	}
-	deepColor = (ray->wall.color.red << 16) | (ray->wall.color.green << 8) | ray->wall.color.blue;
-	return (deepColor);
+	out_c = (ray->wall.clr.r << 16) | (ray->wall.clr.g << 8) | ray->wall.clr.b;
+	return (out_c);
 }
 
-uint32_t	deepColorWall(Uint32 clearColor, int y, t_ray *ray, t_map *mapT)
+uint32_t	ft_d_c_wall(Uint32 in_c, int y, t_ray *ray, t_map *m_t)
 {
-	double centre;
-	double end;
-	double cof;
-	Uint32	deepColor;
+	double	centre;
+	double	end;
+	double	cof;
+	Uint32	out_c;
 
-	ray->wall.color.red = (uint8_t)((clearColor >> 16) & 0xFF);
-	ray->wall.color.green = (uint8_t)((clearColor >> 8) & 0xFF);
-	ray->wall.color.blue = (uint8_t)((clearColor) & 0xFF);
-	centre = mapT->PixelSizeH / 2;
-	end = mapT->PixelSizeH - (centre * 0.5);
+	ray->wall.clr.r = (uint8_t)((in_c >> 16) & 0xFF);
+	ray->wall.clr.g = (uint8_t)((in_c >> 8) & 0xFF);
+	ray->wall.clr.b = (uint8_t)((in_c) & 0xFF);
+	centre = m_t->pxl_s_h / 2;
+	end = m_t->pxl_s_h - (centre * 0.5);
 	cof = ((double)y - centre) / end;
-	if (y > mapT->PixelSizeH / 2)
+	if (y > m_t->pxl_s_h / 2)
 	{
-		ray->wall.color.red = (uint8_t)(((clearColor & 0xFF0000) >> 16) * (cof));
-		ray->wall.color.green = (uint8_t)(((clearColor & 0xFF00) >> 8) * (cof));
-		ray->wall.color.blue = (uint8_t)((clearColor & 0xFF) * (cof));
+		ray->wall.clr.r = (uint8_t)(((in_c & 0xFF0000) >> 16) * (cof));
+		ray->wall.clr.g = (uint8_t)(((in_c & 0xFF00) >> 8) * (cof));
+		ray->wall.clr.b = (uint8_t)((in_c & 0xFF) * (cof));
 	}
-	deepColor = (ray->wall.color.red << 16) | (ray->wall.color.green << 8) | ray->wall.color.blue;
-	return (deepColor);
+	out_c = (ray->wall.clr.r << 16) | (ray->wall.clr.g << 8) | ray->wall.clr.b;
+	return (out_c);
 }
-void drawTextureWall(t_SDL *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
+
+void		ft_dop_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray)
 {
 	if (ray->side == 0)
-		sdlT->texT.wallX = cam->pos.Y + ray->perpWallDist * cam->rayDir.Y;
+		sdl_t->tex_t.wall_x = cam->pos.y + ray->pwd * cam->r_dir.y;
 	else
-		sdlT->texT.wallX = cam->pos.X + ray->perpWallDist * cam->rayDir.X;
-	sdlT->texT.wallX -= floor((sdlT->texT.wallX));
+		sdl_t->tex_t.wall_x = cam->pos.x + ray->pwd * cam->r_dir.x;
+	sdl_t->tex_t.wall_x -= floor((sdl_t->tex_t.wall_x));
+	sdl_t->tex_t.texX = (int)(sdl_t->tex_t.wall_x * (double)sdl_t->tex_t.tex_w);
+	if (ray->side == 0 && cam->r_dir.x > 0)
+		sdl_t->tex_t.texX = sdl_t->tex_t.tex_w - sdl_t->tex_t.texX - 1;
+	if (ray->side == 1 && cam->r_dir.y < 0)
+		sdl_t->tex_t.texX = sdl_t->tex_t.tex_w - sdl_t->tex_t.texX - 1;
+}
 
-	sdlT->texT.texX = (int)(sdlT->texT.wallX * (double)sdlT->texT.texWidth);
-	if(ray->side == 0 && cam->rayDir.X > 0)
-		sdlT->texT.texX = sdlT->texT.texWidth - sdlT->texT.texX - 1;
-	if(ray->side == 1 && cam->rayDir.Y < 0)
-		sdlT->texT.texX = sdlT->texT.texWidth - sdlT->texT.texX - 1;
+void		ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
+{
+	int32_t		y;
+	uint32_t	color;
 
-	for(int y = ray->wall.drawStart; y < ray->wall.drawEnd; y++)
+	ft_dop_tex_w(sdl_t, cam, ray);
+	y = ray->wall.draw_start;
+	while (y < ray->wall.draw_end)
 	{
-		sdlT->texT.d = y * 256 - sdlT->mapT.PixelSizeH * 128 + ray->wall.lineHeight * 128;
-		sdlT->texT.texY = ((sdlT->texT.d * sdlT->texT.texWidth) / ray->wall.lineHeight) / 256;
-		sdlT->texT.pixel = (uint32_t*)sdlT->textures[ray->texture]->pixels;
-		Uint32 color = (uint32_t)sdlT->texT.pixel[(sdlT->texT.texHeight * sdlT->texT.texY + sdlT->texT.texX)];
-		color = deepColor(color, ray);
-		if(ray->side == 1)
+		sdl_t->tex_t.d = y * 256 -
+							sdl_t->m_t.pxl_s_h * 128 + ray->wall.line_h * 128;
+		sdl_t->tex_t.texY = ((sdl_t->tex_t.d * sdl_t->tex_t.tex_w)
+								/ ray->wall.line_h) / 256;
+		sdl_t->tex_t.pixel = (uint32_t*)sdl_t->textures[ray->texture]->pixels;
+		color = (uint32_t)sdl_t->tex_t.pixel
+				[(sdl_t->tex_t.tex_h * sdl_t->tex_t.texY + sdl_t->tex_t.texX)];
+		color = ft_d_color(color, ray);
+		if (ray->side == 1)
 			color = (color >> 1) & 8355711;
-		sdlT->texT.pixel2[sdlT->mapT.PixelSizeW * y + x] = color;
+		sdl_t->tex_t.pixel2[sdl_t->m_t.pxl_s_W * y + x] = color;
+		y++;
 	}
 }

@@ -6,52 +6,52 @@
 
 void floorCast(t_ray *ray, t_tex *texT, t_cam *camT, t_floor *floorT)
 {
-	if(ray->side == 0 && camT->rayDir.X > 0)
+	if(ray->side == 0 && camT->r_dir.x > 0)
 	{
-		floorT->fWall.X = ray->map.X;
-		floorT->fWall.Y = ray->map.Y + texT->wallX;
+		floorT->f_wall.x = ray->map.x;
+		floorT->f_wall.y = ray->map.y + texT->wall_x;
 	}
-	else if(ray->side == 0 && camT->rayDir.X < 0)
+	else if(ray->side == 0 && camT->r_dir.x < 0)
 	{
-		floorT->fWall.X = ray->map.X + 1.0;
-		floorT->fWall.Y = ray->map.Y + texT->wallX;
+		floorT->f_wall.x = ray->map.x + 1.0;
+		floorT->f_wall.y = ray->map.y + texT->wall_x;
 	}
-	else if(ray->side == 1 && camT->rayDir.Y > 0)
+	else if(ray->side == 1 && camT->r_dir.y > 0)
 	{
-		floorT->fWall.X = ray->map.X + texT->wallX;
-		floorT->fWall.Y = ray->map.Y;
+		floorT->f_wall.x = ray->map.x + texT->wall_x;
+		floorT->f_wall.y = ray->map.y;
 	}
 	else
 	{
-		floorT->fWall.X = ray->map.X + texT->wallX;
-		floorT->fWall.Y = ray->map.Y + 1.0;
+		floorT->f_wall.x = ray->map.x + texT->wall_x;
+		floorT->f_wall.y = ray->map.y + 1.0;
 	}
 }
 
-static void floorDrawing(t_SDL *sdlT, t_floor *floor, t_ray *ray, int32_t y)
+static void floorDrawing(t_sdl *sdlT, t_floor *floor, t_ray *ray, int32_t y)
 {
-	sdlT->texT.pixel = (uint32_t*)sdlT->textures[0]->pixels;
-	sdlT->color = (uint32_t)sdlT->texT.pixel[(sdlT->texT.texHeight * floor->fTex.Y + floor->fTex.X)];
-	sdlT->color = deepColorWall(sdlT->color, y, ray, &sdlT->mapT);
-	sdlT->texT.pixel2[sdlT->mapT.PixelSizeW * y + sdlT->x] = sdlT->color;
-	sdlT->texT.pixel2[(sdlT->mapT.PixelSizeH - y) * sdlT->mapT.PixelSizeW + sdlT->x] = sdlT->color;
+	sdlT->tex_t.pixel = (uint32_t*)sdlT->textures[0]->pixels;
+	sdlT->color = (uint32_t)sdlT->tex_t.pixel[(sdlT->tex_t.tex_h * floor->f_tex.y + floor->f_tex.x)];
+	sdlT->color = ft_d_c_wall(sdlT->color, y, ray, &sdlT->m_t);
+	sdlT->tex_t.pixel2[sdlT->m_t.pxl_s_W * y + sdlT->x] = sdlT->color;
+	sdlT->tex_t.pixel2[(sdlT->m_t.pxl_s_h - y) * sdlT->m_t.pxl_s_W + sdlT->x] = sdlT->color;
 }
 
-void floorAdd(t_floor *floor, t_ray *ray, t_SDL *sdlT, t_cam *camT)
+void floorAdd(t_floor *floor, t_ray *ray, t_sdl *sdlT, t_cam *camT)
 {
 	int32_t y;
-	floor->distWall = ray->perpWallDist;
-	if (ray->wall.drawEnd < 0) ray->wall.drawEnd = sdlT->mapT.PixelSizeH;
+	floor->d_wall = ray->pwd;
+	if (ray->wall.draw_end < 0) ray->wall.draw_end = sdlT->m_t.pxl_s_h;
 
-	y = ray->wall.drawEnd + 1;
-	while (y < sdlT->mapT.PixelSizeH)
+	y = ray->wall.draw_end + 1;
+	while (y < sdlT->m_t.pxl_s_h)
 	{
-		floor->currentDist = sdlT->mapT.PixelSizeH / (2.0 * y - sdlT->mapT.PixelSizeH);
-		floor->weight = floor->currentDist / floor->distWall;
-		floor->fCur.X = floor->weight * floor->fWall.X + (1.0 - floor->weight) * camT->pos.X;
-		floor->fCur.Y = floor->weight * floor->fWall.Y + (1.0 - floor->weight) * camT->pos.Y;
-		floor->fTex.X = (int)(floor->fCur.X * sdlT->texT.texWidth) % sdlT->texT.texWidth;
-		floor->fTex.Y = (int)(floor->fCur.Y * sdlT->texT.texHeight) % sdlT->texT.texHeight;
+		floor->cur_dist = sdlT->m_t.pxl_s_h / (2.0 * y - sdlT->m_t.pxl_s_h);
+		floor->weight = floor->cur_dist / floor->d_wall;
+		floor->f_cur.x = floor->weight * floor->f_wall.x + (1.0 - floor->weight) * camT->pos.x;
+		floor->f_cur.y = floor->weight * floor->f_wall.y + (1.0 - floor->weight) * camT->pos.y;
+		floor->f_tex.x = (int)(floor->f_cur.x * sdlT->tex_t.tex_w) % sdlT->tex_t.tex_w;
+		floor->f_tex.y = (int)(floor->f_cur.y * sdlT->tex_t.tex_h) % sdlT->tex_t.tex_h;
 		floorDrawing(sdlT, floor, ray, y);
 		y++;
 	}

@@ -1,30 +1,30 @@
 #include "includes/wolf3d.h"
 
-int8_t	ft_initSdl(t_SDL *sdlT)
+int8_t	ft_initSdl(t_sdl *sdlT)
 {
 	int8_t result;
 
 	result = 1;
-	sdlT->mapT.PixelSizeW = (sdlT->argvT.flag & MAPW) ?
-							sdlT->argvT.screenW : (int16_t)DEF_SCREEN_WIDTH;
-	sdlT->mapT.PixelSizeH = (sdlT->argvT.flag & MAPH) ?
-							sdlT->argvT.screenH : (int16_t)DEF_SCREEN_HEIGHT;
+	sdlT->m_t.pxl_s_W = (sdlT->argv_t.flag & MAPW) ?
+							sdlT->argv_t.screen_w : (int16_t)DEF_SCREEN_WIDTH;
+	sdlT->m_t.pxl_s_h = (sdlT->argv_t.flag & MAPH) ?
+							sdlT->argv_t.screen_h : (int16_t)DEF_SCREEN_HEIGHT;
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0 && result--)
 		ft_putendl_fd(SDL_GetError(), 2);
 	else
 	{
 		sdlT->window = SDL_CreateWindow("Doom style", 960, 400,
-			sdlT->mapT.PixelSizeW, sdlT->mapT.PixelSizeH, SDL_WINDOW_SHOWN);
+			sdlT->m_t.pxl_s_W, sdlT->m_t.pxl_s_h, SDL_WINDOW_SHOWN);
 		if (!sdlT->window && result--)
 			ft_putendl_fd(SDL_GetError(), 2);
 		else
 		{
-			sdlT->renderer = SDL_CreateRenderer(sdlT->window, -1,
+			sdlT->ren = SDL_CreateRenderer(sdlT->window, -1,
 				SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 			sdlT->textures = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * 8);
 			sdlT->loop = 1;
 			sdlT->flag = MENU;
-			sdlT->menuFlag = 0;
+			sdlT->menu_f = 0;
 		}
 	}
 	return (result);
@@ -44,7 +44,7 @@ int8_t	ft_initMix(void)
 	return (result);
 }
 
-int8_t	ft_initTtf(t_SDL *sdlT)
+int8_t	ft_initTtf(t_sdl *sdlT)
 {
 	int8_t result;
 
@@ -72,7 +72,7 @@ int8_t	ft_initImg(void)
 	return (result);
 }
 
-int8_t 	ft_INIT(t_SDL *sdlT)
+int8_t 	ft_INIT(t_sdl *sdlT)
 {
 	int8_t result;
 

@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/wolf3d.dir/event.c.o"
   "CMakeFiles/wolf3d.dir/floor.c.o"
   "CMakeFiles/wolf3d.dir/setStruct.c.o"
+  "CMakeFiles/wolf3d.dir/make.c.o"
+  "CMakeFiles/wolf3d.dir/event_control.c.o"
   "wolf3d.pdb"
   "wolf3d"
 )

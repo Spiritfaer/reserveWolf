@@ -2,12 +2,12 @@
 
 int main(int argc, AR argv)
 {
-	t_SDL sdlT;
+	t_sdl sdlT;
 
-	readArgv(argc, argv, &sdlT.argvT);
+	readArgv(argc, argv, &sdlT.argv_t);
 	if (ft_INIT(&sdlT))
 	{
-		if (ft_make_map(&sdlT))
+		if (makeMap(&sdlT))
 		{
 			ft_helper();
 			ft_process(&sdlT);
@@ -29,12 +29,18 @@ void ft_helper(void)
 	ft_putendl("--------------  * to change track  ---------------");
 }
 
-void	ft_end(t_SDL *sdlT)
+int8_t ft_errors(const char *error)
 {
-	if (sdlT->renderer != NULL)
+	ft_putstr_fd(error, 2);
+	return (-1);
+}
+
+void	ft_end(t_sdl *sdlT)
+{
+	if (sdlT->ren != NULL)
 	{
-		SDL_DestroyRenderer(sdlT->renderer);
-		sdlT->renderer = NULL;
+		SDL_DestroyRenderer(sdlT->ren);
+		sdlT->ren = NULL;
 	}
 	if (sdlT->window != NULL)
 	{

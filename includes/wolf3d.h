@@ -5,8 +5,6 @@
 #ifndef WOLF3D_H
 #define WOLF3D_H
 
-//#define DEBUG
-
 #define RED 0x0000FF
 #define GREEN 0x00FF00
 #define BLUE 0xFF0000
@@ -79,7 +77,7 @@ typedef struct		s_time
 	double 			old_time;
 	double 			frame_time;
 	double			move_speed;
-	double 			rot_speed;
+	double 			rot_s;
 }					t_time;
 
 typedef struct		s_cam
@@ -88,7 +86,7 @@ typedef struct		s_cam
 	t_v2d			r_dir;
 	t_v2d			pos;
 	t_v2d			dir;
-	t_v2d			plane;
+	t_v2d			pl;
 }					t_cam;
 
 typedef struct		s_ray
@@ -169,47 +167,54 @@ typedef struct		s_sdl
 #define MENU 0x000001
 #define GAME 0x000002
 
-void				readArgv(int argc, AR argv, t_arg *arg);
-int8_t			 	ft_INIT(t_sdl *sdlT);
-int8_t				makeMap(t_sdl *sdlT);
+#define TEXTURE_0 0
+#define TEXTURE_1 1
+#define TEXTURE_2 2
+#define TEXTURE_3 3
+#define TEXTURE_4 4
+
+void				ft_read_argv(int argc, AR argv, t_arg *arg);
+int8_t			 	ft_init(t_sdl *sdl_t);
+int8_t				ft_make_map(t_sdl *sdl_t);
 int8_t 				ft_errors(const char *error);
 void				ft_revers_list(t_list **head);
-void				print_map(t_map *mapT);
+void				print_map(t_map *map_t);
 uint_fast32_t		ft_count_list(t_list *head);
-int8_t				checkWidthMap(t_list *head, int16_t mapW);
+int8_t				ft_check_w_map(t_list *head, int16_t map_w);
 void				ft_list_del(t_list **head);
-void				ft_remap(t_map *mapT);
-void				fixMap(t_map *mapT);
+void				ft_remap(t_map *map_t);
+void				ft_fix_map(t_map *map_t);
 void 				ft_split_del(char **head);
 //---------------------------------------------------------------------------------------------
 
 void 				ft_process(t_sdl *sdlT);
-void				Ray(t_cam *cam, t_ray *ray);
-void				Cast(t_ray *ray, t_map *mapT);
+void				ft_ray(t_cam *cam, t_ray *ray);
+void				ft_cast(t_ray *ray, t_map *map_t);
 void				ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h);
-void				setCam(t_cam *cam);
+void				ft_set_cam(t_cam *cam);
 void				drawWall(SDL_Renderer *render, uint16_t x, t_ray *ray);
-void				setTime(t_time *t);
+void				ft_set_time(t_time *t);
 void				event(t_sdl *sdl_t, t_cam *cam, t_time *time);
 
-void				ft_end(t_sdl *sdlT);
+void				ft_end(t_sdl *sdl_t);
 void				ft_print_list(t_list *head);
 void				ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x);
-void				InitRay(t_sdl *sdlT, t_cam *cam, t_ray *ray, uint16_t x);
+void				ft_init_ray(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x);
 uint32_t			ft_d_color(Uint32 in_c, t_ray *ray);
 uint32_t			ft_d_c_wall(Uint32 in_c, int y, t_ray *ray, t_map *m_t);
-void 				floorCast(t_ray *ray, t_tex *texT, t_cam *camT, t_floor *floorT);
-void				floorAdd(t_floor *floor, t_ray *ray, t_sdl *sdlT, t_cam *camT);
-void				setPixFor(SDL_PixelFormat *pFormat);
-void				setMusic(t_sdl *sdlT);
+void 				ft_floor_cast(t_ray *ray, t_tex *tex_t, t_cam *cam_t, t_floor *floor_t);
+void				ft_floor_add(t_floor *floor, t_ray *ray, t_sdl *sdl_t, t_cam *cam_t);
+void				ft_set_pix_for(SDL_PixelFormat *p_format);
+void				ft_set_music(t_sdl *sdl_t);
 void 				ft_helper(void);
-void	makeTexture(SDL_Surface **tex, t_tex *texT, SDL_Surface **menuBG);
-void	makeText(t_sdl *sdlT);
+void	ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
+void	ft_make_text(t_sdl *sdl_t);
 t_list		*ft_pars_file(int16_t fd);
-int8_t		mapping(t_map *mapT);
+int8_t		mapping(t_map *map_t);
 void	ft_move(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void	ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void	ft_audio_v(t_sdl *sdl_t);
-
+SDL_Color	ft_set_color(uint8_t red, uint8_t green, uint8_t blue);
+void		ft_flag_argv(int i, AR argv, t_arg *arg);
 
 #endif

@@ -33,13 +33,13 @@ void	drawGame(t_sdl *sdlT, t_cam *camT, t_ray *ray, t_floor *floor)
 {
 	while (sdlT->x < sdlT->m_t.pxl_s_W)
 	{
-		InitRay(sdlT, camT, ray, sdlT->x);
-		Ray(camT, ray);
-		Cast(ray, &sdlT->m_t);
+		ft_init_ray(sdlT, camT, ray, sdlT->x);
+		ft_ray(camT, ray);
+		ft_cast(ray, &sdlT->m_t);
 		ft_wall(camT, ray, sdlT->m_t.pxl_s_h);
 		ft_draw_tex_w(sdlT, camT, ray, sdlT->x);
-		floorCast(ray, &sdlT->tex_t, camT, floor);
-		floorAdd(floor, ray, sdlT, camT);
+		ft_floor_cast(ray, &sdlT->tex_t, camT, floor);
+		ft_floor_add(floor, ray, sdlT, camT);
 		sdlT->x++;
 	}
 	sdlT->pre_ren = SDL_CreateTextureFromSurface(sdlT->ren, sdlT->buffer);
@@ -48,10 +48,10 @@ void	drawGame(t_sdl *sdlT, t_cam *camT, t_ray *ray, t_floor *floor)
 
 void	preLoop(t_sdl *sdlT, t_cam *camT)
 {
-	makeTexture(sdlT->textures, &sdlT->tex_t, &sdlT->menu_bg);
-	makeText(sdlT);
-	setCam(camT);
-	setMusic(sdlT);
+	ft_make_texture(sdlT->textures, &sdlT->tex_t);
+	ft_make_text(sdlT);
+	ft_set_cam(camT);
+	ft_set_music(sdlT);
 }
 
 void 	ft_process(t_sdl *sdlT)
@@ -78,7 +78,7 @@ void 	ft_process(t_sdl *sdlT)
 		}
 		SDL_DestroyTexture(sdlT->pre_ren);
 		SDL_FreeSurface(sdlT->buffer);
-		setTime(&time);
+		ft_set_time(&time);
 		event(sdlT, &camT, &time);
 		SDL_RenderPresent(sdlT->ren);
 		SDL_RenderClear(sdlT->ren);

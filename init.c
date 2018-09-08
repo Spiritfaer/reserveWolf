@@ -1,42 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 10:44:38 by istalevs          #+#    #+#             */
+/*   Updated: 2018/09/08 10:44:39 by istalevs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/wolf3d.h"
 
-int8_t	ft_initSdl(t_sdl *sdlT)
+int8_t	ft_init_sdl(t_sdl *sdl_t)
 {
-	int8_t result;
+	int8_t	result;
 
 	result = 1;
-	sdlT->m_t.pxl_s_W = (sdlT->argv_t.flag & MAPW) ?
-							sdlT->argv_t.screen_w : (int16_t)DEF_SCREEN_WIDTH;
-	sdlT->m_t.pxl_s_h = (sdlT->argv_t.flag & MAPH) ?
-							sdlT->argv_t.screen_h : (int16_t)DEF_SCREEN_HEIGHT;
+	sdl_t->m_t.pxl_s_W = (sdl_t->argv_t.flag & MAPW) ?
+							sdl_t->argv_t.screen_w : (int16_t)DEF_SCREEN_WIDTH;
+	sdl_t->m_t.pxl_s_h = (sdl_t->argv_t.flag & MAPH) ?
+							sdl_t->argv_t.screen_h : (int16_t)DEF_SCREEN_HEIGHT;
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0 && result--)
 		ft_putendl_fd(SDL_GetError(), 2);
 	else
 	{
-		sdlT->window = SDL_CreateWindow("Doom style", 960, 400,
-			sdlT->m_t.pxl_s_W, sdlT->m_t.pxl_s_h, SDL_WINDOW_SHOWN);
-		if (!sdlT->window && result--)
+		sdl_t->window = SDL_CreateWindow("Doom style", 960, 400,
+			sdl_t->m_t.pxl_s_W, sdl_t->m_t.pxl_s_h, SDL_WINDOW_SHOWN);
+		if (!sdl_t->window && result--)
 			ft_putendl_fd(SDL_GetError(), 2);
 		else
 		{
-			sdlT->ren = SDL_CreateRenderer(sdlT->window, -1,
+			sdl_t->ren = SDL_CreateRenderer(sdl_t->window, -1,
 				SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-			sdlT->textures = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * 8);
-			sdlT->loop = 1;
-			sdlT->flag = MENU;
-			sdlT->menu_f = 0;
+			sdl_t->textures = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * 8);
 		}
 	}
 	return (result);
 }
 
-int8_t	ft_initMix(void)
+int8_t	ft_init_mix(void)
 {
-	int8_t result;
-	int initted;
+	int8_t	result;
+	int		initted;
 
 	result = 1;
-	if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0 && result--)
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0 && result--)
 		printf("SDL_mixer Error: %s\n", Mix_GetError());
 	initted = Mix_Init(MIX_INIT_MP3);
 	if ((initted & MIX_INIT_MP3) != MIX_INIT_MP3 && result--)
@@ -44,45 +53,48 @@ int8_t	ft_initMix(void)
 	return (result);
 }
 
-int8_t	ft_initTtf(t_sdl *sdlT)
+int8_t	ft_init_ttf(t_sdl *sdl_t)
 {
-	int8_t result;
+	int8_t	result;
 
 	result = 1;
 	if (TTF_Init() == -1 && result--)
 		printf("TTF_Init: %s\n", TTF_GetError());
 	else
 	{
-		sdlT->gFont = TTF_OpenFont("font/wolfenstein.ttf", 28);
-		if(sdlT->gFont == NULL && result--)
+		sdl_t->gFont = TTF_OpenFont("font/wolfenstein.ttf", 28);
+		if (sdl_t->gFont == NULL && result--)
 			printf("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
 	}
 	return (result);
 }
 
-int8_t	ft_initImg(void)
+int8_t	ft_init_img(void)
 {
-	int8_t result;
-	int imgFlags;
+	int8_t	result;
+	int		img_flags;
 
 	result = 1;
-	imgFlags = IMG_INIT_PNG;
-	if (!(IMG_Init(imgFlags) & imgFlags) && result--)
+	img_flags = IMG_INIT_PNG;
+	if (!(IMG_Init(img_flags) & img_flags) && result--)
 		ft_errors("IMG Init error!");
 	return (result);
 }
 
-int8_t 	ft_INIT(t_sdl *sdlT)
+int8_t	ft_init(t_sdl *sdl_t)
 {
-	int8_t result;
+	int8_t	result;
 
 	result = 0;
-	if (ft_initSdl(sdlT) > 0 && ++result)
-		if (ft_initTtf(sdlT) > 0 && ++result)
-			if (ft_initMix() > 0 && ++result)
-				if (ft_initImg() > 0 && ++result)
+	if (ft_init_sdl(sdl_t) > 0 && ++result)
+		if (ft_init_ttf(sdl_t) > 0 && ++result)
+			if (ft_init_mix() > 0 && ++result)
+				if (ft_init_img() > 0 && ++result)
 					;
 	if (result != 4)
 		result = 0;
+	sdl_t->loop = 1;
+	sdl_t->flag = MENU;
+	sdl_t->menu_f = 0;
 	return (result);
 }

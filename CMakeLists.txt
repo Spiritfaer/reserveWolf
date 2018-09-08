@@ -20,7 +20,7 @@ link_directories(~/.brew/Cellar/sdl2_ttf/2.0.14/lib/)
 
 set(SOURCE_FILES main.c includes/wolf3d.h
 		foo.c init.c list.c pars.c map.c renderer.c raycast.c drawing.c event.c floor.c
-		setStruct.c make.c event_control.c)
+		set_struct.c maker.c event_control.c)
 add_executable(wolf3d ${SOURCE_FILES})
 
 target_link_libraries(wolf3d -lft

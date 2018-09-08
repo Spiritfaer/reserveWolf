@@ -1,14 +1,22 @@
-//
-// Created by Igor STALEVSKIY on 8/18/18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   raycast.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 11:44:19 by istalevs          #+#    #+#             */
+/*   Updated: 2018/09/08 11:44:19 by istalevs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/wolf3d.h"
 
-void	InitRay(t_sdl *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
+void	ft_init_ray(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
 {
-	cam->cam_x = 2 * x / (double)sdlT->m_t.pxl_s_W - 1;
-	cam->r_dir.x = cam->dir.x + cam->plane.x * cam->cam_x;
-	cam->r_dir.y = cam->dir.y + cam->plane.y * cam->cam_x;
+	cam->cam_x = 2 * x / (double)sdl_t->m_t.pxl_s_W - 1;
+	cam->r_dir.x = cam->dir.x + cam->pl.x * cam->cam_x;
+	cam->r_dir.y = cam->dir.y + cam->pl.y * cam->cam_x;
 	ray->map.x = (int32_t)cam->pos.x;
 	ray->map.y = (int32_t)cam->pos.y;
 	ray->hit = 0;
@@ -17,7 +25,7 @@ void	InitRay(t_sdl *sdlT, t_cam *cam, t_ray *ray, uint16_t x)
 	ray->delt_d.y = fabs(1 / cam->r_dir.y);
 }
 
-void	Ray(t_cam *cam, t_ray *ray)
+void	ft_ray(t_cam *cam, t_ray *ray)
 {
 	if (cam->r_dir.x < 0)
 	{
@@ -41,7 +49,7 @@ void	Ray(t_cam *cam, t_ray *ray)
 	}
 }
 
-void	Cast(t_ray *ray, t_map *mapT)
+void	ft_cast(t_ray *ray, t_map *map_t)
 {
 	while (ray->hit == 0)
 	{
@@ -57,8 +65,8 @@ void	Cast(t_ray *ray, t_map *mapT)
 			ray->map.y += ray->step.y;
 			ray->side = 1;
 		}
-		if (mapT->map[ray->map.x][ray->map.y] > 0)
+		if (map_t->map[ray->map.x][ray->map.y] > 0)
 			ray->hit = 1;
 	}
-	ray->texture = mapT->map[ray->map.x][ray->map.y];
+	ray->texture = map_t->map[ray->map.x][ray->map.y];
 }

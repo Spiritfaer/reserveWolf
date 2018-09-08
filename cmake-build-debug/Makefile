@@ -339,32 +339,32 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/main.c.s
 .PHONY : main.c.s
 
-make.o: make.c.o
+maker.o: maker.c.o
 
-.PHONY : make.o
+.PHONY : maker.o
 
 # target to build an object file
-make.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.o
-.PHONY : make.c.o
+maker.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.o
+.PHONY : maker.c.o
 
-make.i: make.c.i
+maker.i: maker.c.i
 
-.PHONY : make.i
+.PHONY : maker.i
 
 # target to preprocess a source file
-make.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.i
-.PHONY : make.c.i
+maker.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.i
+.PHONY : maker.c.i
 
-make.s: make.c.s
+maker.s: maker.c.s
 
-.PHONY : make.s
+.PHONY : maker.s
 
 # target to generate assembly for a file
-make.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/make.c.s
-.PHONY : make.c.s
+maker.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.s
+.PHONY : maker.c.s
 
 map.o: map.c.o
 
@@ -474,32 +474,32 @@ renderer.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/renderer.c.s
 .PHONY : renderer.c.s
 
-setStruct.o: setStruct.c.o
+set_struct.o: set_struct.c.o
 
-.PHONY : setStruct.o
+.PHONY : set_struct.o
 
 # target to build an object file
-setStruct.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.o
-.PHONY : setStruct.c.o
+set_struct.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.o
+.PHONY : set_struct.c.o
 
-setStruct.i: setStruct.c.i
+set_struct.i: set_struct.c.i
 
-.PHONY : setStruct.i
+.PHONY : set_struct.i
 
 # target to preprocess a source file
-setStruct.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.i
-.PHONY : setStruct.c.i
+set_struct.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.i
+.PHONY : set_struct.c.i
 
-setStruct.s: setStruct.c.s
+set_struct.s: set_struct.c.s
 
-.PHONY : setStruct.s
+.PHONY : set_struct.s
 
 # target to generate assembly for a file
-setStruct.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/setStruct.c.s
-.PHONY : setStruct.c.s
+set_struct.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.s
+.PHONY : set_struct.c.s
 
 # Help Target
 help:
@@ -534,9 +534,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... make.o"
-	@echo "... make.i"
-	@echo "... make.s"
+	@echo "... maker.o"
+	@echo "... maker.i"
+	@echo "... maker.s"
 	@echo "... map.o"
 	@echo "... map.i"
 	@echo "... map.s"
@@ -549,9 +549,9 @@ help:
 	@echo "... renderer.o"
 	@echo "... renderer.i"
 	@echo "... renderer.s"
-	@echo "... setStruct.o"
-	@echo "... setStruct.i"
-	@echo "... setStruct.s"
+	@echo "... set_struct.o"
+	@echo "... set_struct.i"
+	@echo "... set_struct.s"
 .PHONY : help
 
 

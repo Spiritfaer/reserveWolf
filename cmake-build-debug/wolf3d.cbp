@@ -117,7 +117,7 @@
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/main.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/make.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/maker.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/map.c">
@@ -132,7 +132,7 @@
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/renderer.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/setStruct.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/set_struct.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.0/CMakeLists.txt">

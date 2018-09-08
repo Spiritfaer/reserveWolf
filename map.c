@@ -55,15 +55,7 @@ void		ft_remap(t_map *map_t)
 
 int8_t		ft_check_texture(int16_t map)
 {
-	if (map == TEXTURE_0)
-		return (1);
-	if (map == TEXTURE_1)
-		return (1);
-	if (map == TEXTURE_2)
-		return (1);
-	if (map == TEXTURE_3)
-		return (1);
-	if (map == TEXTURE_4)
+	if (map >= greystone && map <= pillar)
 		return (1);
 	return (0);
 }

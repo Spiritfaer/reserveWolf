@@ -21,7 +21,6 @@ int			main(int argc, AR argv)
 	{
 		if (ft_make_map(&sdl_t))
 		{
-			ft_helper();
 			ft_process(&sdl_t);
 		}
 		else
@@ -31,16 +30,6 @@ int			main(int argc, AR argv)
 		return (ft_errors("Error initSDL false!"));
 	ft_end(&sdl_t);
 	return (0);
-}
-
-void		ft_helper(void)
-{
-	ft_putendl("/-------------------  PRESS  --------------------/");
-	ft_putendl("--------------  P to poused music  ---------------");
-	ft_putendl("------  UP, DOWN, LEFT and RIGHT to moving  ------");
-	ft_putendl("-----------  W, S, A and D to moving  ------------");
-	ft_putendl("--  NUM_MIN or NUM_PLUS to change music volume  --");
-	ft_putendl("--------------  * to change track  ---------------");
 }
 
 int8_t		ft_errors(const char *error)

@@ -36,16 +36,19 @@ void		ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
 {
 	int16_t			x;
 	SDL_PixelFormat	format;
-	static char		*path[8] = {"pics/greystone.png",
+	static char		*path[TEXTURS] = {"pics/greystone.png",
 					"pics/wood.png",
 					"pics/eagle.png",
 					"pics/purplestone.png",
 					"pics/redbrick.png",
 					"pics/mossy.png",
 					"pics/bluestone.png",
-					"pics/colorstone.png"};
+					"pics/colorstone.png",
+					"sprite/barrel.png",
+					"sprite/greenlight.png",
+					"sprite/pillar.png"};
 
-	x = 7;
+	x = TEXTURS - 1;
 	ft_set_pix_for(&format);
 	while (x >= 0)
 	{

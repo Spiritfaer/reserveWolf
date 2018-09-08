@@ -23,6 +23,7 @@
 # define DEF_SCREEN_WIDTH 1440
 # define DEF_SCREEN_HEIGHT 840
 # define AR const char**
+# define TEXTURS 11
 
 # define MAPN 0x000001
 # define MAPW 0x000002
@@ -32,11 +33,8 @@
 # define GAME 0x000002
 # define HELP 0x000004
 
-# define TEXTURE_0 0
-# define TEXTURE_1 1
-# define TEXTURE_2 2
-# define TEXTURE_3 3
-# define TEXTURE_4 4
+enum textures {greystone, wood, eagle, purplestone, redbrick,
+	mossy, bluestone, colorstone, barrel, greenlight, pillar};
 
 # include "libft.h"
 # include <stdbool.h>

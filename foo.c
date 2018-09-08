@@ -30,7 +30,7 @@ void	print_arg(t_arg ar)
 		printf("Height -\n");
 }
 
-void	print_map(t_map *map_t)
+void	ft_print_map(t_map *map_t)
 {
 	t_v2i	i;
 

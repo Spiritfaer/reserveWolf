@@ -17,7 +17,7 @@ int8_t	ft_init_sdl(t_sdl *sdl_t)
 	int8_t	result;
 
 	result = 1;
-	sdl_t->m_t.pxl_s_W = (sdl_t->argv_t.flag & MAPW) ?
+	sdl_t->m_t.pxl_s_w = (sdl_t->argv_t.flag & MAPW) ?
 							sdl_t->argv_t.screen_w : (int16_t)DEF_SCREEN_WIDTH;
 	sdl_t->m_t.pxl_s_h = (sdl_t->argv_t.flag & MAPH) ?
 							sdl_t->argv_t.screen_h : (int16_t)DEF_SCREEN_HEIGHT;
@@ -26,7 +26,7 @@ int8_t	ft_init_sdl(t_sdl *sdl_t)
 	else
 	{
 		sdl_t->window = SDL_CreateWindow("Doom style", 960, 400,
-			sdl_t->m_t.pxl_s_W, sdl_t->m_t.pxl_s_h, SDL_WINDOW_SHOWN);
+			sdl_t->m_t.pxl_s_w, sdl_t->m_t.pxl_s_h, SDL_WINDOW_SHOWN);
 		if (!sdl_t->window && result--)
 			ft_putendl_fd(SDL_GetError(), 2);
 		else
@@ -62,8 +62,8 @@ int8_t	ft_init_ttf(t_sdl *sdl_t)
 		printf("TTF_Init: %s\n", TTF_GetError());
 	else
 	{
-		sdl_t->gFont = TTF_OpenFont("font/wolfenstein.ttf", 28);
-		if (sdl_t->gFont == NULL && result--)
+		sdl_t->g_font = TTF_OpenFont("font/wolfenstein.ttf", 28);
+		if (sdl_t->g_font == NULL && result--)
 			printf("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
 	}
 	return (result);

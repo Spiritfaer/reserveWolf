@@ -14,7 +14,7 @@
 
 void	ft_init_ray(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
 {
-	cam->cam_x = 2 * x / (double)sdl_t->m_t.pxl_s_W - 1;
+	cam->cam_x = 2 * x / (double)sdl_t->m_t.pxl_s_w - 1;
 	cam->r_dir.x = cam->dir.x + cam->pl.x * cam->cam_x;
 	cam->r_dir.y = cam->dir.y + cam->pl.y * cam->cam_x;
 	ray->map.x = (int32_t)cam->pos.x;

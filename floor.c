@@ -40,10 +40,10 @@ void	ft_floor_drawing(t_sdl *sdl_t, t_floor *floor, t_ray *ray, int32_t y)
 {
 	sdl_t->tex_t.pixel = (uint32_t*)sdl_t->textures[0]->pixels;
 	sdl_t->color = (uint32_t)sdl_t->tex_t.pixel
-		[(sdl_t->tex_t.tex_h * floor->f_tex.y + floor->f_tex.x)];
+		[(sdl_t->tex_t.twh.y * floor->f_tex.y + floor->f_tex.x)];
 	sdl_t->color = ft_d_c_wall(sdl_t->color, y, ray, &sdl_t->m_t);
-	sdl_t->tex_t.pixel2[sdl_t->m_t.pxl_s_W * y + sdl_t->x] = sdl_t->color;
-	sdl_t->tex_t.pixel2[(sdl_t->m_t.pxl_s_h - y) * sdl_t->m_t.pxl_s_W
+	sdl_t->tex_t.pixel2[sdl_t->m_t.pxl_s_w * y + sdl_t->x] = sdl_t->color;
+	sdl_t->tex_t.pixel2[(sdl_t->m_t.pxl_s_h - y) * sdl_t->m_t.pxl_s_w
 						+ sdl_t->x] = sdl_t->color;
 }
 
@@ -63,10 +63,10 @@ void	ft_floor_add(t_floor *floor, t_ray *ray, t_sdl *sdl_t, t_cam *cam_t)
 							+ (1.0 - floor->weight) * cam_t->pos.x;
 		floor->f_cur.y = floor->weight * floor->f_wall.y
 							+ (1.0 - floor->weight) * cam_t->pos.y;
-		floor->f_tex.x = (int)(floor->f_cur.x * sdl_t->tex_t.tex_w)
-							% sdl_t->tex_t.tex_w;
-		floor->f_tex.y = (int)(floor->f_cur.y * sdl_t->tex_t.tex_h)
-							% sdl_t->tex_t.tex_h;
+		floor->f_tex.x = (int)(floor->f_cur.x * sdl_t->tex_t.twh.x)
+							% sdl_t->tex_t.twh.x;
+		floor->f_tex.y = (int)(floor->f_cur.y * sdl_t->tex_t.twh.y)
+							% sdl_t->tex_t.twh.y;
 		ft_floor_drawing(sdl_t, floor, ray, y);
 		y++;
 	}

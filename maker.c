@@ -54,8 +54,8 @@ void		ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
 	}
 	tex_t->pixel = NULL;
 	tex_t->pixel2 = NULL;
-	tex_t->tex_w = 64;
-	tex_t->tex_h = 64;
+	tex_t->twh.x = 64;
+	tex_t->twh.y = 64;
 }
 
 void		ft_set_w(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
@@ -72,7 +72,7 @@ void		ft_set_w(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 		tmp = TTF_RenderText_Blended(f, str[i], black);
 		TTF_SizeText(f, str[i], &sdl_t->wrds[i].r_q.w, &sdl_t->wrds[i].r_q.h);
 		sdl_t->wrds[i].r_q.y = 200 + i * 100;
-		sdl_t->wrds[i].r_q.x = (int)((sdl_t->m_t.pxl_s_W / 4) * 2.5);
+		sdl_t->wrds[i].r_q.x = (int)((sdl_t->m_t.pxl_s_w / 4) * 2.5);
 		sdl_t->wrds[i].bl = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
 		SDL_FreeSurface(tmp);
 		tmp = TTF_RenderText_Blended(f, str[i], red);
@@ -100,7 +100,7 @@ void		ft_make_text(t_sdl *sdl_t)
 	sdl_t->wrds[3].bl = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
 	sdl_t->wrds[3].r_q.y = (int)(sdl_t->m_t.pxl_s_h / 2.5)
 						- sdl_t->wrds[3].r_q.h / 2;
-	sdl_t->wrds[3].r_q.x = (int)(sdl_t->m_t.pxl_s_W / 3.2)
+	sdl_t->wrds[3].r_q.x = (int)(sdl_t->m_t.pxl_s_w / 3.2)
 						- sdl_t->wrds[3].r_q.w / 2;
 	SDL_FreeSurface(tmp);
 	TTF_CloseFont(g_font);
@@ -122,7 +122,7 @@ int8_t		ft_make_map(t_sdl *sdl_t)
 			sdl_t->m_t.head = ft_pars_file(fd);
 	}
 	ft_revers_list(&sdl_t->m_t.head);
-	if (!mapping(&sdl_t->m_t))
+	if (!ft_mapping(&sdl_t->m_t))
 		return (0);
 	close(fd);
 	return (1);

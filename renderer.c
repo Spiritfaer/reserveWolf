@@ -1,86 +1,91 @@
-//
-// Created by Igor STALEVSKIY on 8/17/18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   renderer.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 11:51:23 by istalevs          #+#    #+#             */
+/*   Updated: 2018/09/08 11:51:24 by istalevs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/wolf3d.h"
 
-void	drawMenu(t_sdl *sdlT)
+void	ft_draw_menu(t_sdl *sdl)
 {
-	SDL_SetRenderDrawColor(sdlT->ren, 0xFF, 0xFF, 0xFF, 0);
-	SDL_RenderClear(sdlT->ren);
-	SDL_RenderCopy(sdlT->ren, sdlT->pre_ren, 0, 0);
-	SDL_RenderCopy(sdlT->ren, sdlT->wrds[3].bl, NULL, &sdlT->wrds[3].r_q);
-	if (sdlT->menu_f == 0)
+	SDL_SetRenderDrawColor(sdl->ren, 0xFF, 0xFF, 0xFF, 0);
+	SDL_RenderClear(sdl->ren);
+	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
+	SDL_RenderCopy(sdl->ren, sdl->wrds[3].bl, NULL, &sdl->wrds[3].r_q);
+	if (sdl->menu_f == 0)
 	{
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[0].bl, NULL, &sdlT->wrds[0].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[1].red, NULL, &sdlT->wrds[1].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[2].red, NULL, &sdlT->wrds[2].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[0].bl, NULL, &sdl->wrds[0].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[1].red, NULL, &sdl->wrds[1].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[2].red, NULL, &sdl->wrds[2].r_q);
 	}
-	else if (sdlT->menu_f == 1)
+	else if (sdl->menu_f == 1)
 	{
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[0].red, NULL, &sdlT->wrds[0].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[1].bl, NULL, &sdlT->wrds[1].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[2].red, NULL, &sdlT->wrds[2].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[0].red, NULL, &sdl->wrds[0].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[1].bl, NULL, &sdl->wrds[1].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[2].red, NULL, &sdl->wrds[2].r_q);
 	}
-	else if (sdlT->menu_f == 2)
+	else if (sdl->menu_f == 2)
 	{
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[0].red, NULL, &sdlT->wrds[0].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[1].red, NULL, &sdlT->wrds[1].r_q);
-		SDL_RenderCopy(sdlT->ren, sdlT->wrds[2].bl, NULL, &sdlT->wrds[2].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[0].red, NULL, &sdl->wrds[0].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[1].red, NULL, &sdl->wrds[1].r_q);
+		SDL_RenderCopy(sdl->ren, sdl->wrds[2].bl, NULL, &sdl->wrds[2].r_q);
 	}
 }
 
-void	drawGame(t_sdl *sdlT, t_cam *camT, t_ray *ray, t_floor *floor)
+void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 {
-	while (sdlT->x < sdlT->m_t.pxl_s_W)
+	while (sdl->x < sdl->m_t.pxl_s_w)
 	{
-		ft_init_ray(sdlT, camT, ray, sdlT->x);
-		ft_ray(camT, ray);
-		ft_cast(ray, &sdlT->m_t);
-		ft_wall(camT, ray, sdlT->m_t.pxl_s_h);
-		ft_draw_tex_w(sdlT, camT, ray, sdlT->x);
-		ft_floor_cast(ray, &sdlT->tex_t, camT, floor);
-		ft_floor_add(floor, ray, sdlT, camT);
-		sdlT->x++;
+		ft_init_ray(sdl, cam, ray, sdl->x);
+		ft_ray(cam, ray);
+		ft_cast(ray, &sdl->m_t);
+		ft_wall(cam, ray, sdl->m_t.pxl_s_h);
+		ft_draw_tex_w(sdl, cam, ray, sdl->x);
+		ft_floor_cast(ray, &sdl->tex_t, cam, floor);
+		ft_floor_add(floor, ray, sdl, cam);
+		sdl->x++;
 	}
-	sdlT->pre_ren = SDL_CreateTextureFromSurface(sdlT->ren, sdlT->buffer);
-	SDL_RenderCopy(sdlT->ren, sdlT->pre_ren, 0, 0);
+	sdl->pre_ren = SDL_CreateTextureFromSurface(sdl->ren, sdl->buffer);
+	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
 }
 
-void	preLoop(t_sdl *sdlT, t_cam *camT)
+void	ft_pre_loop(t_sdl *sdl, t_cam *cam)
 {
-	ft_make_texture(sdlT->textures, &sdlT->tex_t);
-	ft_make_text(sdlT);
-	ft_set_cam(camT);
-	ft_set_music(sdlT);
+	ft_make_texture(sdl->textures, &sdl->tex_t);
+	ft_make_text(sdl);
+	ft_set_cam(cam);
+	ft_set_music(sdl);
 }
 
-void 	ft_process(t_sdl *sdlT)
+void	ft_process(t_sdl *sdl)
 {
-	t_cam camT;
-	t_ray ray;
-	t_time time;
-	t_floor floor;
+	t_cam	cam;
+	t_ray	ray;
+	t_time	time;
+	t_floor	floor;
 
-	preLoop(sdlT, &camT);
-	while (sdlT->loop)
+	ft_pre_loop(sdl, &cam);
+	while (sdl->loop)
 	{
-		sdlT->buffer = SDL_CreateRGBSurface(0,
-			sdlT->m_t.pxl_s_W, sdlT->m_t.pxl_s_h, 32, 0, 0, 0, 0);
-		sdlT->tex_t.pixel2 = sdlT->buffer->pixels;
-		sdlT->x = 0;
-		if (sdlT->flag & MENU)
-		{
-			drawMenu(sdlT);
-		}
-		else if (sdlT->flag & GAME)
-		{
-			drawGame(sdlT, &camT, &ray, &floor);
-		}
-		SDL_DestroyTexture(sdlT->pre_ren);
-		SDL_FreeSurface(sdlT->buffer);
+		sdl->buffer = SDL_CreateRGBSurface(0,
+			sdl->m_t.pxl_s_w, sdl->m_t.pxl_s_h, 32, 0, 0, 0, 0);
+		sdl->tex_t.pixel2 = sdl->buffer->pixels;
+		sdl->x = 0;
+		if (sdl->flag & MENU)
+			ft_draw_menu(sdl);
+		else if (sdl->flag & GAME)
+			ft_draw_game(sdl, &cam, &ray, &floor);
+		SDL_DestroyTexture(sdl->pre_ren);
+		SDL_FreeSurface(sdl->buffer);
 		ft_set_time(&time);
-		event(sdlT, &camT, &time);
-		SDL_RenderPresent(sdlT->ren);
-		SDL_RenderClear(sdlT->ren);
+		event(sdl, &cam, &time);
+		SDL_RenderPresent(sdl->ren);
+		SDL_RenderClear(sdl->ren);
 	}
 }

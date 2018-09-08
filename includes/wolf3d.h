@@ -27,8 +27,10 @@
 # define MAPN 0x000001
 # define MAPW 0x000002
 # define MAPH 0x000004
+
 # define MENU 0x000001
 # define GAME 0x000002
+# define HELP 0x000004
 
 # define TEXTURE_0 0
 # define TEXTURE_1 1
@@ -170,7 +172,7 @@ typedef struct		s_sdl
 	int32_t			flag;
 	SDL_Surface		*menu_bg;
 	TTF_Font		*g_font;
-	t_text			wrds[4];
+	t_text			wrds[10];
 	int16_t			menu_f;
 }					t_sdl;
 
@@ -218,5 +220,6 @@ void				ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void				ft_audio_v(t_sdl *sdl_t);
 SDL_Color			ft_set_color(uint8_t red, uint8_t green, uint8_t blue);
 void				ft_flag_argv(int i, AR argv, t_arg *arg);
+t_list				*ft_smooth(t_list **head);
 
 #endif

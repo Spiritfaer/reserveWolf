@@ -65,7 +65,7 @@ void		ft_set_w(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 	int16_t		i;
 
 	black = ft_set_color(0, 0, 0);
-	red = ft_set_color(200, 0, 0);
+	red = ft_set_color(150, 0, 0);
 	i = 0;
 	while (i < 3)
 	{
@@ -82,9 +82,40 @@ void		ft_set_w(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 	}
 }
 
+void		ft_set_hlp(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
+{
+	SDL_Color	black;
+	SDL_Color	red;
+	int16_t		i;
+	int16_t		k;
+
+	black = ft_set_color(0, 0, 0);
+	red = ft_set_color(150, 0, 0);
+	i = 4;
+	k = 0;
+	while (i < 10)
+	{
+		tmp = TTF_RenderText_Blended(f, str[i], black);
+		TTF_SizeText(f, str[i], &sdl_t->wrds[i].r_q.w, &sdl_t->wrds[i].r_q.h);
+		sdl_t->wrds[i].r_q.y = sdl_t->wrds[i].r_q.h + k * 100;
+		sdl_t->wrds[i].r_q.x = (sdl_t->m_t.pxl_s_w / 2)
+								- sdl_t->wrds[i].r_q.w / 2;
+		sdl_t->wrds[i].bl = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
+		SDL_FreeSurface(tmp);
+		tmp = TTF_RenderText_Blended(f, str[i], red);
+		sdl_t->wrds[i].red = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
+		SDL_FreeSurface(tmp);
+		i++;
+		k++;
+	}
+}
+
 void		ft_make_text(t_sdl *sdl_t)
 {
-	static char	*str[] = {"START GAME", "SETTINGS", "QUIT"};
+	static char	*str[] = {"START GAME", "HELP", "QUIT", "PRESS",
+	"P to poused music", "UP, DOWN, LEFT and RIGHT to moving",
+	"W, S, A and D to moving", "NUM-MIN or NUM-PLUS to change music volume",
+	"O to change track", "BACK TO MENU"};
 	static char	*font = "font/wolfenstein.ttf";
 	SDL_Surface *tmp;
 	TTF_Font	*g_font;
@@ -94,7 +125,8 @@ void		ft_make_text(t_sdl *sdl_t)
 	g_font = TTF_OpenFont(font, 88);
 	g_font_big = TTF_OpenFont(font, 150);
 	ft_set_w(sdl_t, g_font, tmp, str);
-	tmp = TTF_RenderText_Blended(g_font, "_%", ft_set_color(200, 0, 0));
+	ft_set_hlp(sdl_t, g_font, tmp, str);
+	tmp = TTF_RenderText_Blended(g_font, "_%", ft_set_color(150, 0, 0));
 	TTF_SizeText(g_font_big, "_%",
 				&sdl_t->wrds[3].r_q.w, &sdl_t->wrds[3].r_q.h);
 	sdl_t->wrds[3].bl = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
@@ -105,25 +137,4 @@ void		ft_make_text(t_sdl *sdl_t)
 	SDL_FreeSurface(tmp);
 	TTF_CloseFont(g_font);
 	TTF_CloseFont(g_font_big);
-}
-
-int8_t		ft_make_map(t_sdl *sdl_t)
-{
-	int16_t	fd;
-
-	if (!(sdl_t->argv_t.flag & MAPN))
-		return (ft_errors("error m_t flag"));
-	else
-	{
-		fd = (int16_t)open(sdl_t->argv_t.map_name, O_RDONLY);
-		if (fd < 1)
-			return (ft_errors("error fd"));
-		else
-			sdl_t->m_t.head = ft_pars_file(fd);
-	}
-	ft_revers_list(&sdl_t->m_t.head);
-	if (!ft_mapping(&sdl_t->m_t))
-		return (0);
-	close(fd);
-	return (1);
 }

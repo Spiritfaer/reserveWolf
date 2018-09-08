@@ -16,7 +16,6 @@ void	ft_draw_menu(t_sdl *sdl)
 {
 	SDL_SetRenderDrawColor(sdl->ren, 0xFF, 0xFF, 0xFF, 0);
 	SDL_RenderClear(sdl->ren);
-	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
 	SDL_RenderCopy(sdl->ren, sdl->wrds[3].bl, NULL, &sdl->wrds[3].r_q);
 	if (sdl->menu_f == 0)
 	{
@@ -63,6 +62,21 @@ void	ft_pre_loop(t_sdl *sdl, t_cam *cam)
 	ft_set_music(sdl);
 }
 
+void	ft_draw_help(t_sdl *sdl)
+{
+	int	i;
+
+	i = 4;
+	SDL_SetRenderDrawColor(sdl->ren, 0xFF, 0xFF, 0xFF, 0);
+	SDL_RenderClear(sdl->ren);
+	while (i < 9)
+	{
+		SDL_RenderCopy(sdl->ren, sdl->wrds[i].red, NULL, &sdl->wrds[i].r_q);
+		i++;
+	}
+	SDL_RenderCopy(sdl->ren, sdl->wrds[i].bl, NULL, &sdl->wrds[i].r_q);
+}
+
 void	ft_process(t_sdl *sdl)
 {
 	t_cam	cam;
@@ -79,6 +93,8 @@ void	ft_process(t_sdl *sdl)
 		sdl->x = 0;
 		if (sdl->flag & MENU)
 			ft_draw_menu(sdl);
+		else if (sdl->flag & HELP)
+			ft_draw_help(sdl);
 		else if (sdl->flag & GAME)
 			ft_draw_game(sdl, &cam, &ray, &floor);
 		SDL_DestroyTexture(sdl->pre_ren);

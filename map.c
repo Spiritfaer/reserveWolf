@@ -12,18 +12,6 @@
 
 #include "includes/wolf3d.h"
 
-t_list		*ft_smooth(t_list **head)
-{
-	t_list *next;
-
-	next = (*head)->next;
-	if ((*head)->content)
-		free((*head)->content);
-	(*head)->content_size = 0;
-	free(*head);
-	return (next);
-}
-
 int8_t		ft_check_w_map(t_list *head, int16_t map_w)
 {
 	t_list	*tmp;
@@ -104,4 +92,25 @@ void		ft_fix_map(t_map *map_t)
 		}
 		i.y++;
 	}
+}
+
+int8_t		ft_make_map(t_sdl *sdl_t)
+{
+	int16_t	fd;
+
+	if (!(sdl_t->argv_t.flag & MAPN))
+		return (ft_errors("error m_t flag"));
+	else
+	{
+		fd = (int16_t)open(sdl_t->argv_t.map_name, O_RDONLY);
+		if (fd < 1)
+			return (ft_errors("error fd"));
+		else
+			sdl_t->m_t.head = ft_pars_file(fd);
+	}
+	ft_revers_list(&sdl_t->m_t.head);
+	if (!ft_mapping(&sdl_t->m_t))
+		return (0);
+	close(fd);
+	return (1);
 }

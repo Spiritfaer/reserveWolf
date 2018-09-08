@@ -12,7 +12,7 @@
 
 #include "includes/wolf3d.h"
 
-void	print_arg(t_arg ar)
+void		print_arg(t_arg ar)
 {
 	printf("m_t - %s\nWidth - %d\nHeight - %d\n",
 			ar.map_name, ar.screen_w, ar.screen_h);
@@ -30,7 +30,7 @@ void	print_arg(t_arg ar)
 		printf("Height -\n");
 }
 
-void	ft_print_map(t_map *map_t)
+void		ft_print_map(t_map *map_t)
 {
 	t_v2i	i;
 
@@ -47,4 +47,16 @@ void	ft_print_map(t_map *map_t)
 		printf("\n");
 		i.y++;
 	}
+}
+
+t_list		*ft_smooth(t_list **head)
+{
+	t_list *next;
+
+	next = (*head)->next;
+	if ((*head)->content)
+		free((*head)->content);
+	(*head)->content_size = 0;
+	free(*head);
+	return (next);
 }

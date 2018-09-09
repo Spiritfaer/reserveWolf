@@ -33,7 +33,7 @@ int8_t	ft_init_sdl(t_sdl *sdl_t)
 		{
 			sdl_t->ren = SDL_CreateRenderer(sdl_t->window, -1,
 				SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-			sdl_t->textures = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * TEXTURS);
+			sdl_t->txtr = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * TEXTURS);
 		}
 	}
 	return (result);
@@ -94,7 +94,7 @@ int8_t	ft_init(t_sdl *sdl_t)
 	if (result != 4)
 		result = 0;
 	sdl_t->loop = 1;
-	sdl_t->flag = GAME;
+	sdl_t->flag = MENU;
 	sdl_t->menu_f = 0;
 	sdl_t->m_t.sprit_num = 0;
 	return (result);

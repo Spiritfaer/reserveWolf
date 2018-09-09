@@ -417,6 +417,54 @@ CMakeFiles/wolf3d.dir/sprite.c.o.provides: CMakeFiles/wolf3d.dir/sprite.c.o.requ
 CMakeFiles/wolf3d.dir/sprite.c.o.provides.build: CMakeFiles/wolf3d.dir/sprite.c.o
 
 
+CMakeFiles/wolf3d.dir/event_mix.c.o: CMakeFiles/wolf3d.dir/flags.make
+CMakeFiles/wolf3d.dir/event_mix.c.o: ../event_mix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/wolf3d.dir/event_mix.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/event_mix.c.o   -c /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c
+
+CMakeFiles/wolf3d.dir/event_mix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wolf3d.dir/event_mix.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c > CMakeFiles/wolf3d.dir/event_mix.c.i
+
+CMakeFiles/wolf3d.dir/event_mix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wolf3d.dir/event_mix.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c -o CMakeFiles/wolf3d.dir/event_mix.c.s
+
+CMakeFiles/wolf3d.dir/event_mix.c.o.requires:
+
+.PHONY : CMakeFiles/wolf3d.dir/event_mix.c.o.requires
+
+CMakeFiles/wolf3d.dir/event_mix.c.o.provides: CMakeFiles/wolf3d.dir/event_mix.c.o.requires
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.o.provides.build
+.PHONY : CMakeFiles/wolf3d.dir/event_mix.c.o.provides
+
+CMakeFiles/wolf3d.dir/event_mix.c.o.provides.build: CMakeFiles/wolf3d.dir/event_mix.c.o
+
+
+CMakeFiles/wolf3d.dir/checks.c.o: CMakeFiles/wolf3d.dir/flags.make
+CMakeFiles/wolf3d.dir/checks.c.o: ../checks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/wolf3d.dir/checks.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/checks.c.o   -c /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c
+
+CMakeFiles/wolf3d.dir/checks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wolf3d.dir/checks.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c > CMakeFiles/wolf3d.dir/checks.c.i
+
+CMakeFiles/wolf3d.dir/checks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wolf3d.dir/checks.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c -o CMakeFiles/wolf3d.dir/checks.c.s
+
+CMakeFiles/wolf3d.dir/checks.c.o.requires:
+
+.PHONY : CMakeFiles/wolf3d.dir/checks.c.o.requires
+
+CMakeFiles/wolf3d.dir/checks.c.o.provides: CMakeFiles/wolf3d.dir/checks.c.o.requires
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.o.provides.build
+.PHONY : CMakeFiles/wolf3d.dir/checks.c.o.provides
+
+CMakeFiles/wolf3d.dir/checks.c.o.provides.build: CMakeFiles/wolf3d.dir/checks.c.o
+
+
 # Object files for target wolf3d
 wolf3d_OBJECTS = \
 "CMakeFiles/wolf3d.dir/main.c.o" \
@@ -433,7 +481,9 @@ wolf3d_OBJECTS = \
 "CMakeFiles/wolf3d.dir/set_struct.c.o" \
 "CMakeFiles/wolf3d.dir/maker.c.o" \
 "CMakeFiles/wolf3d.dir/event_control.c.o" \
-"CMakeFiles/wolf3d.dir/sprite.c.o"
+"CMakeFiles/wolf3d.dir/sprite.c.o" \
+"CMakeFiles/wolf3d.dir/event_mix.c.o" \
+"CMakeFiles/wolf3d.dir/checks.c.o"
 
 # External object files for target wolf3d
 wolf3d_EXTERNAL_OBJECTS =
@@ -453,9 +503,11 @@ wolf3d: CMakeFiles/wolf3d.dir/set_struct.c.o
 wolf3d: CMakeFiles/wolf3d.dir/maker.c.o
 wolf3d: CMakeFiles/wolf3d.dir/event_control.c.o
 wolf3d: CMakeFiles/wolf3d.dir/sprite.c.o
+wolf3d: CMakeFiles/wolf3d.dir/event_mix.c.o
+wolf3d: CMakeFiles/wolf3d.dir/checks.c.o
 wolf3d: CMakeFiles/wolf3d.dir/build.make
 wolf3d: CMakeFiles/wolf3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable wolf3d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable wolf3d"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wolf3d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -478,6 +530,8 @@ CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/set_struct.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/maker.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/event_control.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/sprite.c.o.requires
+CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/event_mix.c.o.requires
+CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/checks.c.o.requires
 
 .PHONY : CMakeFiles/wolf3d.dir/requires
 

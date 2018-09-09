@@ -71,7 +71,7 @@ typedef struct		s_v2i
 typedef struct		s_spr
 {
 	t_v2d			p;
-	int16_t			texture;
+	int16_t			nm_t;
 	double			dist;
 }					t_spr;
 
@@ -139,9 +139,9 @@ typedef struct		s_tex
 	int32_t			d;
 	t_v2i			txy;
 	t_v2i			twh;
-	uint32_t		*pixel;
-	uint32_t		*pixel2;
-	uint32_t		*pixel3;
+	uint32_t		*pxl;
+	uint32_t		*pxl2;
+	uint32_t		*pxl3;
 }					t_tex;
 
 typedef struct		s_text
@@ -153,15 +153,15 @@ typedef struct		s_text
 
 typedef struct		s_sp
 {
-	t_v2d			sprite;
-	t_v2d			transform;
-	t_v2i			drawstart;
-	t_v2i			drawend;
+	t_v2d			sp;
+	t_v2d			trform;
+	t_v2i			dr_start;
+	t_v2i			dr_end;
 	t_v2i			tex;
 	double			invDet;
-	int				spriteScreenX;
-	int				spriteHeight;
-	int				spriteWidth;
+	int				sp_scr_x;
+	int				sp_h;
+	int				sp_w;
 	int				y;
 	int				d;
 	int				i;
@@ -174,7 +174,7 @@ typedef struct		s_sdl
 	SDL_Renderer	*ren;
 	SDL_Event		event;
 	const uint8_t	*cur_key;
-	SDL_Surface		**textures;
+	SDL_Surface		**txtr;
 	t_tex			tex_t;
 	int8_t			loop;
 	t_arg			argv_t;
@@ -192,7 +192,7 @@ typedef struct		s_sdl
 	TTF_Font		*g_font;
 	t_text			wrds[10];
 	int16_t			menu_f;
-	t_spr			sprite[MAXSPL];
+	t_spr			sp[MAXSPL];
 	double			z_buff[2048];
 }					t_sdl;
 
@@ -244,5 +244,11 @@ t_list				*ft_smooth(t_list **head);
 int8_t				ft_check_sprite(int16_t wall);
 void				ft_sort(void **sorted, int16_t size);
 void				ft_spline(t_sdl *sdl, t_cam *cam);
+void				ft_audio_s(t_sdl *sdl_t);
+int8_t				ft_check_texture(int16_t wall);
+
+
+
+
 
 #endif

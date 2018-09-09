@@ -57,7 +57,7 @@ void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 
 void	ft_pre_loop(t_sdl *sdl, t_cam *cam)
 {
-	ft_make_texture(sdl->textures, &sdl->tex_t);
+	ft_make_texture(sdl->txtr, &sdl->tex_t);
 	ft_make_text(sdl);
 	ft_set_cam(cam);
 	ft_set_music(sdl);
@@ -90,7 +90,7 @@ void	ft_process(t_sdl *sdl)
 	{
 		sdl->buffer = SDL_CreateRGBSurface(0,
 			sdl->m_t.pxl_s_w, sdl->m_t.pxl_s_h, 32, 0, 0, 0, 0);
-		sdl->tex_t.pixel2 = sdl->buffer->pixels;
+		sdl->tex_t.pxl2 = sdl->buffer->pixels;
 		sdl->x = 0;
 		if (sdl->flag & MENU)
 			ft_draw_menu(sdl);

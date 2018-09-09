@@ -55,8 +55,8 @@ void		ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
 		tex[x] = ft_load_texture(path[x], &format);
 		x--;
 	}
-	tex_t->pixel = NULL;
-	tex_t->pixel2 = NULL;
+	tex_t->pxl = NULL;
+	tex_t->pxl2 = NULL;
 	tex_t->twh.x = 64;
 	tex_t->twh.y = 64;
 }

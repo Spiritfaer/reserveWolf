@@ -90,6 +90,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c">
+			<Option target="wolf3d"/>
+		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c">
 			<Option target="wolf3d"/>
 		</Unit>
@@ -97,6 +100,9 @@
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c">

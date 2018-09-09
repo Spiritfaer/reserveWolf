@@ -81,7 +81,8 @@ void		ft_dop_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray)
 	else
 		sdl_t->tex_t.wall_x = cam->pos.x + ray->pwd * cam->r_dir.x;
 	sdl_t->tex_t.wall_x -= floor((sdl_t->tex_t.wall_x));
-	sdl_t->tex_t.txy.x = (int)(sdl_t->tex_t.wall_x * (double)sdl_t->tex_t.twh.x);
+	sdl_t->tex_t.txy.x = (int)(sdl_t->tex_t.wall_x
+						* (double)sdl_t->tex_t.twh.x);
 	if (ray->side == 0 && cam->r_dir.x > 0)
 		sdl_t->tex_t.txy.x = sdl_t->tex_t.twh.x - sdl_t->tex_t.txy.x - 1;
 	if (ray->side == 1 && cam->r_dir.y < 0)
@@ -99,18 +100,18 @@ void		ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
 	while (y < ray->wall.draw_end)
 	{
 		if (ft_check_sprite(ray->texture))
-			return;
-		sdl_t->tex_t.d = y * 256 - sdl_t->m_t.pxl_s_h * 128 + ray->wall.line_h * 128;
-		sdl_t->tex_t.txy.y = ((sdl_t->tex_t.d * sdl_t->tex_t.twh.x) / ray->wall.line_h) / 256;
-		sdl_t->tex_t.pixel = (uint32_t*)sdl_t->textures[ray->texture]->pixels;
-
-		color = (uint32_t)sdl_t->tex_t.pixel[(sdl_t->tex_t.twh.y * sdl_t->tex_t.txy.y + sdl_t->tex_t.txy.x)];
+			return ;
+		sdl_t->tex_t.d = y * 256 - sdl_t->m_t.pxl_s_h
+							* 128 + ray->wall.line_h * 128;
+		sdl_t->tex_t.txy.y = ((sdl_t->tex_t.d * sdl_t->tex_t.twh.x)
+							/ ray->wall.line_h) / 256;
+		sdl_t->tex_t.pxl = (uint32_t*)sdl_t->txtr[ray->texture]->pixels;
+		color = (uint32_t)sdl_t->tex_t.pxl[(sdl_t->tex_t.twh.y
+							* sdl_t->tex_t.txy.y + sdl_t->tex_t.txy.x)];
 		color = ft_d_color(color, ray);
-
 		if (ray->side == 1)
 			color = (color >> 1) & 8355711;
-
-		sdl_t->tex_t.pixel2[sdl_t->m_t.pxl_s_w * y + x] = color;
+		sdl_t->tex_t.pxl2[sdl_t->m_t.pxl_s_w * y + x] = color;
 		y++;
 	}
 }

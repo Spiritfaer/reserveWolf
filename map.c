@@ -12,20 +12,6 @@
 
 #include "includes/wolf3d.h"
 
-int8_t		ft_check_w_map(t_list *head, int16_t map_w)
-{
-	t_list	*tmp;
-
-	tmp = head;
-	while (tmp)
-	{
-		if (map_w != (int16_t)ft_splitter(tmp->content, ' '))
-			return (ft_errors("error incorect map_w!\n"));
-		tmp = tmp->next;
-	}
-	return (1);
-}
-
 void		ft_remap(t_map *map_t)
 {
 	char	**str;
@@ -53,18 +39,18 @@ void		ft_remap(t_map *map_t)
 	}
 }
 
-int8_t		ft_check_texture(int16_t wall)
+void		init_sprit(t_map *map_t, t_v2i i, t_spr *sprite)
 {
-	if (wall >= greystone && wall <= pillar)
-		return (1);
-	return (0);
-}
-
-int8_t		ft_check_sprite(int16_t wall)
-{
-	if (wall >= barrel && wall <= pillar)
-		return (1);
-	return (0);
+	if (map_t->sprit_num >= MAXSPL)
+		map_t->map[i.y][i.x] = 0;
+	else
+	{
+		sprite[map_t->sprit_num].p.x = i.y + 0.5;
+		sprite[map_t->sprit_num].p.y = i.x + 0.5;
+		sprite[map_t->sprit_num].nm_t = map_t->map[i.y][i.x];
+		map_t->map[i.y][i.x] = 0;
+	}
+	map_t->sprit_num++;
 }
 
 void		ft_fix_map(t_map *map_t, t_spr *sprite)
@@ -88,18 +74,7 @@ void		ft_fix_map(t_map *map_t, t_spr *sprite)
 			if (i.x == 0 || i.x == map_t->map_w - 1)
 				map_t->map[i.y][i.x] = 1;
 			if (ft_check_sprite(map_t->map[i.y][i.x]))
-			{
-				if (map_t->sprit_num >= MAXSPL)
-					map_t->map[i.y][i.x] = 0;
-				else
-				{
-					sprite[map_t->sprit_num].p.x = i.y + 0.5;
-					sprite[map_t->sprit_num].p.y = i.x + 0.5;
-					sprite[map_t->sprit_num].texture = map_t->map[i.y][i.x];
-					map_t->map[i.y][i.x] = 0;
-				}
-				map_t->sprit_num++;
-			}
+				init_sprit(map_t, i, sprite);
 			i.x++;
 		}
 		i.y++;
@@ -109,9 +84,7 @@ void		ft_fix_map(t_map *map_t, t_spr *sprite)
 int8_t		ft_make_map(t_sdl *sdl_t)
 {
 	int16_t	fd;
-	int16_t	i;
 
-	i = 0;
 	if (!(sdl_t->argv_t.flag & MAPN))
 		return (ft_errors("error m_t flag"));
 	else
@@ -123,7 +96,7 @@ int8_t		ft_make_map(t_sdl *sdl_t)
 			sdl_t->m_t.head = ft_pars_file(fd);
 	}
 	ft_revers_list(&sdl_t->m_t.head);
-	if (!ft_mapping(&sdl_t->m_t, sdl_t->sprite))
+	if (!ft_mapping(&sdl_t->m_t, sdl_t->sp))
 		return (0);
 	close(fd);
 	return (1);

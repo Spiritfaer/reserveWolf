@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/checks.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event_control.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event_mix.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/floor.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/foo.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/init.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/init.c.o"

@@ -123,6 +123,33 @@ wolf3d/fast:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/build
 .PHONY : wolf3d/fast
 
+checks.o: checks.c.o
+
+.PHONY : checks.o
+
+# target to build an object file
+checks.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.o
+.PHONY : checks.c.o
+
+checks.i: checks.c.i
+
+.PHONY : checks.i
+
+# target to preprocess a source file
+checks.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.i
+.PHONY : checks.c.i
+
+checks.s: checks.c.s
+
+.PHONY : checks.s
+
+# target to generate assembly for a file
+checks.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.s
+.PHONY : checks.c.s
+
 drawing.o: drawing.c.o
 
 .PHONY : drawing.o
@@ -203,6 +230,33 @@ event_control.s: event_control.c.s
 event_control.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.s
 .PHONY : event_control.c.s
+
+event_mix.o: event_mix.c.o
+
+.PHONY : event_mix.o
+
+# target to build an object file
+event_mix.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.o
+.PHONY : event_mix.c.o
+
+event_mix.i: event_mix.c.i
+
+.PHONY : event_mix.i
+
+# target to preprocess a source file
+event_mix.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.i
+.PHONY : event_mix.c.i
+
+event_mix.s: event_mix.c.s
+
+.PHONY : event_mix.s
+
+# target to generate assembly for a file
+event_mix.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.s
+.PHONY : event_mix.c.s
 
 floor.o: floor.c.o
 
@@ -537,6 +591,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... wolf3d"
+	@echo "... checks.o"
+	@echo "... checks.i"
+	@echo "... checks.s"
 	@echo "... drawing.o"
 	@echo "... drawing.i"
 	@echo "... drawing.s"
@@ -546,6 +603,9 @@ help:
 	@echo "... event_control.o"
 	@echo "... event_control.i"
 	@echo "... event_control.s"
+	@echo "... event_mix.o"
+	@echo "... event_mix.i"
+	@echo "... event_mix.s"
 	@echo "... floor.o"
 	@echo "... floor.i"
 	@echo "... floor.s"

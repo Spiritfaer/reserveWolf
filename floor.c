@@ -38,12 +38,12 @@ void	ft_floor_cast(t_ray *ray, t_tex *tex_t, t_cam *cam_t, t_floor *floor_t)
 
 void	ft_floor_drawing(t_sdl *sdl_t, t_floor *floor, t_ray *ray, int32_t y)
 {
-	sdl_t->tex_t.pixel = (uint32_t*)sdl_t->textures[0]->pixels;
-	sdl_t->color = (uint32_t)sdl_t->tex_t.pixel
+	sdl_t->tex_t.pxl = (uint32_t*)sdl_t->txtr[0]->pixels;
+	sdl_t->color = (uint32_t)sdl_t->tex_t.pxl
 		[(sdl_t->tex_t.twh.y * floor->f_tex.y + floor->f_tex.x)];
 	sdl_t->color = ft_d_c_wall(sdl_t->color, y, ray, &sdl_t->m_t);
-	sdl_t->tex_t.pixel2[sdl_t->m_t.pxl_s_w * y + sdl_t->x] = sdl_t->color;
-	sdl_t->tex_t.pixel2[(sdl_t->m_t.pxl_s_h - y) * sdl_t->m_t.pxl_s_w
+	sdl_t->tex_t.pxl2[sdl_t->m_t.pxl_s_w * y + sdl_t->x] = sdl_t->color;
+	sdl_t->tex_t.pxl2[(sdl_t->m_t.pxl_s_h - y) * sdl_t->m_t.pxl_s_w
 						+ sdl_t->x] = sdl_t->color;
 }
 

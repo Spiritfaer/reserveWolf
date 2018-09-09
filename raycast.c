@@ -69,6 +69,4 @@ void	ft_cast(t_ray *ray, t_map *map_t)
 			ray->hit = 1;
 	}
 	ray->texture = map_t->map[ray->map.x][ray->map.y];
-//	if (ft_check_sprite(ray->texture))
-//		ray->texture = 0;
 }

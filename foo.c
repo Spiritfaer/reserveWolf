@@ -63,12 +63,12 @@ t_list		*ft_smooth(t_list **head)
 
 void		ft_sort(void **sorted, int16_t size)
 {
-	t_spr *one;
-	int16_t i;
-	int16_t j;
-	t_spr tmp;
+	t_spr	*one;
+	int16_t	i;
+	int16_t	j;
+	t_spr	tmp;
 
-	one = (t_spr *) sorted;
+	one = (t_spr *)sorted;
 	i = 0;
 	while (i < size - 1)
 	{

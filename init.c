@@ -94,7 +94,7 @@ int8_t	ft_init(t_sdl *sdl_t)
 	if (result != 4)
 		result = 0;
 	sdl_t->loop = 1;
-	sdl_t->flag = MENU;
+	sdl_t->flag = GAME;
 	sdl_t->menu_f = 0;
 	sdl_t->m_t.sprit_num = 0;
 	return (result);

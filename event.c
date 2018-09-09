@@ -39,8 +39,8 @@ void	ft_game_menu_e(t_sdl *sdl_t)
 			sdl_t->menu_f--;
 		if (sdl_t->cur_key[SDL_SCANCODE_DOWN])
 			sdl_t->menu_f++;
-		sdl_t->menu_f = (sdl_t->menu_f < 0) ? (short)0 : sdl_t->menu_f;
-		sdl_t->menu_f = (sdl_t->menu_f > 2) ? (short)2 : sdl_t->menu_f;
+		sdl_t->menu_f = (sdl_t->menu_f < 0) ? (short)2 : sdl_t->menu_f;
+		sdl_t->menu_f = (sdl_t->menu_f > 2) ? (short)0 : sdl_t->menu_f;
 	}
 	if (sdl_t->cur_key[SDL_SCANCODE_RETURN]
 		|| sdl_t->cur_key[SDL_SCANCODE_KP_ENTER])

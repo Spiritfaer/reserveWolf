@@ -48,7 +48,8 @@ void		init_sprit(t_map *map_t, t_v2i i, t_spr *sprite)
 		sprite[map_t->sprit_num].p.x = i.y + 0.5;
 		sprite[map_t->sprit_num].p.y = i.x + 0.5;
 		sprite[map_t->sprit_num].nm_t = map_t->map[i.y][i.x];
-		map_t->map[i.y][i.x] = 0;
+		sprite[map_t->sprit_num].hit = 3;
+//		map_t->map[i.y][i.x] = 0;
 	}
 	map_t->sprit_num++;
 }

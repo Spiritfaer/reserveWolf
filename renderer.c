@@ -50,7 +50,7 @@ void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 		ft_floor_add(floor, ray, sdl, cam);
 		sdl->x++;
 	}
-	ft_spline(sdl, cam);
+	ft_spline(sdl, cam, &sdl->s_calc);
 	sdl->pre_ren = SDL_CreateTextureFromSurface(sdl->ren, sdl->buffer);
 	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
 }

@@ -28,6 +28,8 @@ void		ft_set_time(t_time *t)
 	t->time = SDL_GetTicks();
 	t->frame_time = (t->time - t->old_time) / 1000.0;
 	t->move_speed = t->frame_time * 3.0;
+	if (t->move_speed > 0.15)
+		t->move_speed = 0.15;
 	t->rot_s = t->frame_time * 2.5;
 }
 

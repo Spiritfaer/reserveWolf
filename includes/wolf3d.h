@@ -73,6 +73,7 @@ typedef struct		s_spr
 	t_v2d			p;
 	int16_t			nm_t;
 	double			dist;
+	int 			hit;
 }					t_spr;
 
 typedef struct		s_arg {
@@ -108,6 +109,7 @@ typedef struct		s_cam
 	t_v2d			pos;
 	t_v2d			dir;
 	t_v2d			pl;
+	t_v2d			coll;
 }					t_cam;
 
 typedef struct		s_ray
@@ -194,6 +196,7 @@ typedef struct		s_sdl
 	int16_t			menu_f;
 	t_spr			sp[MAXSPL];
 	double			z_buff[2048];
+	t_sp			s_calc;
 }					t_sdl;
 
 void				ft_read_argv(int argc, AR argv, t_arg *arg);
@@ -243,7 +246,7 @@ void				ft_flag_argv(int i, AR argv, t_arg *arg);
 t_list				*ft_smooth(t_list **head);
 int8_t				ft_check_sprite(int16_t wall);
 void				ft_sort(void **sorted, int16_t size);
-void				ft_spline(t_sdl *sdl, t_cam *cam);
+void				ft_spline(t_sdl *sdl, t_cam *cam, t_sp *s_calc);
 void				ft_audio_s(t_sdl *sdl_t);
 int8_t				ft_check_texture(int16_t wall);
 

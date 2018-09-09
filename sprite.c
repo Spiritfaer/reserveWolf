@@ -100,26 +100,24 @@ void		ft_draw_spline(t_sdl *sdl, t_sp *s_calc)
 	}
 }
 
-void		ft_spline(t_sdl *sdl, t_cam *cam)
+void		ft_spline(t_sdl *sdl, t_cam *cam, t_sp *s_calc)
 {
-	t_sp s_calc;
-
-	ft_sort_spline(sdl, cam, &s_calc);
-	while (s_calc.i < sdl->m_t.sprit_num)
+	ft_sort_spline(sdl, cam, s_calc);
+	while (s_calc->i < sdl->m_t.sprit_num)
 	{
-		ft_cacl_sprite(sdl, cam, &s_calc);
-		while (s_calc.dr_start.x <= s_calc.dr_end.x)
+		ft_cacl_sprite(sdl, cam, s_calc);
+		while (s_calc->dr_start.x <= s_calc->dr_end.x)
 		{
-			s_calc.tex.x = (int)(256 * (s_calc.dr_start.x
-				- (-s_calc.sp_w / 2.0 + s_calc.sp_scr_x))
-				* sdl->tex_t.twh.x / s_calc.sp_w) / 256;
-			if (s_calc.trform.y > 0 && s_calc.dr_start.x < sdl->m_t.pxl_s_w
-				&& s_calc.trform.y < sdl->z_buff[s_calc.dr_start.x])
+			s_calc->tex.x = (int)(256 * (s_calc->dr_start.x
+				- (-s_calc->sp_w / 2.0 + s_calc->sp_scr_x))
+				* sdl->tex_t.twh.x / s_calc->sp_w) / 256;
+			if (s_calc->trform.y > 0 && s_calc->dr_start.x < sdl->m_t.pxl_s_w
+				&& s_calc->trform.y < sdl->z_buff[s_calc->dr_start.x])
 			{
-				ft_draw_spline(sdl, &s_calc);
+				ft_draw_spline(sdl, s_calc);
 			}
-			s_calc.dr_start.x++;
+			s_calc->dr_start.x++;
 		}
-		s_calc.i++;
+		s_calc->i++;
 	}
 }

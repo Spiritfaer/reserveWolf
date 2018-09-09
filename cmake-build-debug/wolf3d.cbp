@@ -8,44 +8,44 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug"/>
+				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug"/>
+				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug"/>
+				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wolf3d">
-				<Option output="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug"/>
+				<Option output="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/libft"/>
-					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/src"/>
+					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/libft"/>
+					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2"/>
@@ -57,21 +57,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wolf3d/fast">
-				<Option output="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug"/>
+				<Option output="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/libft"/>
-					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/src"/>
+					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/libft"/>
+					<Add directory="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2"/>
 					<Add directory="/Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2"/>
@@ -83,59 +83,62 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/drawing.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event_control.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/floor.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/foo.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/foo.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/init.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/init.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/list.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/list.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/main.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/main.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/maker.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/maker.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/map.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/map.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/pars.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/pars.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/raycast.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/raycast.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/renderer.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/renderer.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/set_struct.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/set_struct.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/CMakeLists.txt">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/sprite.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

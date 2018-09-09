@@ -13,17 +13,11 @@
 #ifndef WOLF3D_H
 # define WOLF3D_H
 
-# define RED 0x0000FF
-# define GREEN 0x00FF00
-# define BLUE 0xFF0000
-# define WHITE 0xFFFFFF
-# define YELLOW 0xFFFF00
-# define BLACK 0x000000
-
 # define DEF_SCREEN_WIDTH 1440
 # define DEF_SCREEN_HEIGHT 840
 # define AR const char**
 # define TEXTURS 11
+# define MAXSPL 64
 
 # define MAPN 0x000001
 # define MAPW 0x000002
@@ -74,6 +68,13 @@ typedef struct		s_v2i
 	int32_t			y;
 }					t_v2i;
 
+typedef struct		s_spr
+{
+	t_v2d			p;
+	int16_t			texture;
+	double			dist;
+}					t_spr;
+
 typedef struct		s_arg {
 	const char		*map_name;
 	Uint16			screen_w;
@@ -88,6 +89,7 @@ typedef struct		s_map {
 	int16_t			map_h;
 	int16_t			pxl_s_w;
 	int16_t			pxl_s_h;
+	int16_t			sprit_num;
 }					t_map;
 
 typedef struct		s_time
@@ -139,6 +141,7 @@ typedef struct		s_tex
 	t_v2i			twh;
 	uint32_t		*pixel;
 	uint32_t		*pixel2;
+	uint32_t		*pixel3;
 }					t_tex;
 
 typedef struct		s_text
@@ -147,6 +150,23 @@ typedef struct		s_text
 	SDL_Texture		*bl;
 	SDL_Texture		*red;
 }					t_text;
+
+typedef struct		s_sp
+{
+	t_v2d			sprite;
+	t_v2d			transform;
+	t_v2i			drawstart;
+	t_v2i			drawend;
+	t_v2i			tex;
+	double			invDet;
+	int				spriteScreenX;
+	int				spriteHeight;
+	int				spriteWidth;
+	int				y;
+	int				d;
+	int				i;
+	uint32_t		color;
+}					t_sp;
 
 typedef struct		s_sdl
 {
@@ -172,6 +192,8 @@ typedef struct		s_sdl
 	TTF_Font		*g_font;
 	t_text			wrds[10];
 	int16_t			menu_f;
+	t_spr			sprite[MAXSPL];
+	double			z_buff[2048];
 }					t_sdl;
 
 void				ft_read_argv(int argc, AR argv, t_arg *arg);
@@ -184,7 +206,7 @@ uint_fast32_t		ft_count_list(t_list *head);
 int8_t				ft_check_w_map(t_list *head, int16_t map_w);
 void				ft_list_del(t_list **head);
 void				ft_remap(t_map *map_t);
-void				ft_fix_map(t_map *map_t);
+void				ft_fix_map(t_map *map_t, t_spr *sprite);
 void				ft_split_del(char **head);
 void				ft_process(t_sdl *sdl);
 void				ft_ray(t_cam *cam, t_ray *ray);
@@ -212,12 +234,15 @@ void				ft_helper(void);
 void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
 void				ft_make_text(t_sdl *sdl_t);
 t_list				*ft_pars_file(int16_t fd);
-int8_t				ft_mapping(t_map *map_t);
+int8_t				ft_mapping(t_map *map_t, t_spr *sprite);
 void				ft_move(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void				ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void				ft_audio_v(t_sdl *sdl_t);
 SDL_Color			ft_set_color(uint8_t red, uint8_t green, uint8_t blue);
 void				ft_flag_argv(int i, AR argv, t_arg *arg);
 t_list				*ft_smooth(t_list **head);
+int8_t				ft_check_sprite(int16_t wall);
+void				ft_sort(void **sorted, int16_t size);
+void				ft_spline(t_sdl *sdl, t_cam *cam);
 
 #endif

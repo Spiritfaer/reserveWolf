@@ -1,4 +1,4 @@
-# Install script for directory: /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf
+# Install script for directory: /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

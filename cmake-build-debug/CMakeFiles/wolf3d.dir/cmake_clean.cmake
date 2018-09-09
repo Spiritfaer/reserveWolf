@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wolf3d.dir/set_struct.c.o"
   "CMakeFiles/wolf3d.dir/maker.c.o"
   "CMakeFiles/wolf3d.dir/event_control.c.o"
+  "CMakeFiles/wolf3d.dir/sprite.c.o"
   "wolf3d.pdb"
   "wolf3d"
 )

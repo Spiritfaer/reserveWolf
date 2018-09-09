@@ -12,24 +12,31 @@
 
 #include "includes/wolf3d.h"
 
+bool	ft_collisions(int map)
+{
+	if (map > greystone && map < barrel)
+		return (true);
+	return (false);
+}
+
 void	ft_move(t_sdl *sdl_t, t_cam *cam, t_time *t)
 {
 	if (sdl_t->cur_key[SDL_SCANCODE_UP] || sdl_t->cur_key[SDL_SCANCODE_W])
 	{
-		if (sdl_t->m_t.map[(int)(cam->pos.x + cam->dir.x * t->move_speed)]
-			[(int)cam->pos.y] == false)
+		if (ft_collisions(sdl_t->m_t.map[(int)(cam->pos.x + cam->dir.x * t->move_speed)]
+			[(int)cam->pos.y]) == false)
 			cam->pos.x += cam->dir.x * t->move_speed;
-		if (sdl_t->m_t.map[(int)cam->pos.x]
-			[(int)(cam->pos.y + cam->dir.y * t->move_speed)] == false)
+		if (ft_collisions(sdl_t->m_t.map[(int)cam->pos.x]
+			[(int)(cam->pos.y + cam->dir.y * t->move_speed)]) == false)
 			cam->pos.y += cam->dir.y * t->move_speed;
 	}
 	if (sdl_t->cur_key[SDL_SCANCODE_DOWN] || sdl_t->cur_key[SDL_SCANCODE_S])
 	{
-		if (sdl_t->m_t.map[(int)(cam->pos.x - cam->dir.x * t->move_speed)]
-			[(int)cam->pos.y] == false)
+		if (ft_collisions(sdl_t->m_t.map[(int)(cam->pos.x - cam->dir.x * t->move_speed)]
+			[(int)cam->pos.y]) == false)
 			cam->pos.x -= cam->dir.x * t->move_speed;
-		if (sdl_t->m_t.map[(int)cam->pos.x]
-			[(int)(cam->pos.y - cam->dir.y * t->move_speed)] == false)
+		if (ft_collisions(sdl_t->m_t.map[(int)cam->pos.x]
+			[(int)(cam->pos.y - cam->dir.y * t->move_speed)]) == false)
 			cam->pos.y -= cam->dir.y * t->move_speed;
 	}
 }

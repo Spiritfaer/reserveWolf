@@ -60,3 +60,31 @@ t_list		*ft_smooth(t_list **head)
 	free(*head);
 	return (next);
 }
+
+void		ft_sort(void **sorted, int16_t size)
+{
+	t_spr *one;
+	int16_t i;
+	int16_t j;
+	t_spr tmp;
+
+	one = (t_spr *) sorted;
+	i = 0;
+	while (i < size - 1)
+	{
+		j = 0;
+		{
+			while (j < size - 1)
+			{
+				if (one[j].dist < one[j + 1].dist)
+				{
+					tmp = one[j];
+					one[j] = one[j + 1];
+					one[j + 1] = tmp;
+				}
+				j++;
+			}
+			i++;
+		}
+	}
+}

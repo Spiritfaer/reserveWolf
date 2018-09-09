@@ -116,9 +116,9 @@ void		ft_set_hlp(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 void		ft_make_text(t_sdl *sdl_t)
 {
 	static char	*str[] = {"START GAME", "HELP", "QUIT", "PRESS",
-	"P to poused music", "UP, DOWN, LEFT and RIGHT to moving",
-	"W, S, A and D to moving", "NUM-MIN or NUM-PLUS to change music volume",
-	"O to change track", "BACK TO MENU"};
+	"P - poused music", "UP, DOWN, LEFT and RIGHT - moving",
+	"W, S, A and D - moving", "MIN or PLUS - change music volume",
+	"O - change track", "BACK TO MENU"};
 	static char	*font = "font/wolfenstein.ttf";
 	SDL_Surface *tmp;
 	TTF_Font	*g_font;

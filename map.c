@@ -53,14 +53,21 @@ void		ft_remap(t_map *map_t)
 	}
 }
 
-int8_t		ft_check_texture(int16_t map)
+int8_t		ft_check_texture(int16_t wall)
 {
-	if (map >= greystone && map <= pillar)
+	if (wall >= greystone && wall <= pillar)
 		return (1);
 	return (0);
 }
 
-void		ft_fix_map(t_map *map_t)
+int8_t		ft_check_sprite(int16_t wall)
+{
+	if (wall >= barrel && wall <= pillar)
+		return (1);
+	return (0);
+}
+
+void		ft_fix_map(t_map *map_t, t_spr *sprite)
 {
 	t_v2i		i;
 
@@ -80,6 +87,19 @@ void		ft_fix_map(t_map *map_t)
 				map_t->map[i.y][i.x] = 0;
 			if (i.x == 0 || i.x == map_t->map_w - 1)
 				map_t->map[i.y][i.x] = 1;
+			if (ft_check_sprite(map_t->map[i.y][i.x]))
+			{
+				if (map_t->sprit_num >= MAXSPL)
+					map_t->map[i.y][i.x] = 0;
+				else
+				{
+					sprite[map_t->sprit_num].p.x = i.y + 0.5;
+					sprite[map_t->sprit_num].p.y = i.x + 0.5;
+					sprite[map_t->sprit_num].texture = map_t->map[i.y][i.x];
+					map_t->map[i.y][i.x] = 0;
+				}
+				map_t->sprit_num++;
+			}
 			i.x++;
 		}
 		i.y++;
@@ -89,7 +109,9 @@ void		ft_fix_map(t_map *map_t)
 int8_t		ft_make_map(t_sdl *sdl_t)
 {
 	int16_t	fd;
+	int16_t	i;
 
+	i = 0;
 	if (!(sdl_t->argv_t.flag & MAPN))
 		return (ft_errors("error m_t flag"));
 	else
@@ -101,7 +123,7 @@ int8_t		ft_make_map(t_sdl *sdl_t)
 			sdl_t->m_t.head = ft_pars_file(fd);
 	}
 	ft_revers_list(&sdl_t->m_t.head);
-	if (!ft_mapping(&sdl_t->m_t))
+	if (!ft_mapping(&sdl_t->m_t, sdl_t->sprite))
 		return (0);
 	close(fd);
 	return (1);

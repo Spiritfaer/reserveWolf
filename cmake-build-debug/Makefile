@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf
+CMAKE_SOURCE_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -501,6 +501,33 @@ set_struct.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.s
 .PHONY : set_struct.c.s
 
+sprite.o: sprite.c.o
+
+.PHONY : sprite.o
+
+# target to build an object file
+sprite.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.o
+.PHONY : sprite.c.o
+
+sprite.i: sprite.c.i
+
+.PHONY : sprite.i
+
+# target to preprocess a source file
+sprite.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.i
+.PHONY : sprite.c.i
+
+sprite.s: sprite.c.s
+
+.PHONY : sprite.s
+
+# target to generate assembly for a file
+sprite.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.s
+.PHONY : sprite.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -552,6 +579,9 @@ help:
 	@echo "... set_struct.o"
 	@echo "... set_struct.i"
 	@echo "... set_struct.s"
+	@echo "... sprite.o"
+	@echo "... sprite.i"
+	@echo "... sprite.s"
 .PHONY : help
 
 

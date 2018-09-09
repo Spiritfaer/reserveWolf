@@ -632,29 +632,29 @@ begin_code.h
 close_code.h
 /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/close_code.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/drawing.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event_control.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/floor.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/foo.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/foo.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 libft.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/libft.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/libft.h
 stdbool.h
 -
 stdio.h
@@ -666,49 +666,53 @@ fcntl.h
 stdlib.h
 -
 SDL.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/SDL.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/SDL.h
 SDL_image.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/SDL_image.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/SDL_image.h
 SDL_mixer.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/SDL_mixer.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/SDL_mixer.h
 SDL_ttf.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/SDL_ttf.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/SDL_ttf.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/init.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/init.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/list.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/list.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/main.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/main.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/maker.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/maker.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/map.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/map.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/pars.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/pars.c
 get_next_line.h
 -
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/raycast.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/raycast.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/renderer.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/renderer.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/set_struct.c
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/set_struct.c
 includes/wolf3d.h
-/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
+
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/sprite.c
+includes/wolf3d.h
+/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
 

@@ -57,7 +57,7 @@ void		ft_read_argv(int argc, AR argv, t_arg *arg)
 	}
 }
 
-int8_t		ft_mapping(t_map *map_t)
+int8_t		ft_mapping(t_map *map_t, t_spr *sprite)
 {
 	map_t->map_w = (int16_t)ft_splitter(map_t->head->content, ' ');
 	map_t->map_h = (int16_t)ft_count_list(map_t->head);
@@ -67,7 +67,7 @@ int8_t		ft_mapping(t_map *map_t)
 		return (0);
 	}
 	ft_remap(map_t);
-	ft_fix_map(map_t);
+	ft_fix_map(map_t, sprite);
 	return (1);
 }
 

@@ -4,20 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/drawing.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/event_control.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event_control.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/floor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/floor.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/foo.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/init.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/init.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/list.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/list.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/main.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/main.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/maker.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/maker.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/map.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/map.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/pars.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/pars.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/raycast.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/raycast.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/renderer.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/renderer.c.o"
-  "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/set_struct.c" "/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/set_struct.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/event_control.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/floor.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/foo.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/init.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/init.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/list.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/list.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/main.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/main.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/maker.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/maker.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/map.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/map.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/pars.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/pars.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/raycast.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/raycast.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/renderer.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/renderer.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/set_struct.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/set_struct.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/sprite.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/sprite.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

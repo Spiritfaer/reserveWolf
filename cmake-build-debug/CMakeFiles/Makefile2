@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf
+CMAKE_SOURCE_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/wolf3d.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-b
 CMakeFiles/wolf3d.dir/all:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/depend
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target wolf3d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target wolf3d"
 .PHONY : CMakeFiles/wolf3d.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/wolf3d.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wolf3d.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/wolf3d.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.2/reserveWolf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/wolf3d.dir/rule
 
 # Convenience name for target.

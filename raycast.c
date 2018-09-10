@@ -65,7 +65,8 @@ void	ft_cast(t_ray *ray, t_map *map_t)
 			ray->map.y += ray->step.y;
 			ray->side = 1;
 		}
-		if (map_t->map[ray->map.x][ray->map.y] > 0 && map_t->map[ray->map.x][ray->map.y] < barrel)
+		if (map_t->map[ray->map.x][ray->map.y] > 0
+		&& map_t->map[ray->map.x][ray->map.y] < barrel)
 			ray->hit = 1;
 	}
 	ray->texture = map_t->map[ray->map.x][ray->map.y];

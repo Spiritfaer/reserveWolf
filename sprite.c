@@ -59,10 +59,10 @@ void		ft_cacl_sprite(t_sdl *sdl, t_cam *cam, t_sp *sp_t)
 	sdl->tex_t.pxl3 = sdl->txtr[sdl->sp[sp_t->i].nm_t]->pixels;
 	sp_t->sp.x = sdl->sp[sp_t->i].p.x - cam->pos.x;
 	sp_t->sp.y = sdl->sp[sp_t->i].p.y - cam->pos.y;
-	sp_t->invDet = 1.0 / (cam->pl.x * cam->dir.y - cam->dir.x * cam->pl.y);
-	sp_t->trform.x = sp_t->invDet * (cam->dir.y
+	sp_t->invdet = 1.0 / (cam->pl.x * cam->dir.y - cam->dir.x * cam->pl.y);
+	sp_t->trform.x = sp_t->invdet * (cam->dir.y
 						* sp_t->sp.x - cam->dir.x * sp_t->sp.y);
-	sp_t->trform.y = sp_t->invDet * (-cam->pl.y
+	sp_t->trform.y = sp_t->invdet * (-cam->pl.y
 						* sp_t->sp.x + cam->pl.x * sp_t->sp.y);
 	sp_t->sp_scr_x = (int)((sdl->m_t.pxl_s_w / 2)
 						* (1 + sp_t->trform.x / sp_t->trform.y));

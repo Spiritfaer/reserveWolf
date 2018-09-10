@@ -90,12 +90,13 @@ int8_t	ft_init(t_sdl *sdl_t)
 		if (ft_init_ttf(sdl_t) > 0 && ++result)
 			if (ft_init_mix() > 0 && ++result)
 				if (ft_init_img() > 0 && ++result)
-					;
+					sdl_t->flag = MENU;
 	if (result != 4)
 		result = 0;
 	sdl_t->loop = 1;
-	sdl_t->flag = GAME;
 	sdl_t->menu_f = 0;
 	sdl_t->m_t.sprit_num = 0;
+	sdl_t->player.x = 0;
+	sdl_t->player.y = 0;
 	return (result);
 }

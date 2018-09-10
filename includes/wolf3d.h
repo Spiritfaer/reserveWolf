@@ -27,9 +27,6 @@
 # define GAME 0x000002
 # define HELP 0x000004
 
-enum textures {greystone, wood, eagle, purplestone, redbrick,
-	mossy, bluestone, colorstone, barrel, greenlight, pillar};
-
 # include "libft.h"
 # include <stdbool.h>
 # include <stdio.h>
@@ -40,6 +37,9 @@ enum textures {greystone, wood, eagle, purplestone, redbrick,
 # include "SDL_image.h"
 # include "SDL_mixer.h"
 # include "SDL_ttf.h"
+
+enum	e_textures {greystone, wood, eagle, purplestone, redbrick,
+	mossy, bluestone, colorstone, barrel, greenlight, pillar};
 
 typedef struct		s_rgb
 {
@@ -73,7 +73,7 @@ typedef struct		s_spr
 	t_v2d			p;
 	int16_t			nm_t;
 	double			dist;
-	int 			hit;
+	int				hit;
 }					t_spr;
 
 typedef struct		s_arg {
@@ -98,7 +98,7 @@ typedef struct		s_time
 	double			time;
 	double			old_time;
 	double			frame_time;
-	double			move_speed;
+	double			m_sp;
 	double			rot_s;
 }					t_time;
 
@@ -160,7 +160,7 @@ typedef struct		s_sp
 	t_v2i			dr_start;
 	t_v2i			dr_end;
 	t_v2i			tex;
-	double			invDet;
+	double			invdet;
 	int				sp_scr_x;
 	int				sp_h;
 	int				sp_w;
@@ -192,14 +192,12 @@ typedef struct		s_sdl
 	t_map			m_t;
 	Uint16			num_track;
 	Mix_Music		*music[2];
-	Mix_Chunk		*move;
 	int16_t			volume;
 	SDL_Surface		*buffer;
 	SDL_Texture		*pre_ren;
 	uint16_t		x;
 	uint32_t		color;
 	int32_t			flag;
-	SDL_Surface		*menu_bg;
 	TTF_Font		*g_font;
 	t_text			wrds[10];
 	int16_t			menu_f;
@@ -207,11 +205,12 @@ typedef struct		s_sdl
 	double			z_buff[2048];
 	t_sp			s_calc;
 	t_weapon		weapon;
+	t_v2i			player;
 }					t_sdl;
 
 void				ft_read_argv(int argc, AR argv, t_arg *arg);
 int8_t				ft_init(t_sdl *sdl_t);
-int8_t				ft_make_map(t_sdl *sdl_t);
+int8_t				ft_make_map(t_sdl *sdl);
 int8_t				ft_errors(const char *error);
 void				ft_revers_list(t_list **head);
 void				ft_print_map(t_map *map_t);
@@ -219,13 +218,13 @@ uint_fast32_t		ft_count_list(t_list *head);
 int8_t				ft_check_w_map(t_list *head, int16_t map_w);
 void				ft_list_del(t_list **head);
 void				ft_remap(t_map *map_t);
-void				ft_fix_map(t_map *map_t, t_spr *sprite);
+void				ft_fix_map(t_map *map_t, t_spr *sprite, t_sdl *sdl);
 void				ft_split_del(char **head);
 void				ft_process(t_sdl *sdl);
 void				ft_ray(t_cam *cam, t_ray *ray);
 void				ft_cast(t_ray *ray, t_map *map_t);
 void				ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h);
-void				ft_set_cam(t_cam *cam);
+void				ft_set_cam(t_cam *cam, t_v2i player);
 void				ft_draw_wall(SDL_Renderer *render, uint16_t x, t_ray *ray);
 void				ft_set_time(t_time *t);
 void				event(t_sdl *sdl, t_cam *cam, t_time *time);
@@ -247,7 +246,7 @@ void				ft_helper(void);
 void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
 void				ft_make_text(t_sdl *sdl_t);
 t_list				*ft_pars_file(int16_t fd);
-int8_t				ft_mapping(t_map *map_t, t_spr *sprite);
+int8_t				ft_mapping(t_map *map_t, t_spr *sprite, t_sdl *sdl);
 void				ft_move(t_sdl *sdl, t_cam *cam, t_time *t);
 void				ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void				ft_audio_v(t_sdl *sdl_t);
@@ -262,5 +261,6 @@ int8_t				ft_check_texture(int16_t wall);
 SDL_Surface			*ft_load_texture(char *name, SDL_PixelFormat *format);
 void				ft_draw_weapon(t_sdl *sdl);
 SDL_Color			get_color(uint32_t in_c);
-
+void				ft_shoot_box(t_sdl *sdl, t_cam *cam);
+void				ft_make_weapon(t_sdl *sdl, t_weapon *w);
 #endif

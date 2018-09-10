@@ -48,7 +48,6 @@ void		init_sprit(t_map *map_t, t_v2i i, t_spr *sprite)
 		sprite[map_t->sprit_num].p.x = i.y + 0.5;
 		sprite[map_t->sprit_num].p.y = i.x + 0.5;
 		sprite[map_t->sprit_num].nm_t = map_t->map[i.y][i.x];
-		printf("%d\n", sprite[map_t->sprit_num].nm_t);
 		if (sprite[map_t->sprit_num].nm_t == barrel)
 			sprite[map_t->sprit_num].hit = 3;
 		else
@@ -57,14 +56,20 @@ void		init_sprit(t_map *map_t, t_v2i i, t_spr *sprite)
 	map_t->sprit_num++;
 }
 
-void		ft_fix_map(t_map *map_t, t_spr *sprite)
+void		set_player(t_sdl *sdl, t_v2i point)
 {
-	t_v2i		i;
+	sdl->player.x = point.y;
+	sdl->player.y = point.x;
+	sdl->m_t.map[point.y][point.x] = 0;
+}
+
+void		ft_fix_map(t_map *map_t, t_spr *sprite, t_sdl *sdl)
+{
+	t_v2i	i;
 
 	i.y = 0;
-	while (i.y < map_t->map_h)
+	while (i.y < map_t->map_h && !(i.x = 0))
 	{
-		i.x = 0;
 		while (i.x < map_t->map_w)
 		{
 			if (i.y == 0)
@@ -73,6 +78,8 @@ void		ft_fix_map(t_map *map_t, t_spr *sprite)
 			if (i.y == (map_t->map_h - 1))
 				while (i.x < map_t->map_w - 1)
 					map_t->map[i.y][i.x++] = 1;
+			if (map_t->map[i.y][i.x] == 25)
+				set_player(sdl, i);
 			if (!ft_check_texture(map_t->map[i.y][i.x]))
 				map_t->map[i.y][i.x] = 0;
 			if (i.x == 0 || i.x == map_t->map_w - 1)
@@ -85,22 +92,22 @@ void		ft_fix_map(t_map *map_t, t_spr *sprite)
 	}
 }
 
-int8_t		ft_make_map(t_sdl *sdl_t)
+int8_t		ft_make_map(t_sdl *sdl)
 {
 	int16_t	fd;
 
-	if (!(sdl_t->argv_t.flag & MAPN))
+	if (!(sdl->argv_t.flag & MAPN))
 		return (ft_errors("error m_t flag"));
 	else
 	{
-		fd = (int16_t)open(sdl_t->argv_t.map_name, O_RDONLY);
+		fd = (int16_t)open(sdl->argv_t.map_name, O_RDONLY);
 		if (fd < 1)
 			return (ft_errors("error fd"));
 		else
-			sdl_t->m_t.head = ft_pars_file(fd);
+			sdl->m_t.head = ft_pars_file(fd);
 	}
-	ft_revers_list(&sdl_t->m_t.head);
-	if (!ft_mapping(&sdl_t->m_t, sdl_t->sp))
+	ft_revers_list(&sdl->m_t.head);
+	if (!ft_mapping(&sdl->m_t, sdl->sp, sdl))
 		return (0);
 	close(fd);
 	return (1);

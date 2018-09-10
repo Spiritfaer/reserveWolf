@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/renderer.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/renderer.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/set_struct.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/set_struct.c.o"
   "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/sprite.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/sprite.c.o"
+  "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/weapon.c" "/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/cmake-build-debug/CMakeFiles/wolf3d.dir/weapon.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

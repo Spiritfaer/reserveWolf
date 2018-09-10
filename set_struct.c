@@ -12,10 +12,15 @@
 
 #include "includes/wolf3d.h"
 
-void		ft_set_cam(t_cam *cam)
+void		ft_set_cam(t_cam *cam, t_v2i player)
 {
-	cam->pos.x = 7.5;
-	cam->pos.y = 1.5;
+	cam->pos.x = player.x + 0.5;
+	cam->pos.y = player.y + 0.5;
+	if (player.x <= 0 || player.y <= 0)
+	{
+		cam->pos.x = 7.5;
+		cam->pos.y = 1.5;
+	}
 	cam->dir.x = -1;
 	cam->dir.y = 0;
 	cam->pl.x = 0;
@@ -27,9 +32,9 @@ void		ft_set_time(t_time *t)
 	t->old_time = t->time;
 	t->time = SDL_GetTicks();
 	t->frame_time = (t->time - t->old_time) / 1000.0;
-	t->move_speed = t->frame_time * 3.0;
-	if (t->move_speed > 0.15)
-		t->move_speed = 0.15;
+	t->m_sp = t->frame_time * 3.0;
+	if (t->m_sp > 0.15)
+		t->m_sp = 0.15;
 	t->rot_s = t->frame_time * 2.5;
 }
 

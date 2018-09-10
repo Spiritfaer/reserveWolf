@@ -65,35 +65,6 @@ void	ft_menu_help(t_sdl *sdl_t)
 	}
 }
 
-void	ft_shoot_box(t_sdl *sdl, t_cam *cam)
-{
-	double k;
-
-	int8_t num = (int8_t)(sdl->m_t.sprit_num - 1);
-	if (sdl->sp[num].dist < 1)
-	{
-		if (sdl->cur_key[SDL_SCANCODE_SPACE])
-		{
-			sdl->sp[num].hit--;
-			if (sdl->sp[num].hit < 0)
-			{
-				sdl->sp[num].p.x = -1;
-				sdl->sp[num].p.y = -1;
-			}
-			else if (sdl->sp[num].nm_t == barrel)
-			{
-				if (sdl->cur_key[SDL_SCANCODE_UP]
-					|| sdl->cur_key[SDL_SCANCODE_W])
-					k = 0.2;
-				else
-					k = 0.02;
-				cam->pos.x -= cam->dir.x * k;
-				cam->pos.y -= cam->dir.y * k;
-			}
-		}
-	}
-}
-
 void	ft_event_guard(t_sdl *sdl, t_cam *cam)
 {
 	ft_game_s(sdl);
@@ -101,6 +72,8 @@ void	ft_event_guard(t_sdl *sdl, t_cam *cam)
 		sdl->loop = false;
 	if (sdl->cur_key[SDL_SCANCODE_ESCAPE])
 		sdl->loop = false;
+	if (sdl->cur_key[SDL_SCANCODE_F])
+		ft_set_cam(cam, sdl->player);
 	ft_shoot_box(sdl, cam);
 }
 

@@ -48,8 +48,11 @@ void		init_sprit(t_map *map_t, t_v2i i, t_spr *sprite)
 		sprite[map_t->sprit_num].p.x = i.y + 0.5;
 		sprite[map_t->sprit_num].p.y = i.x + 0.5;
 		sprite[map_t->sprit_num].nm_t = map_t->map[i.y][i.x];
-		sprite[map_t->sprit_num].hit = 3;
-//		map_t->map[i.y][i.x] = 0;
+		printf("%d\n", sprite[map_t->sprit_num].nm_t);
+		if (sprite[map_t->sprit_num].nm_t == barrel)
+			sprite[map_t->sprit_num].hit = 3;
+		else
+			sprite[map_t->sprit_num].hit = 999;
 	}
 	map_t->sprit_num++;
 }

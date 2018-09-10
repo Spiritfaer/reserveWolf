@@ -170,6 +170,15 @@ typedef struct		s_sp
 	uint32_t		color;
 }					t_sp;
 
+typedef	struct		s_weapon
+{
+	int8_t			num;
+	SDL_Surface		*weap_sur;
+	SDL_Texture		*weap_tex;
+	SDL_Rect		anim[6];
+	SDL_Rect		box_screen;
+}					t_weapon;
+
 typedef struct		s_sdl
 {
 	SDL_Window		*window;
@@ -197,6 +206,7 @@ typedef struct		s_sdl
 	t_spr			sp[MAXSPL];
 	double			z_buff[2048];
 	t_sp			s_calc;
+	t_weapon		weapon;
 }					t_sdl;
 
 void				ft_read_argv(int argc, AR argv, t_arg *arg);
@@ -218,7 +228,7 @@ void				ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h);
 void				ft_set_cam(t_cam *cam);
 void				ft_draw_wall(SDL_Renderer *render, uint16_t x, t_ray *ray);
 void				ft_set_time(t_time *t);
-void				event(t_sdl *sdl_t, t_cam *cam, t_time *time);
+void				event(t_sdl *sdl, t_cam *cam, t_time *time);
 void				ft_end(t_sdl *sdl_t);
 void				ft_print_list(t_list *head);
 void				ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam,
@@ -238,7 +248,7 @@ void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
 void				ft_make_text(t_sdl *sdl_t);
 t_list				*ft_pars_file(int16_t fd);
 int8_t				ft_mapping(t_map *map_t, t_spr *sprite);
-void				ft_move(t_sdl *sdl_t, t_cam *cam, t_time *t);
+void				ft_move(t_sdl *sdl, t_cam *cam, t_time *t);
 void				ft_rotate(t_sdl *sdl_t, t_cam *cam, t_time *t);
 void				ft_audio_v(t_sdl *sdl_t);
 SDL_Color			ft_set_color(uint8_t red, uint8_t green, uint8_t blue);
@@ -249,9 +259,8 @@ void				ft_sort(void **sorted, int16_t size);
 void				ft_spline(t_sdl *sdl, t_cam *cam, t_sp *s_calc);
 void				ft_audio_s(t_sdl *sdl_t);
 int8_t				ft_check_texture(int16_t wall);
-
-
-
-
+SDL_Surface			*ft_load_texture(char *name, SDL_PixelFormat *format);
+void				ft_draw_weapon(t_sdl *sdl);
+SDL_Color			get_color(uint32_t in_c);
 
 #endif

@@ -12,45 +12,45 @@
 
 #include "includes/wolf3d.h"
 
-void	ft_game_s(t_sdl *sdl_t)
+void	ft_game_s(t_sdl *sdl)
 {
-	if (sdl_t->event.type == SDL_KEYDOWN)
+	if (sdl->event.type == SDL_KEYDOWN)
 	{
-		if (sdl_t->cur_key[SDL_SCANCODE_TAB])
+		if (sdl->cur_key[SDL_SCANCODE_TAB])
 		{
-			if (sdl_t->flag == GAME)
+			if (sdl->flag == GAME)
 			{
-				sdl_t->menu_f = 0;
-				sdl_t->flag = MENU;
+				sdl->menu_f = 0;
+				sdl->flag = MENU;
 			}
 			else
-				sdl_t->flag = GAME;
+				sdl->flag = GAME;
 			SDL_Delay(150);
 		}
 	}
 }
 
-void	ft_game_menu_e(t_sdl *sdl_t)
+void	ft_game_menu_e(t_sdl *sdl)
 {
-	if (sdl_t->event.type == SDL_KEYDOWN)
+	if (sdl->event.type == SDL_KEYDOWN)
 	{
 		SDL_Delay(150);
-		if (sdl_t->cur_key[SDL_SCANCODE_UP])
-			sdl_t->menu_f--;
-		if (sdl_t->cur_key[SDL_SCANCODE_DOWN])
-			sdl_t->menu_f++;
-		sdl_t->menu_f = (sdl_t->menu_f < 0) ? (short)2 : sdl_t->menu_f;
-		sdl_t->menu_f = (sdl_t->menu_f > 2) ? (short)0 : sdl_t->menu_f;
+		if (sdl->cur_key[SDL_SCANCODE_UP])
+			sdl->menu_f--;
+		if (sdl->cur_key[SDL_SCANCODE_DOWN])
+			sdl->menu_f++;
+		sdl->menu_f = (sdl->menu_f < 0) ? (short)2 : sdl->menu_f;
+		sdl->menu_f = (sdl->menu_f > 2) ? (short)0 : sdl->menu_f;
 	}
-	if (sdl_t->cur_key[SDL_SCANCODE_RETURN]
-		|| sdl_t->cur_key[SDL_SCANCODE_KP_ENTER])
+	if (sdl->cur_key[SDL_SCANCODE_RETURN]
+		|| sdl->cur_key[SDL_SCANCODE_KP_ENTER])
 	{
-		if (sdl_t->menu_f == 0)
-			sdl_t->flag = GAME;
-		else if (sdl_t->menu_f == 1)
-			sdl_t->flag = HELP;
-		else if (sdl_t->menu_f == 2)
-			sdl_t->loop = false;
+		if (sdl->menu_f == 0)
+			sdl->flag = GAME;
+		else if (sdl->menu_f == 1)
+			sdl->flag = HELP;
+		else if (sdl->menu_f == 2)
+			sdl->loop = false;
 		SDL_Delay(150);
 	}
 }
@@ -65,37 +65,69 @@ void	ft_menu_help(t_sdl *sdl_t)
 	}
 }
 
-void	ft_event_guard(t_sdl *sdl_t)
+void	ft_shoot_box(t_sdl *sdl, t_cam *cam)
 {
-	ft_game_s(sdl_t);
-	if (sdl_t->event.type == SDL_QUIT)
-		sdl_t->loop = false;
-	if (sdl_t->cur_key[SDL_SCANCODE_ESCAPE])
-		sdl_t->loop = false;
+	double k;
+
+	int8_t num = (int8_t)(sdl->m_t.sprit_num - 1);
+	if (sdl->sp[num].dist < 1)
+	{
+		if (sdl->cur_key[SDL_SCANCODE_SPACE])
+		{
+			sdl->sp[num].hit--;
+			if (sdl->sp[num].hit < 0)
+			{
+				sdl->sp[num].p.x = -1;
+				sdl->sp[num].p.y = -1;
+			}
+			else if (sdl->sp[num].nm_t == barrel)
+			{
+				if (sdl->cur_key[SDL_SCANCODE_UP]
+					|| sdl->cur_key[SDL_SCANCODE_W])
+					k = 0.2;
+				else
+					k = 0.02;
+				cam->pos.x -= cam->dir.x * k;
+				cam->pos.y -= cam->dir.y * k;
+			}
+		}
+	}
 }
 
-void	event(t_sdl *sdl_t, t_cam *cam, t_time *time)
+void	ft_event_guard(t_sdl *sdl, t_cam *cam)
 {
-	if (sdl_t->flag == GAME)
+	ft_game_s(sdl);
+	if (sdl->event.type == SDL_QUIT)
+		sdl->loop = false;
+	if (sdl->cur_key[SDL_SCANCODE_ESCAPE])
+		sdl->loop = false;
+	ft_shoot_box(sdl, cam);
+}
+
+void	event(t_sdl *sdl, t_cam *cam, t_time *time)
+{
+	if (sdl->flag == GAME)
 	{
-		SDL_PollEvent(&sdl_t->event);
-		sdl_t->cur_key = SDL_GetKeyboardState(NULL);
-		ft_audio_s(sdl_t);
-		ft_audio_v(sdl_t);
-		ft_move(sdl_t, cam, time);
-		ft_rotate(sdl_t, cam, time);
+		SDL_PollEvent(&sdl->event);
+		sdl->cur_key = SDL_GetKeyboardState(NULL);
+		ft_audio_s(sdl);
+		ft_audio_v(sdl);
+		ft_move(sdl, cam, time);
+		ft_rotate(sdl, cam, time);
+		if (sdl->cur_key[SDL_SCANCODE_SPACE])
+			sdl->weapon.num = 0;
 	}
-	else if (sdl_t->flag == MENU)
+	else if (sdl->flag == MENU)
 	{
-		SDL_PollEvent(&sdl_t->event);
-		sdl_t->cur_key = SDL_GetKeyboardState(NULL);
-		ft_game_menu_e(sdl_t);
+		SDL_PollEvent(&sdl->event);
+		sdl->cur_key = SDL_GetKeyboardState(NULL);
+		ft_game_menu_e(sdl);
 	}
-	else if (sdl_t->flag == HELP)
+	else if (sdl->flag == HELP)
 	{
-		SDL_PollEvent(&sdl_t->event);
-		sdl_t->cur_key = SDL_GetKeyboardState(NULL);
-		ft_menu_help(sdl_t);
+		SDL_PollEvent(&sdl->event);
+		sdl->cur_key = SDL_GetKeyboardState(NULL);
+		ft_menu_help(sdl);
 	}
-	ft_event_guard(sdl_t);
+	ft_event_guard(sdl, cam);
 }

@@ -88,3 +88,14 @@ void		ft_sort(void **sorted, int16_t size)
 		}
 	}
 }
+
+SDL_Color	get_color(uint32_t in_c)
+{
+	SDL_Color	color;
+
+	color.r = (uint8_t)((in_c >> 16) & 0xFF);
+	color.g = (uint8_t)((in_c >> 8) & 0xFF);
+	color.b = (uint8_t)((in_c) & 0xFF);
+	color.a = 0;
+	return (color);
+}

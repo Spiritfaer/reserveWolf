@@ -53,12 +53,59 @@ void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 	ft_spline(sdl, cam, &sdl->s_calc);
 	sdl->pre_ren = SDL_CreateTextureFromSurface(sdl->ren, sdl->buffer);
 	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
+	ft_draw_weapon(sdl);
+}
+
+void	ft_make_weapon(t_sdl *sdl, t_weapon *weapon)
+{
+	static char *path = "dopPNG/weapon.png";
+	int16_t			x;
+	SDL_PixelFormat	format;
+	Uint32			form;
+
+	x = 0;
+	ft_set_pix_for(&format);
+	weapon->weap_sur = ft_load_texture(path, &format);
+	uint32_t *pixel = (uint32_t*)(weapon->weap_sur->pixels);
+	SDL_Color col = get_color(pixel[0]);
+	SDL_SetColorKey(weapon->weap_sur, SDL_TRUE, SDL_MapRGB(weapon->weap_sur->format, col.r, col.g, col.b));
+	weapon->weap_tex = SDL_CreateTextureFromSurface(sdl->ren, weapon->weap_sur);
+	SDL_QueryTexture(weapon->weap_tex, &form, 0, &weapon->anim[5].w, &weapon->anim[5].h);
+	weapon->anim[5].x = 0;
+	weapon->anim[5].y = 0;
+	weapon->box_screen.w = weapon->anim[5].w + 250;
+	weapon->box_screen.h = weapon->anim[5].h + 250;
+	weapon->box_screen.x = sdl->m_t.pxl_s_h / 2 + weapon->anim[5].w / 2;
+	weapon->box_screen.y = sdl->m_t.pxl_s_h - weapon->box_screen.h;
+	while (x < 5)
+	{
+		weapon->anim[x].w = weapon->anim[5].w / 5;
+		weapon->anim[x].h = weapon->anim[5].h / 5;
+		weapon->anim[x].x = 0 + weapon->anim[5].w / 5 * x + x;
+		weapon->anim[x].y = 5;
+		x++;
+	}
+	sdl->weapon.num = -1;
+}
+
+void	ft_draw_weapon(t_sdl *sdl)
+{
+	if (sdl->weapon.num == -1)
+		SDL_RenderCopy(sdl->ren, sdl->weapon.weap_tex, &sdl->weapon.anim[1], &sdl->weapon.box_screen);
+	else
+	{
+		SDL_RenderCopy(sdl->ren, sdl->weapon.weap_tex, &sdl->weapon.anim[sdl->weapon.num], &sdl->weapon.box_screen);
+		sdl->weapon.num++;
+		if (sdl->weapon.num >= 5)
+			sdl->weapon.num = -1;
+	}
 }
 
 void	ft_pre_loop(t_sdl *sdl, t_cam *cam)
 {
 	ft_make_texture(sdl->txtr, &sdl->tex_t);
 	ft_make_text(sdl);
+	ft_make_weapon(sdl, &sdl->weapon);
 	ft_set_cam(cam);
 	ft_set_music(sdl);
 }

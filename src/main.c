@@ -10,21 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
+
+void		ft_ptint_usage(void)
+{
+	ft_putendl("USAGE:");
+	ft_putendl("------ Use -m to tell the program map file with path");
+	ft_putendl("------ File must have the extension *.map:");
+	ft_putendl("------ Also you can use -h and -w flag");
+	ft_putendl("------ But if you use their, program may working incorrect!");
+}
 
 int			main(int argc, AR argv)
 {
 	t_sdl	sdl_t;
 
-	ft_read_argv(argc, argv, &sdl_t.argv_t);
+	if (ft_read_argv(argc, argv, &sdl_t.argv_t))
+	{
+		ft_ptint_usage();
+		return (0);
+	}
 	if (ft_init(&sdl_t))
 	{
-		if (ft_make_map(&sdl_t))
-		{
+		if (ft_make_map(&sdl_t) == 1)
 			ft_process(&sdl_t);
-		}
 		else
-			return (ft_errors("Error make_map false!"));
+			return (ft_errors("\nError make map false!"));
 	}
 	else
 		return (ft_errors("Error initSDL false!"));

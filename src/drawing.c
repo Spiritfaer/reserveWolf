@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void		ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h)
 {

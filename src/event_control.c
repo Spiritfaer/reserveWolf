@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void	ft_shoot_box(t_sdl *sdl, t_cam *cam)
 {
@@ -69,8 +69,8 @@ bool	ft_sp_cll(t_sdl *sdl, t_cam *cam, t_time *t, int16_t map)
 		box = ft_cof(cam, x);
 		if (sdl->cur_key[SDL_SCANCODE_UP] || sdl->cur_key[SDL_SCANCODE_W])
 		{
-			cam->pos.x -= (cam->dir.x * t->m_sp) / box.x;
-			cam->pos.y -= (cam->dir.y * t->m_sp) / box.y;
+			cam->pos.x += (cam->dir.x * t->m_sp) / box.x;
+			cam->pos.y += (cam->dir.y * t->m_sp) / box.y;
 		}
 		return (false);
 	}

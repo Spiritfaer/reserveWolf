@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 int8_t		ft_check_texture(int16_t wall)
 {

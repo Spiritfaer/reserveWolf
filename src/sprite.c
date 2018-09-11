@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 uint32_t	deep_color_spite(uint32_t in_c, double dist)
 {

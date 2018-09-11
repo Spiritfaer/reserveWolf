@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void	ft_floor_cast(t_ray *ray, t_tex *tex_t, t_cam *cam_t, t_floor *floor_t)
 {

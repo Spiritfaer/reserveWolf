@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void	ft_init_ray(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 SDL_Surface	*ft_load_texture(char *name, SDL_PixelFormat *format)
 {

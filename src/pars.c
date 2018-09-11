@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include <get_next_line.h>
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void		ft_flag_argv(int i, AR argv, t_arg *arg)
 {
 	if (argv[i][1] == 'm')
 	{
-		if (arg->flag & MAPN)
+		if (arg->flag & MAPN && ++arg->error)
 			ft_putendl("Warning! You set the m_t a second time");
 		arg->map_name = argv[i + 1];
 		arg->flag |= MAPN;
@@ -36,13 +36,14 @@ void		ft_flag_argv(int i, AR argv, t_arg *arg)
 		ft_putendl("Uncorrected argument");
 }
 
-void		ft_read_argv(int argc, AR argv, t_arg *arg)
+int8_t		ft_read_argv(int argc, AR argv, t_arg *arg)
 {
 	int		i;
 
 	i = 1;
 	arg->flag = 0x000000;
-	if (argc == 1 || (argc - 1) % 2 != 0)
+	arg->error = 0;
+	if ((argc == 1 || (argc - 1) % 2 != 0) && ++arg->error)
 		ft_putendl_fd("Wrong arguments!", 2);
 	else
 	{
@@ -55,6 +56,9 @@ void		ft_read_argv(int argc, AR argv, t_arg *arg)
 			i += 2;
 		}
 	}
+	if (arg->error)
+		return (1);
+	return (0);
 }
 
 int8_t		ft_mapping(t_map *map_t, t_spr *sprite, t_sdl *sdl)

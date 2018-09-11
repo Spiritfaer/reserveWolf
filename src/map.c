@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void		ft_remap(t_map *map_t)
 {
@@ -97,12 +97,12 @@ int8_t		ft_make_map(t_sdl *sdl)
 	int16_t	fd;
 
 	if (!(sdl->argv_t.flag & MAPN))
-		return (ft_errors("error m_t flag"));
+		return (ft_errors("\nError m_t flag"));
 	else
 	{
 		fd = (int16_t)open(sdl->argv_t.map_name, O_RDONLY);
 		if (fd < 1)
-			return (ft_errors("error fd"));
+			return (ft_errors("\nError fd"));
 		else
 			sdl->m_t.head = ft_pars_file(fd);
 	}

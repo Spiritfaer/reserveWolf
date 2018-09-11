@@ -14,49 +14,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de5d0535-e7a4-4d74-a8f2-efb93cb2d12d" name="Default" comment="update 5.2 add weapon knife and animated attack, add sprites hit-point">
-      <change afterPath="$PROJECT_DIR$/maps/first_level.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weapon.c" afterDir="false" />
+    <list default="true" id="de5d0535-e7a4-4d74-a8f2-efb93cb2d12d" name="Default" comment="update 5.3 some fix and normineted all .c and .h file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/drawing.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/event.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/foo.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/map.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/map.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/pars.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/pars.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/raycast.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/raycast.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/renderer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/renderer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/wolf3d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/wolf3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/wolf3d.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/wolf3d.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event.c" beforeDir="false" afterPath="$PROJECT_DIR$/event.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event_control.c" beforeDir="false" afterPath="$PROJECT_DIR$/event_control.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/wolf3d.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/wolf3d.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.c" beforeDir="false" afterPath="$PROJECT_DIR$/init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/wolf.map" beforeDir="false" afterPath="$PROJECT_DIR$/maps/wolf.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pars.c" beforeDir="false" afterPath="$PROJECT_DIR$/pars.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raycast.c" beforeDir="false" afterPath="$PROJECT_DIR$/raycast.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/set_struct.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite.c" beforeDir="false" afterPath="$PROJECT_DIR$/sprite.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,75 +46,119 @@
     <session id="1423544605">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="c" value="27" />
-          <entry key="h" value="2" />
+          <entry key="c" value="36" />
+          <entry key="h" value="4" />
           <entry key="map" value="4" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="29" />
+          <entry key="CMakeLists.txt" value="1" />
+          <entry key="ObjectiveC" value="40" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="1082" />
-          <entry key="h" value="78" />
+          <entry key="c" value="1457" />
+          <entry key="h" value="115" />
           <entry key="map" value="260" />
+          <entry key="txt" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1160" />
-          <entry key="PLAIN_TEXT" value="260" />
+          <entry key="CMakeLists.txt" value="6" />
+          <entry key="ObjectiveC" value="1572" />
+          <entry key="PLAIN_TEXT" value="310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/renderer.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-              <folding>
-                <element signature="e#922#1841#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-              <folding>
-                <element signature="e#1318#1337#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.52304316">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pars.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="646">
+                  <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/map.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="511">
+                  <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="465">
+                  <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#1539#1598#0" />
+                    <element signature="e#1619#1714#0" />
+                    <element signature="e#1736#1779#0" />
+                    <element signature="e#1800#1845#0" />
+                    <element signature="e#1866#1941#0" />
+                    <element signature="e#1962#2075#0" />
+                    <element signature="e#2096#2246#0" />
+                    <element signature="e#2267#2376#0" />
+                    <element signature="e#2398#2504#0" />
+                    <element signature="e#2525#2687#0" />
+                    <element signature="e#2708#2832#0" />
+                    <element signature="e#2855#2985#0" />
+                    <element signature="e#3006#3079#0" />
+                    <element signature="e#3101#3312#0" />
+                    <element signature="e#3332#3460#0" />
+                    <element signature="e#3484#3987#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -160,6 +180,7 @@
       <find>ft_spline</find>
       <find>ft_fix_map</find>
       <find>set_ca</find>
+      <find>ft_flag_argv</find>
     </findStrings>
     <replaceStrings>
       <replace>cam</replace>
@@ -194,26 +215,26 @@
         <option value="$PROJECT_DIR$/floor.c" />
         <option value="$PROJECT_DIR$/demo.map" />
         <option value="$PROJECT_DIR$/maker.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/drawing.c" />
         <option value="$PROJECT_DIR$/event_mix.c" />
         <option value="$PROJECT_DIR$/checks.c" />
         <option value="$PROJECT_DIR$/sprite.c" />
         <option value="$PROJECT_DIR$/maps/empty.map" />
         <option value="$PROJECT_DIR$/foo.c" />
-        <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/pars.c" />
-        <option value="$PROJECT_DIR$/init.c" />
         <option value="$PROJECT_DIR$/maps/wolf.map" />
         <option value="$PROJECT_DIR$/maps/first_level.map" />
         <option value="$PROJECT_DIR$/set_struct.c" />
         <option value="$PROJECT_DIR$/raycast.c" />
         <option value="$PROJECT_DIR$/event.c" />
-        <option value="$PROJECT_DIR$/event_control.c" />
         <option value="$PROJECT_DIR$/renderer.c" />
         <option value="$PROJECT_DIR$/weapon.c" />
+        <option value="$PROJECT_DIR$/init.c" />
+        <option value="$PROJECT_DIR$/event_control.c" />
+        <option value="$PROJECT_DIR$/pars.c" />
         <option value="$PROJECT_DIR$/map.c" />
+        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/includes/wolf3d.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -225,7 +246,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
+    <option name="x" value="887" />
     <option name="y" value="23" />
     <option name="width" value="1673" />
     <option name="height" value="1337" />
@@ -261,6 +282,16 @@
               <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
               <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -275,8 +306,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/maps" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/maps" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,13 +322,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.first_level">
+  <component name="RunManager" selected="Application.error -m">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wolf3d" RUN_TARGET_NAME="wolf3d" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="empty" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-m maps/empty.map" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wolf3d" TARGET_NAME="wolf3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wolf3d" RUN_TARGET_NAME="wolf3d">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="error -m" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-m maps/first_level.map" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wolf3d" TARGET_NAME="wolf3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wolf3d" RUN_TARGET_NAME="wolf3d">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -321,6 +357,7 @@
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.wolf3d" />
       <item itemvalue="Application.first_level" />
+      <item itemvalue="Application.error -m" />
       <item itemvalue="Application.empty" />
       <item itemvalue="Application.normal" />
     </list>
@@ -362,7 +399,9 @@
       <workItem from="1536420906168" duration="12676000" />
       <workItem from="1536476808495" duration="37065000" />
       <workItem from="1536558907361" duration="14281000" />
-      <workItem from="1536598417649" duration="7849000" />
+      <workItem from="1536598417649" duration="8954000" />
+      <workItem from="1536652399811" duration="1889000" />
+      <workItem from="1536685545262" duration="1865000" />
     </task>
     <task id="LOCAL-00001" summary="update 1">
       <created>1536225268885</created>
@@ -448,36 +487,42 @@
       <option name="project" value="LOCAL" />
       <updated>1536574980258</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update 5.3 some fix and normineted all .c and .h file">
+      <created>1536606763798</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536606763798</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206772000" />
+    <option name="totallyTimeSpent" value="211631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="23" width="1673" height="1337" extended-state="0" />
-    <editor active="true" />
+    <frame x="887" y="23" width="1673" height="1337" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15818517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1618639" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48494983" weight="0.32885376" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47148988" visible="true" weight="0.20160642" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47887325" weight="0.39598393" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48436543" visible="true" weight="0.32851407" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4402207" weight="0.20160642" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4782342" weight="0.39598393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49843013" weight="0.32990506" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.22371541" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49372056" weight="0.32990506" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5285101" side_tool="true" visible="true" weight="0.20160642" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.20416923" weight="0.29718876" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49785408" weight="0.32931727" />
+      <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49908033" weight="0.22329317" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.492336" weight="0.32931727" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5156346" side_tool="true" visible="true" weight="0.32851407" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.17228694" weight="0.29718876" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123487905" />
@@ -519,7 +564,8 @@
     <MESSAGE value="update 4.3 normineted all fils" />
     <MESSAGE value="update 4.4 fix wall collision and set spline collision" />
     <MESSAGE value="update 5.2 add weapon knife and animated attack, add sprites hit-point" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 5.2 add weapon knife and animated attack, add sprites hit-point" />
+    <MESSAGE value="update 5.3 some fix and normineted all .c and .h file" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 5.3 some fix and normineted all .c and .h file" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
@@ -612,20 +658,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/normal.map" />
     <entry file="file://$PROJECT_DIR$/demo.map" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprite.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maps/wolf.map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -654,24 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drawing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checks.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pars.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -682,24 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
           <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -723,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raycast.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/set_struct.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -737,24 +734,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event_control.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="78" lean-forward="true" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weapon.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/event.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
@@ -768,19 +758,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sprite.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weapon.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raycast.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pars.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/map.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+        <state relative-caret-position="511">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+        <state relative-caret-position="465">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="e#1318#1337#0" expanded="true" />
+            <element signature="e#1539#1598#0" />
+            <element signature="e#1619#1714#0" />
+            <element signature="e#1736#1779#0" />
+            <element signature="e#1800#1845#0" />
+            <element signature="e#1866#1941#0" />
+            <element signature="e#1962#2075#0" />
+            <element signature="e#2096#2246#0" />
+            <element signature="e#2267#2376#0" />
+            <element signature="e#2398#2504#0" />
+            <element signature="e#2525#2687#0" />
+            <element signature="e#2708#2832#0" />
+            <element signature="e#2855#2985#0" />
+            <element signature="e#3006#3079#0" />
+            <element signature="e#3101#3312#0" />
+            <element signature="e#3332#3460#0" />
+            <element signature="e#3484#3987#0" />
           </folding>
         </state>
       </provider>

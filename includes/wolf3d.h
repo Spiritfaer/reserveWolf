@@ -81,6 +81,7 @@ typedef struct		s_arg {
 	Uint16			screen_w;
 	Uint16			screen_h;
 	Uint8			flag;
+	int8_t			error;
 }					t_arg;
 
 typedef struct		s_map {
@@ -208,12 +209,11 @@ typedef struct		s_sdl
 	t_v2i			player;
 }					t_sdl;
 
-void				ft_read_argv(int argc, AR argv, t_arg *arg);
+int8_t				ft_read_argv(int argc, AR argv, t_arg *arg);
 int8_t				ft_init(t_sdl *sdl_t);
 int8_t				ft_make_map(t_sdl *sdl);
 int8_t				ft_errors(const char *error);
 void				ft_revers_list(t_list **head);
-void				ft_print_map(t_map *map_t);
 uint_fast32_t		ft_count_list(t_list *head);
 int8_t				ft_check_w_map(t_list *head, int16_t map_w);
 void				ft_list_del(t_list **head);
@@ -225,11 +225,9 @@ void				ft_ray(t_cam *cam, t_ray *ray);
 void				ft_cast(t_ray *ray, t_map *map_t);
 void				ft_wall(t_cam *cam, t_ray *ray, int16_t pxl_h);
 void				ft_set_cam(t_cam *cam, t_v2i player);
-void				ft_draw_wall(SDL_Renderer *render, uint16_t x, t_ray *ray);
 void				ft_set_time(t_time *t);
 void				event(t_sdl *sdl, t_cam *cam, t_time *time);
 void				ft_end(t_sdl *sdl_t);
-void				ft_print_list(t_list *head);
 void				ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam,
 									t_ray *ray, uint16_t x);
 void				ft_init_ray(t_sdl *sdl_t, t_cam *cam,
@@ -242,7 +240,6 @@ void				ft_floor_add(t_floor *floor, t_ray *ray,
 									t_sdl *sdl_t, t_cam *cam_t);
 void				ft_set_pix_for(SDL_PixelFormat *p_format);
 void				ft_set_music(t_sdl *sdl_t);
-void				ft_helper(void);
 void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
 void				ft_make_text(t_sdl *sdl_t);
 t_list				*ft_pars_file(int16_t fd);

@@ -90,61 +90,61 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/checks.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/drawing.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_control.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/event_mix.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/floor.c">
-			<Option target="wolf3d"/>
-		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/foo.c">
-			<Option target="wolf3d"/>
-		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/init.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/checks.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/list.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/drawing.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/main.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/maker.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event_control.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/map.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event_mix.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/pars.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/floor.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/raycast.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/foo.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/renderer.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/init.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/set_struct.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/list.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/sprite.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/main.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/weapon.c">
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/maker.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/map.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/pars.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/raycast.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/renderer.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/set_struct.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/sprite.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/weapon.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/CMakeLists.txt">

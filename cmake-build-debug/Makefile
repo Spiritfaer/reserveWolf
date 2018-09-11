@@ -123,491 +123,491 @@ wolf3d/fast:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/build
 .PHONY : wolf3d/fast
 
-checks.o: checks.c.o
+src/checks.o: src/checks.c.o
 
-.PHONY : checks.o
-
-# target to build an object file
-checks.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.o
-.PHONY : checks.c.o
-
-checks.i: checks.c.i
-
-.PHONY : checks.i
-
-# target to preprocess a source file
-checks.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.i
-.PHONY : checks.c.i
-
-checks.s: checks.c.s
-
-.PHONY : checks.s
-
-# target to generate assembly for a file
-checks.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/checks.c.s
-.PHONY : checks.c.s
-
-drawing.o: drawing.c.o
-
-.PHONY : drawing.o
+.PHONY : src/checks.o
 
 # target to build an object file
-drawing.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/drawing.c.o
-.PHONY : drawing.c.o
+src/checks.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/checks.c.o
+.PHONY : src/checks.c.o
 
-drawing.i: drawing.c.i
+src/checks.i: src/checks.c.i
 
-.PHONY : drawing.i
+.PHONY : src/checks.i
 
 # target to preprocess a source file
-drawing.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/drawing.c.i
-.PHONY : drawing.c.i
+src/checks.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/checks.c.i
+.PHONY : src/checks.c.i
 
-drawing.s: drawing.c.s
+src/checks.s: src/checks.c.s
 
-.PHONY : drawing.s
+.PHONY : src/checks.s
 
 # target to generate assembly for a file
-drawing.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/drawing.c.s
-.PHONY : drawing.c.s
+src/checks.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/checks.c.s
+.PHONY : src/checks.c.s
 
-event.o: event.c.o
+src/drawing.o: src/drawing.c.o
 
-.PHONY : event.o
+.PHONY : src/drawing.o
 
 # target to build an object file
-event.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.o
-.PHONY : event.c.o
+src/drawing.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/drawing.c.o
+.PHONY : src/drawing.c.o
 
-event.i: event.c.i
+src/drawing.i: src/drawing.c.i
 
-.PHONY : event.i
+.PHONY : src/drawing.i
 
 # target to preprocess a source file
-event.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.i
-.PHONY : event.c.i
+src/drawing.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/drawing.c.i
+.PHONY : src/drawing.c.i
 
-event.s: event.c.s
+src/drawing.s: src/drawing.c.s
 
-.PHONY : event.s
+.PHONY : src/drawing.s
 
 # target to generate assembly for a file
-event.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event.c.s
-.PHONY : event.c.s
+src/drawing.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/drawing.c.s
+.PHONY : src/drawing.c.s
 
-event_control.o: event_control.c.o
+src/event.o: src/event.c.o
 
-.PHONY : event_control.o
+.PHONY : src/event.o
 
 # target to build an object file
-event_control.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.o
-.PHONY : event_control.c.o
+src/event.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event.c.o
+.PHONY : src/event.c.o
 
-event_control.i: event_control.c.i
+src/event.i: src/event.c.i
 
-.PHONY : event_control.i
+.PHONY : src/event.i
 
 # target to preprocess a source file
-event_control.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.i
-.PHONY : event_control.c.i
+src/event.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event.c.i
+.PHONY : src/event.c.i
 
-event_control.s: event_control.c.s
+src/event.s: src/event.c.s
 
-.PHONY : event_control.s
+.PHONY : src/event.s
 
 # target to generate assembly for a file
-event_control.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_control.c.s
-.PHONY : event_control.c.s
+src/event.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event.c.s
+.PHONY : src/event.c.s
 
-event_mix.o: event_mix.c.o
+src/event_control.o: src/event_control.c.o
 
-.PHONY : event_mix.o
+.PHONY : src/event_control.o
 
 # target to build an object file
-event_mix.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.o
-.PHONY : event_mix.c.o
+src/event_control.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_control.c.o
+.PHONY : src/event_control.c.o
 
-event_mix.i: event_mix.c.i
+src/event_control.i: src/event_control.c.i
 
-.PHONY : event_mix.i
+.PHONY : src/event_control.i
 
 # target to preprocess a source file
-event_mix.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.i
-.PHONY : event_mix.c.i
+src/event_control.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_control.c.i
+.PHONY : src/event_control.c.i
 
-event_mix.s: event_mix.c.s
+src/event_control.s: src/event_control.c.s
 
-.PHONY : event_mix.s
+.PHONY : src/event_control.s
 
 # target to generate assembly for a file
-event_mix.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/event_mix.c.s
-.PHONY : event_mix.c.s
+src/event_control.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_control.c.s
+.PHONY : src/event_control.c.s
 
-floor.o: floor.c.o
+src/event_mix.o: src/event_mix.c.o
 
-.PHONY : floor.o
+.PHONY : src/event_mix.o
 
 # target to build an object file
-floor.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.o
-.PHONY : floor.c.o
+src/event_mix.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_mix.c.o
+.PHONY : src/event_mix.c.o
 
-floor.i: floor.c.i
+src/event_mix.i: src/event_mix.c.i
 
-.PHONY : floor.i
+.PHONY : src/event_mix.i
 
 # target to preprocess a source file
-floor.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.i
-.PHONY : floor.c.i
+src/event_mix.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_mix.c.i
+.PHONY : src/event_mix.c.i
 
-floor.s: floor.c.s
+src/event_mix.s: src/event_mix.c.s
 
-.PHONY : floor.s
+.PHONY : src/event_mix.s
 
 # target to generate assembly for a file
-floor.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/floor.c.s
-.PHONY : floor.c.s
+src/event_mix.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/event_mix.c.s
+.PHONY : src/event_mix.c.s
 
-foo.o: foo.c.o
+src/floor.o: src/floor.c.o
 
-.PHONY : foo.o
+.PHONY : src/floor.o
 
 # target to build an object file
-foo.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/foo.c.o
-.PHONY : foo.c.o
+src/floor.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/floor.c.o
+.PHONY : src/floor.c.o
 
-foo.i: foo.c.i
+src/floor.i: src/floor.c.i
 
-.PHONY : foo.i
+.PHONY : src/floor.i
 
 # target to preprocess a source file
-foo.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/foo.c.i
-.PHONY : foo.c.i
+src/floor.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/floor.c.i
+.PHONY : src/floor.c.i
 
-foo.s: foo.c.s
+src/floor.s: src/floor.c.s
 
-.PHONY : foo.s
+.PHONY : src/floor.s
 
 # target to generate assembly for a file
-foo.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/foo.c.s
-.PHONY : foo.c.s
+src/floor.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/floor.c.s
+.PHONY : src/floor.c.s
 
-init.o: init.c.o
+src/foo.o: src/foo.c.o
 
-.PHONY : init.o
+.PHONY : src/foo.o
 
 # target to build an object file
-init.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.o
-.PHONY : init.c.o
+src/foo.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/foo.c.o
+.PHONY : src/foo.c.o
 
-init.i: init.c.i
+src/foo.i: src/foo.c.i
 
-.PHONY : init.i
+.PHONY : src/foo.i
 
 # target to preprocess a source file
-init.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.i
-.PHONY : init.c.i
+src/foo.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/foo.c.i
+.PHONY : src/foo.c.i
 
-init.s: init.c.s
+src/foo.s: src/foo.c.s
 
-.PHONY : init.s
+.PHONY : src/foo.s
 
 # target to generate assembly for a file
-init.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/init.c.s
-.PHONY : init.c.s
+src/foo.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/foo.c.s
+.PHONY : src/foo.c.s
 
-list.o: list.c.o
+src/init.o: src/init.c.o
 
-.PHONY : list.o
+.PHONY : src/init.o
 
 # target to build an object file
-list.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/list.c.o
-.PHONY : list.c.o
+src/init.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/init.c.o
+.PHONY : src/init.c.o
 
-list.i: list.c.i
+src/init.i: src/init.c.i
 
-.PHONY : list.i
+.PHONY : src/init.i
 
 # target to preprocess a source file
-list.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/list.c.i
-.PHONY : list.c.i
+src/init.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/init.c.i
+.PHONY : src/init.c.i
 
-list.s: list.c.s
+src/init.s: src/init.c.s
 
-.PHONY : list.s
+.PHONY : src/init.s
 
 # target to generate assembly for a file
-list.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/list.c.s
-.PHONY : list.c.s
+src/init.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/init.c.s
+.PHONY : src/init.c.s
 
-main.o: main.c.o
+src/list.o: src/list.c.o
 
-.PHONY : main.o
+.PHONY : src/list.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/main.c.o
-.PHONY : main.c.o
+src/list.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/list.c.o
+.PHONY : src/list.c.o
 
-main.i: main.c.i
+src/list.i: src/list.c.i
 
-.PHONY : main.i
+.PHONY : src/list.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/main.c.i
-.PHONY : main.c.i
+src/list.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/list.c.i
+.PHONY : src/list.c.i
 
-main.s: main.c.s
+src/list.s: src/list.c.s
 
-.PHONY : main.s
+.PHONY : src/list.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/main.c.s
-.PHONY : main.c.s
+src/list.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/list.c.s
+.PHONY : src/list.c.s
 
-maker.o: maker.c.o
+src/main.o: src/main.c.o
 
-.PHONY : maker.o
+.PHONY : src/main.o
 
 # target to build an object file
-maker.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.o
-.PHONY : maker.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-maker.i: maker.c.i
+src/main.i: src/main.c.i
 
-.PHONY : maker.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-maker.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.i
-.PHONY : maker.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-maker.s: maker.c.s
+src/main.s: src/main.c.s
 
-.PHONY : maker.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-maker.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/maker.c.s
-.PHONY : maker.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-map.o: map.c.o
+src/maker.o: src/maker.c.o
 
-.PHONY : map.o
+.PHONY : src/maker.o
 
 # target to build an object file
-map.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/map.c.o
-.PHONY : map.c.o
+src/maker.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/maker.c.o
+.PHONY : src/maker.c.o
 
-map.i: map.c.i
+src/maker.i: src/maker.c.i
 
-.PHONY : map.i
+.PHONY : src/maker.i
 
 # target to preprocess a source file
-map.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/map.c.i
-.PHONY : map.c.i
+src/maker.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/maker.c.i
+.PHONY : src/maker.c.i
 
-map.s: map.c.s
+src/maker.s: src/maker.c.s
 
-.PHONY : map.s
+.PHONY : src/maker.s
 
 # target to generate assembly for a file
-map.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/map.c.s
-.PHONY : map.c.s
+src/maker.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/maker.c.s
+.PHONY : src/maker.c.s
 
-pars.o: pars.c.o
+src/map.o: src/map.c.o
 
-.PHONY : pars.o
+.PHONY : src/map.o
 
 # target to build an object file
-pars.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/pars.c.o
-.PHONY : pars.c.o
+src/map.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/map.c.o
+.PHONY : src/map.c.o
 
-pars.i: pars.c.i
+src/map.i: src/map.c.i
 
-.PHONY : pars.i
+.PHONY : src/map.i
 
 # target to preprocess a source file
-pars.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/pars.c.i
-.PHONY : pars.c.i
+src/map.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/map.c.i
+.PHONY : src/map.c.i
 
-pars.s: pars.c.s
+src/map.s: src/map.c.s
 
-.PHONY : pars.s
+.PHONY : src/map.s
 
 # target to generate assembly for a file
-pars.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/pars.c.s
-.PHONY : pars.c.s
+src/map.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/map.c.s
+.PHONY : src/map.c.s
 
-raycast.o: raycast.c.o
+src/pars.o: src/pars.c.o
 
-.PHONY : raycast.o
+.PHONY : src/pars.o
 
 # target to build an object file
-raycast.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/raycast.c.o
-.PHONY : raycast.c.o
+src/pars.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/pars.c.o
+.PHONY : src/pars.c.o
 
-raycast.i: raycast.c.i
+src/pars.i: src/pars.c.i
 
-.PHONY : raycast.i
+.PHONY : src/pars.i
 
 # target to preprocess a source file
-raycast.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/raycast.c.i
-.PHONY : raycast.c.i
+src/pars.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/pars.c.i
+.PHONY : src/pars.c.i
 
-raycast.s: raycast.c.s
+src/pars.s: src/pars.c.s
 
-.PHONY : raycast.s
+.PHONY : src/pars.s
 
 # target to generate assembly for a file
-raycast.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/raycast.c.s
-.PHONY : raycast.c.s
+src/pars.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/pars.c.s
+.PHONY : src/pars.c.s
 
-renderer.o: renderer.c.o
+src/raycast.o: src/raycast.c.o
 
-.PHONY : renderer.o
+.PHONY : src/raycast.o
 
 # target to build an object file
-renderer.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/renderer.c.o
-.PHONY : renderer.c.o
+src/raycast.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/raycast.c.o
+.PHONY : src/raycast.c.o
 
-renderer.i: renderer.c.i
+src/raycast.i: src/raycast.c.i
 
-.PHONY : renderer.i
+.PHONY : src/raycast.i
 
 # target to preprocess a source file
-renderer.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/renderer.c.i
-.PHONY : renderer.c.i
+src/raycast.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/raycast.c.i
+.PHONY : src/raycast.c.i
 
-renderer.s: renderer.c.s
+src/raycast.s: src/raycast.c.s
 
-.PHONY : renderer.s
+.PHONY : src/raycast.s
 
 # target to generate assembly for a file
-renderer.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/renderer.c.s
-.PHONY : renderer.c.s
+src/raycast.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/raycast.c.s
+.PHONY : src/raycast.c.s
 
-set_struct.o: set_struct.c.o
+src/renderer.o: src/renderer.c.o
 
-.PHONY : set_struct.o
+.PHONY : src/renderer.o
 
 # target to build an object file
-set_struct.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.o
-.PHONY : set_struct.c.o
+src/renderer.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/renderer.c.o
+.PHONY : src/renderer.c.o
 
-set_struct.i: set_struct.c.i
+src/renderer.i: src/renderer.c.i
 
-.PHONY : set_struct.i
+.PHONY : src/renderer.i
 
 # target to preprocess a source file
-set_struct.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.i
-.PHONY : set_struct.c.i
+src/renderer.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/renderer.c.i
+.PHONY : src/renderer.c.i
 
-set_struct.s: set_struct.c.s
+src/renderer.s: src/renderer.c.s
 
-.PHONY : set_struct.s
+.PHONY : src/renderer.s
 
 # target to generate assembly for a file
-set_struct.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/set_struct.c.s
-.PHONY : set_struct.c.s
+src/renderer.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/renderer.c.s
+.PHONY : src/renderer.c.s
 
-sprite.o: sprite.c.o
+src/set_struct.o: src/set_struct.c.o
 
-.PHONY : sprite.o
+.PHONY : src/set_struct.o
 
 # target to build an object file
-sprite.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.o
-.PHONY : sprite.c.o
+src/set_struct.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/set_struct.c.o
+.PHONY : src/set_struct.c.o
 
-sprite.i: sprite.c.i
+src/set_struct.i: src/set_struct.c.i
 
-.PHONY : sprite.i
+.PHONY : src/set_struct.i
 
 # target to preprocess a source file
-sprite.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.i
-.PHONY : sprite.c.i
+src/set_struct.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/set_struct.c.i
+.PHONY : src/set_struct.c.i
 
-sprite.s: sprite.c.s
+src/set_struct.s: src/set_struct.c.s
 
-.PHONY : sprite.s
+.PHONY : src/set_struct.s
 
 # target to generate assembly for a file
-sprite.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/sprite.c.s
-.PHONY : sprite.c.s
+src/set_struct.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/set_struct.c.s
+.PHONY : src/set_struct.c.s
 
-weapon.o: weapon.c.o
+src/sprite.o: src/sprite.c.o
 
-.PHONY : weapon.o
+.PHONY : src/sprite.o
 
 # target to build an object file
-weapon.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/weapon.c.o
-.PHONY : weapon.c.o
+src/sprite.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sprite.c.o
+.PHONY : src/sprite.c.o
 
-weapon.i: weapon.c.i
+src/sprite.i: src/sprite.c.i
 
-.PHONY : weapon.i
+.PHONY : src/sprite.i
 
 # target to preprocess a source file
-weapon.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/weapon.c.i
-.PHONY : weapon.c.i
+src/sprite.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sprite.c.i
+.PHONY : src/sprite.c.i
 
-weapon.s: weapon.c.s
+src/sprite.s: src/sprite.c.s
 
-.PHONY : weapon.s
+.PHONY : src/sprite.s
 
 # target to generate assembly for a file
-weapon.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/weapon.c.s
-.PHONY : weapon.c.s
+src/sprite.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sprite.c.s
+.PHONY : src/sprite.c.s
+
+src/weapon.o: src/weapon.c.o
+
+.PHONY : src/weapon.o
+
+# target to build an object file
+src/weapon.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/weapon.c.o
+.PHONY : src/weapon.c.o
+
+src/weapon.i: src/weapon.c.i
+
+.PHONY : src/weapon.i
+
+# target to preprocess a source file
+src/weapon.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/weapon.c.i
+.PHONY : src/weapon.c.i
+
+src/weapon.s: src/weapon.c.s
+
+.PHONY : src/weapon.s
+
+# target to generate assembly for a file
+src/weapon.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/weapon.c.s
+.PHONY : src/weapon.c.s
 
 # Help Target
 help:
@@ -618,60 +618,60 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... wolf3d"
-	@echo "... checks.o"
-	@echo "... checks.i"
-	@echo "... checks.s"
-	@echo "... drawing.o"
-	@echo "... drawing.i"
-	@echo "... drawing.s"
-	@echo "... event.o"
-	@echo "... event.i"
-	@echo "... event.s"
-	@echo "... event_control.o"
-	@echo "... event_control.i"
-	@echo "... event_control.s"
-	@echo "... event_mix.o"
-	@echo "... event_mix.i"
-	@echo "... event_mix.s"
-	@echo "... floor.o"
-	@echo "... floor.i"
-	@echo "... floor.s"
-	@echo "... foo.o"
-	@echo "... foo.i"
-	@echo "... foo.s"
-	@echo "... init.o"
-	@echo "... init.i"
-	@echo "... init.s"
-	@echo "... list.o"
-	@echo "... list.i"
-	@echo "... list.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... maker.o"
-	@echo "... maker.i"
-	@echo "... maker.s"
-	@echo "... map.o"
-	@echo "... map.i"
-	@echo "... map.s"
-	@echo "... pars.o"
-	@echo "... pars.i"
-	@echo "... pars.s"
-	@echo "... raycast.o"
-	@echo "... raycast.i"
-	@echo "... raycast.s"
-	@echo "... renderer.o"
-	@echo "... renderer.i"
-	@echo "... renderer.s"
-	@echo "... set_struct.o"
-	@echo "... set_struct.i"
-	@echo "... set_struct.s"
-	@echo "... sprite.o"
-	@echo "... sprite.i"
-	@echo "... sprite.s"
-	@echo "... weapon.o"
-	@echo "... weapon.i"
-	@echo "... weapon.s"
+	@echo "... src/checks.o"
+	@echo "... src/checks.i"
+	@echo "... src/checks.s"
+	@echo "... src/drawing.o"
+	@echo "... src/drawing.i"
+	@echo "... src/drawing.s"
+	@echo "... src/event.o"
+	@echo "... src/event.i"
+	@echo "... src/event.s"
+	@echo "... src/event_control.o"
+	@echo "... src/event_control.i"
+	@echo "... src/event_control.s"
+	@echo "... src/event_mix.o"
+	@echo "... src/event_mix.i"
+	@echo "... src/event_mix.s"
+	@echo "... src/floor.o"
+	@echo "... src/floor.i"
+	@echo "... src/floor.s"
+	@echo "... src/foo.o"
+	@echo "... src/foo.i"
+	@echo "... src/foo.s"
+	@echo "... src/init.o"
+	@echo "... src/init.i"
+	@echo "... src/init.s"
+	@echo "... src/list.o"
+	@echo "... src/list.i"
+	@echo "... src/list.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/maker.o"
+	@echo "... src/maker.i"
+	@echo "... src/maker.s"
+	@echo "... src/map.o"
+	@echo "... src/map.i"
+	@echo "... src/map.s"
+	@echo "... src/pars.o"
+	@echo "... src/pars.i"
+	@echo "... src/pars.s"
+	@echo "... src/raycast.o"
+	@echo "... src/raycast.i"
+	@echo "... src/raycast.s"
+	@echo "... src/renderer.o"
+	@echo "... src/renderer.i"
+	@echo "... src/renderer.s"
+	@echo "... src/set_struct.o"
+	@echo "... src/set_struct.i"
+	@echo "... src/set_struct.s"
+	@echo "... src/sprite.o"
+	@echo "... src/sprite.i"
+	@echo "... src/sprite.s"
+	@echo "... src/weapon.o"
+	@echo "... src/weapon.i"
+	@echo "... src/weapon.s"
 .PHONY : help
 
 

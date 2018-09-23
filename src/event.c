@@ -34,7 +34,6 @@ void	ft_game_menu_e(t_sdl *sdl)
 {
 	if (sdl->event.type == SDL_KEYDOWN)
 	{
-		SDL_Delay(150);
 		if (sdl->cur_key[SDL_SCANCODE_UP])
 			sdl->menu_f--;
 		if (sdl->cur_key[SDL_SCANCODE_DOWN])
@@ -51,7 +50,6 @@ void	ft_game_menu_e(t_sdl *sdl)
 			sdl->flag = HELP;
 		else if (sdl->menu_f == 2)
 			sdl->loop = false;
-		SDL_Delay(150);
 	}
 }
 
@@ -61,7 +59,6 @@ void	ft_menu_help(t_sdl *sdl_t)
 			|| sdl_t->cur_key[SDL_SCANCODE_KP_ENTER])
 	{
 		sdl_t->flag = MENU;
-		SDL_Delay(150);
 	}
 }
 
@@ -79,10 +76,11 @@ void	ft_event_guard(t_sdl *sdl, t_cam *cam)
 
 void	event(t_sdl *sdl, t_cam *cam, t_time *time)
 {
-	if (sdl->flag == GAME)
+	SDL_PollEvent(&sdl->event);
+	sdl->cur_key = SDL_GetKeyboardState(NULL);
+	ft_event_guard(sdl, cam);
+	if (sdl->flag == GAME && sdl->loop)
 	{
-		SDL_PollEvent(&sdl->event);
-		sdl->cur_key = SDL_GetKeyboardState(NULL);
 		ft_audio_s(sdl);
 		ft_audio_v(sdl);
 		ft_move(sdl, cam, time);
@@ -90,17 +88,14 @@ void	event(t_sdl *sdl, t_cam *cam, t_time *time)
 		if (sdl->cur_key[SDL_SCANCODE_SPACE])
 			sdl->weapon.num = 0;
 	}
-	else if (sdl->flag == MENU)
+	else if (sdl->flag == MENU && sdl->loop)
 	{
-		SDL_PollEvent(&sdl->event);
-		sdl->cur_key = SDL_GetKeyboardState(NULL);
-		ft_game_menu_e(sdl);
+		if (SDL_WaitEvent(&sdl->event) >= 0)
+			ft_game_menu_e(sdl);
 	}
-	else if (sdl->flag == HELP)
+	else if (sdl->flag == HELP && sdl->loop)
 	{
-		SDL_PollEvent(&sdl->event);
-		sdl->cur_key = SDL_GetKeyboardState(NULL);
-		ft_menu_help(sdl);
+		if (SDL_WaitEvent(&sdl->event) >= 0)
+			ft_menu_help(sdl);
 	}
-	ft_event_guard(sdl, cam);
 }

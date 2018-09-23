@@ -113,7 +113,7 @@ void		ft_set_hlp(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 	}
 }
 
-void		ft_make_text(t_sdl *sdl_t)
+void		ft_make_text(t_sdl *sdl)
 {
 	static char	*str[] = {"START GAME", "HELP", "QUIT", "PRESS",
 	"P - poused music", "UP, DOWN, LEFT and RIGHT - moving",
@@ -125,18 +125,18 @@ void		ft_make_text(t_sdl *sdl_t)
 	TTF_Font	*g_font_big;
 
 	tmp = NULL;
-	g_font = TTF_OpenFont(font, 88);
-	g_font_big = TTF_OpenFont(font, 150);
-	ft_set_w(sdl_t, g_font, tmp, str);
-	ft_set_hlp(sdl_t, g_font, tmp, str);
+	g_font = TTF_OpenFont(font, sdl->m_t.pxl_s_h / 9);
+	g_font_big = TTF_OpenFont(font, sdl->m_t.pxl_s_h / 5);
+	ft_set_w(sdl, g_font, tmp, str);
+	ft_set_hlp(sdl, g_font, tmp, str);
 	tmp = TTF_RenderText_Blended(g_font, "_%", ft_set_color(150, 0, 0));
 	TTF_SizeText(g_font_big, "_%",
-				&sdl_t->wrds[3].r_q.w, &sdl_t->wrds[3].r_q.h);
-	sdl_t->wrds[3].bl = SDL_CreateTextureFromSurface(sdl_t->ren, tmp);
-	sdl_t->wrds[3].r_q.y = (int)(sdl_t->m_t.pxl_s_h / 2.5)
-						- sdl_t->wrds[3].r_q.h / 2;
-	sdl_t->wrds[3].r_q.x = (int)(sdl_t->m_t.pxl_s_w / 3.2)
-						- sdl_t->wrds[3].r_q.w / 2;
+				&sdl->wrds[3].r_q.w, &sdl->wrds[3].r_q.h);
+	sdl->wrds[3].bl = SDL_CreateTextureFromSurface(sdl->ren, tmp);
+	sdl->wrds[3].r_q.y = (int)(sdl->m_t.pxl_s_h / 2.5)
+						- sdl->wrds[3].r_q.h / 2;
+	sdl->wrds[3].r_q.x = (int)(sdl->m_t.pxl_s_w / 3.2)
+						- sdl->wrds[3].r_q.w / 2;
 	SDL_FreeSurface(tmp);
 	TTF_CloseFont(g_font);
 	TTF_CloseFont(g_font_big);

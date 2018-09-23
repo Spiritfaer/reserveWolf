@@ -241,7 +241,7 @@ void				ft_floor_add(t_floor *floor, t_ray *ray,
 void				ft_set_pix_for(SDL_PixelFormat *p_format);
 void				ft_set_music(t_sdl *sdl_t);
 void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
-void				ft_make_text(t_sdl *sdl_t);
+void				ft_make_text(t_sdl *sdl);
 t_list				*ft_pars_file(int16_t fd);
 int8_t				ft_mapping(t_map *map_t, t_spr *sprite, t_sdl *sdl);
 void				ft_move(t_sdl *sdl, t_cam *cam, t_time *t);

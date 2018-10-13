@@ -6,7 +6,7 @@
 /*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 11:00:04 by istalevs          #+#    #+#             */
-/*   Updated: 2018/09/08 11:00:06 by istalevs         ###   ########.fr       */
+/*   Updated: 2018/10/13 14:48:27 by istalevs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ SDL_Surface	*ft_load_texture(char *name, SDL_PixelFormat *format)
 	opt_sur = NULL;
 	load_sur = IMG_Load(name);
 	if (!load_sur)
+	{
 		printf("Unload img %s! %s\n", name, IMG_GetError());
+	}
 	else
 	{
 		opt_sur = SDL_ConvertSurface(load_sur, format, 0);
@@ -32,7 +34,7 @@ SDL_Surface	*ft_load_texture(char *name, SDL_PixelFormat *format)
 	return (opt_sur);
 }
 
-void		ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
+int ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
 {
 	int16_t			x;
 	SDL_PixelFormat	format;
@@ -53,12 +55,15 @@ void		ft_make_texture(SDL_Surface **tex, t_tex *tex_t)
 	while (x >= 0)
 	{
 		tex[x] = ft_load_texture(path[x], &format);
+		if (tex[x] == NULL)
+			return (BROKEN);
 		x--;
 	}
 	tex_t->pxl = NULL;
 	tex_t->pxl2 = NULL;
 	tex_t->twh.x = 64;
 	tex_t->twh.y = 64;
+	return (WORK);
 }
 
 void		ft_set_w(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
@@ -113,7 +118,7 @@ void		ft_set_hlp(t_sdl *sdl_t, TTF_Font *f, SDL_Surface *tmp, char **str)
 	}
 }
 
-void		ft_make_text(t_sdl *sdl)
+int ft_make_text(t_sdl *sdl)
 {
 	static char	*str[] = {"START GAME", "HELP", "QUIT", "PRESS",
 	"P - poused music", "UP, DOWN, LEFT and RIGHT - moving",
@@ -127,6 +132,8 @@ void		ft_make_text(t_sdl *sdl)
 	tmp = NULL;
 	g_font = TTF_OpenFont(font, sdl->m_t.pxl_s_h / 9);
 	g_font_big = TTF_OpenFont(font, sdl->m_t.pxl_s_h / 5);
+	if (!g_font || !g_font_big)
+		return (BROKEN);
 	ft_set_w(sdl, g_font, tmp, str);
 	ft_set_hlp(sdl, g_font, tmp, str);
 	tmp = TTF_RenderText_Blended(g_font, "_%", ft_set_color(150, 0, 0));
@@ -140,4 +147,5 @@ void		ft_make_text(t_sdl *sdl)
 	SDL_FreeSurface(tmp);
 	TTF_CloseFont(g_font);
 	TTF_CloseFont(g_font_big);
+	return (WORK);
 }

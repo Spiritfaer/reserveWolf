@@ -49,17 +49,20 @@ void		ft_set_pix_for(SDL_PixelFormat *p_format)
 	p_format->Amask = 0;
 }
 
-void		ft_set_music(t_sdl *sdl_t)
+int ft_set_music(t_sdl *sdl_t)
 {
 	sdl_t->num_track = 0;
 	sdl_t->music[0] = Mix_LoadMUS("sound/Future_City_Funk.mp3");
 	sdl_t->music[1] = Mix_LoadMUS("sound/Itty_Bitty_8_Bit.mp3");
-	sdl_t->volume = 20;
-	if (!sdl_t->music[0])
+	if (!sdl_t->music[0] || !sdl_t->music[1])
+	{
 		printf("Failed to load music! SDL_mixer Error: %s\n", Mix_GetError());
-	else
-		Mix_PlayMusic(sdl_t->music[sdl_t->num_track], -1);
+		return (BROKEN);
+	}
+	sdl_t->volume = 20;
+	Mix_PlayMusic(sdl_t->music[sdl_t->num_track], -1);
 	Mix_VolumeMusic(sdl_t->volume);
+	return (WORK);
 }
 
 SDL_Color	ft_set_color(uint8_t red, uint8_t green, uint8_t blue)

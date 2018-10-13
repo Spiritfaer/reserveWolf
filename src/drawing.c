@@ -64,7 +64,7 @@ uint32_t	ft_d_c_wall(Uint32 in_c, int y, t_ray *ray, t_map *m_t)
 	centre = m_t->pxl_s_h / 2;
 	end = m_t->pxl_s_h - (centre * 0.5);
 	cof = ((double)y - centre) / end;
-	if (y > m_t->pxl_s_h / 2)
+	if (y > centre)
 	{
 		ray->wall.clr.r = (uint8_t)(((in_c & 0xFF0000) >> 16) * (cof));
 		ray->wall.clr.g = (uint8_t)(((in_c & 0xFF00) >> 8) * (cof));
@@ -101,13 +101,10 @@ void		ft_draw_tex_w(t_sdl *sdl_t, t_cam *cam, t_ray *ray, uint16_t x)
 	{
 		if (ft_check_sprite(ray->texture))
 			return ;
-		sdl_t->tex_t.d = y * 256 - sdl_t->m_t.pxl_s_h
-							* 128 + ray->wall.line_h * 128;
-		sdl_t->tex_t.txy.y = ((sdl_t->tex_t.d * sdl_t->tex_t.twh.x)
-							/ ray->wall.line_h) / 256;
+		sdl_t->tex_t.d = y * 256 - sdl_t->m_t.pxl_s_h * 128 + ray->wall.line_h * 128;
+		sdl_t->tex_t.txy.y = ((sdl_t->tex_t.d * sdl_t->tex_t.twh.x) / ray->wall.line_h) / 256;
 		sdl_t->tex_t.pxl = (uint32_t*)sdl_t->txtr[ray->texture]->pixels;
-		color = (uint32_t)sdl_t->tex_t.pxl[(sdl_t->tex_t.twh.y
-							* sdl_t->tex_t.txy.y + sdl_t->tex_t.txy.x)];
+		color = (uint32_t)sdl_t->tex_t.pxl[(sdl_t->tex_t.twh.y * sdl_t->tex_t.txy.y + sdl_t->tex_t.txy.x)];
 		color = ft_d_color(color, ray);
 		if (ray->side == 1)
 			color = (color >> 1) & 8355711;

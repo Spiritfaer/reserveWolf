@@ -6,7 +6,7 @@
 /*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 11:51:23 by istalevs          #+#    #+#             */
-/*   Updated: 2018/09/08 11:51:24 by istalevs         ###   ########.fr       */
+/*   Updated: 2018/10/13 14:56:18 by istalevs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,23 @@ void	ft_draw_menu(t_sdl *sdl)
 	}
 }
 
+//void	print_z_buff(t_sdl *sdl)
+//{
+//	for (int i = 0; i < 2000; i++)
+//		if (sdl->z_buff[i])
+//			printf("%i = %f\n",i, sdl->z_buff[i]);
+//}
+
+void	clear_z_buff(t_sdl *sdl)
+{
+	for (int i = 0; i < 2048; i++)
+		sdl->z_buff[i] = 0.0;
+}
+
 void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 {
+//	static int i = 0;
+	clear_z_buff(sdl);
 	while (sdl->x < sdl->m_t.pxl_s_w)
 	{
 		ft_init_ray(sdl, cam, ray, sdl->x);
@@ -50,19 +65,28 @@ void	ft_draw_game(t_sdl *sdl, t_cam *cam, t_ray *ray, t_floor *floor)
 		ft_floor_add(floor, ray, sdl, cam);
 		sdl->x++;
 	}
+//	if (!i++)
+//		print_z_buff(sdl);
 	ft_spline(sdl, cam, &sdl->s_calc);
 	sdl->pre_ren = SDL_CreateTextureFromSurface(sdl->ren, sdl->buffer);
 	SDL_RenderCopy(sdl->ren, sdl->pre_ren, 0, 0);
 	ft_draw_weapon(sdl);
 }
 
-void	ft_pre_loop(t_sdl *sdl, t_cam *cam)
+int ft_pre_loop(t_sdl *sdl, t_cam *cam)
 {
-	ft_make_texture(sdl->txtr, &sdl->tex_t);
-	ft_make_text(sdl);
-	ft_make_weapon(sdl, &sdl->weapon);
-	ft_set_cam(cam, sdl->player);
-	ft_set_music(sdl);
+	int	result;
+
+	result = (ft_make_texture(sdl->txtr, &sdl->tex_t) == WORK) ? WORK : BROKEN;
+	if (result)
+		result = ft_make_text(sdl) ? WORK : BROKEN;
+	if (result)
+		result = ft_make_weapon(sdl, &sdl->weapon) ? WORK : BROKEN;
+	if (result)
+		ft_set_cam(cam, sdl->player);
+	if (result)
+		ft_set_music(sdl);
+	return result;
 }
 
 void	ft_draw_help(t_sdl *sdl)
@@ -87,7 +111,8 @@ void	ft_process(t_sdl *sdl)
 	t_time	time;
 	t_floor	floor;
 
-	ft_pre_loop(sdl, &cam);
+	if (ft_pre_loop(sdl, &cam) == BROKEN)
+		return;
 	while (sdl->loop)
 	{
 		sdl->buffer = SDL_CreateRGBSurface(0,
@@ -100,7 +125,7 @@ void	ft_process(t_sdl *sdl)
 			ft_draw_help(sdl);
 		else if (sdl->flag & GAME)
 			ft_draw_game(sdl, &cam, &ray, &floor);
-		SDL_DestroyTexture(sdl->pre_ren);
+//		SDL_DestroyTexture(sdl->pre_ren);
 		SDL_FreeSurface(sdl->buffer);
 		ft_set_time(&time);
 		event(sdl, &cam, &time);

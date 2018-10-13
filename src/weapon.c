@@ -34,7 +34,7 @@ void	ft_set_weapon(t_sdl *sdl, t_weapon *w)
 	sdl->weapon.num = -1;
 }
 
-void	ft_make_weapon(t_sdl *sdl, t_weapon *w)
+int ft_make_weapon(t_sdl *sdl, t_weapon *w)
 {
 	static char		*path = "dopPNG/weapon.png";
 	SDL_PixelFormat	format;
@@ -44,6 +44,8 @@ void	ft_make_weapon(t_sdl *sdl, t_weapon *w)
 
 	ft_set_pix_for(&format);
 	w->weap_sur = ft_load_texture(path, &format);
+	if (!w->weap_sur)
+		return (BROKEN);
 	pixel = (uint32_t*)(w->weap_sur->pixels);
 	col = get_color(pixel[0]);
 	SDL_SetColorKey(w->weap_sur, SDL_TRUE,
@@ -51,6 +53,7 @@ void	ft_make_weapon(t_sdl *sdl, t_weapon *w)
 	w->weap_tex = SDL_CreateTextureFromSurface(sdl->ren, w->weap_sur);
 	SDL_QueryTexture(w->weap_tex, &form, 0, &w->anim[5].w, &w->anim[5].h);
 	ft_set_weapon(sdl, w);
+	return (WORK);
 }
 
 void	ft_draw_weapon(t_sdl *sdl)

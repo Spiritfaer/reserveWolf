@@ -6,7 +6,7 @@
 /*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 11:57:56 by istalevs          #+#    #+#             */
-/*   Updated: 2018/09/08 11:57:57 by istalevs         ###   ########.fr       */
+/*   Updated: 2018/10/13 14:55:51 by istalevs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 # define MENU 0x000001
 # define GAME 0x000002
 # define HELP 0x000004
+
+# define WORK 1
+# define BROKEN 0
 
 # include "libft.h"
 # include <stdbool.h>
@@ -239,9 +242,9 @@ void				ft_floor_cast(t_ray *ray, t_tex *tex_t,
 void				ft_floor_add(t_floor *floor, t_ray *ray,
 									t_sdl *sdl_t, t_cam *cam_t);
 void				ft_set_pix_for(SDL_PixelFormat *p_format);
-void				ft_set_music(t_sdl *sdl_t);
-void				ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
-void				ft_make_text(t_sdl *sdl);
+int ft_set_music(t_sdl *sdl_t);
+int ft_make_texture(SDL_Surface **tex, t_tex *tex_t);
+int ft_make_text(t_sdl *sdl);
 t_list				*ft_pars_file(int16_t fd);
 int8_t				ft_mapping(t_map *map_t, t_spr *sprite, t_sdl *sdl);
 void				ft_move(t_sdl *sdl, t_cam *cam, t_time *t);
@@ -259,5 +262,5 @@ SDL_Surface			*ft_load_texture(char *name, SDL_PixelFormat *format);
 void				ft_draw_weapon(t_sdl *sdl);
 SDL_Color			get_color(uint32_t in_c);
 void				ft_shoot_box(t_sdl *sdl, t_cam *cam);
-void				ft_make_weapon(t_sdl *sdl, t_weapon *w);
+int ft_make_weapon(t_sdl *sdl, t_weapon *w);
 #endif

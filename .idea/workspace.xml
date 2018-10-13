@@ -11,14 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de5d0535-e7a4-4d74-a8f2-efb93cb2d12d" name="Default" comment="update 5.4 fix arg">
+    <list default="true" id="de5d0535-e7a4-4d74-a8f2-efb93cb2d12d" name="Default" comment="update 5.5 fix event">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/wolf3d.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/wolf3d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/wolf3d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/wolf3d.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/wolf3d.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maps/first_level.map" beforeDir="false" afterPath="$PROJECT_DIR$/maps/first_level.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/event.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/event.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/maker.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/maker.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/set_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/set_struct.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapon.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,51 +35,62 @@
     <session id="1423544605">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
-          <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.closed" value="38" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.2" value="3" />
-          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="3" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="c" value="66" />
+          <entry key="c" value="85" />
           <entry key="h" value="5" />
-          <entry key="map" value="6" />
-          <entry key="txt" value="2" />
+          <entry key="map" value="8" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="2" />
-          <entry key="ObjectiveC" value="71" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="CMakeLists.txt" value="3" />
+          <entry key="ObjectiveC" value="90" />
+          <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="1690" />
-          <entry key="h" value="115" />
-          <entry key="map" value="336" />
-          <entry key="txt" value="65" />
+          <entry key="c" value="2500" />
+          <entry key="h" value="149" />
+          <entry key="m" value="18" />
+          <entry key="map" value="373" />
+          <entry key="txt" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="6" />
-          <entry key="ObjectiveC" value="1805" />
-          <entry key="PLAIN_TEXT" value="395" />
+          <entry key="ObjectiveC" value="2667" />
+          <entry key="PLAIN_TEXT" value="438" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -84,14 +98,14 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.53185594">
+    <splitter split-orientation="horizontal" split-proportion="0.43872228">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="975">
-                  <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+                <state relative-caret-position="380">
+                  <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -99,59 +113,21 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/init.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2265">
-                  <caret line="151" column="23" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#1195#1214#0" expanded="true" />
-                    <element signature="e#1539#1598#0" />
-                    <element signature="e#2855#2985#0" />
-                    <element signature="e#3332#3460#0" />
-                  </folding>
+                <state relative-caret-position="509">
+                  <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/event.c">
+            <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="402">
-                  <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/event_control.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/event_mix.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/set_struct.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#1539#1598#0" />
+                    <element signature="e#3332#3460#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -163,17 +139,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/renderer.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="705">
-                  <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+                <state relative-caret-position="474">
+                  <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/drawing.c">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weapon.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="662">
-                  <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+                <state relative-caret-position="607">
+                  <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -181,17 +157,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/maker.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1140">
-                  <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/maps/first_level.map">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+                <state relative-caret-position="1061">
+                  <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -208,8 +175,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/map.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
-                  <caret line="77" column="42" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+                <state relative-caret-position="301">
+                  <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/set_struct.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="614">
+                  <caret line="65" selection-start-line="65" selection-end-line="65" />
                 </state>
               </provider>
             </entry>
@@ -227,7 +203,7 @@
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="375">
-                  <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+                  <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -324,16 +300,19 @@
         <option value="$PROJECT_DIR$/pars.c" />
         <option value="$PROJECT_DIR$/map.c" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/includes/wolf3d.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/init.c" />
-        <option value="$PROJECT_DIR$/src/renderer.c" />
-        <option value="$PROJECT_DIR$/src/drawing.c" />
         <option value="$PROJECT_DIR$/src/map.c" />
-        <option value="$PROJECT_DIR$/src/set_struct.c" />
-        <option value="$PROJECT_DIR$/src/maker.c" />
-        <option value="$PROJECT_DIR$/maps/first_level.map" />
         <option value="$PROJECT_DIR$/src/event.c" />
+        <option value="$PROJECT_DIR$/src/event_mix.c" />
+        <option value="$PROJECT_DIR$/src/drawing.c" />
+        <option value="$PROJECT_DIR$/maps/first_level.map" />
+        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/includes/wolf3d.h" />
+        <option value="$PROJECT_DIR$/src/maker.c" />
+        <option value="$PROJECT_DIR$/src/weapon.c" />
+        <option value="$PROJECT_DIR$/src/renderer.c" />
+        <option value="$PROJECT_DIR$/src/set_struct.c" />
       </list>
     </option>
   </component>
@@ -345,10 +324,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="517" />
-    <option name="y" value="150" />
-    <option name="width" value="1905" />
-    <option name="height" value="1143" />
+    <option name="x" value="146" />
+    <option name="y" value="72" />
+    <option name="width" value="2313" />
+    <option name="height" value="1257" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -395,7 +374,22 @@
             <path>
               <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
               <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
               <item name="maps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
+              <item name="pics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reserveWolf" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wolf3d" type="b2602c69:ProjectViewProjectNode" />
@@ -414,12 +408,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pics" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/maps" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -533,7 +528,28 @@
       <workItem from="1537565494086" duration="66000" />
       <workItem from="1537600127374" duration="272000" />
       <workItem from="1537614953348" duration="364000" />
-      <workItem from="1537681481546" duration="1167000" />
+      <workItem from="1537681481546" duration="3003000" />
+      <workItem from="1537733823141" duration="576000" />
+      <workItem from="1537774667365" duration="658000" />
+      <workItem from="1538033218224" duration="153000" />
+      <workItem from="1538075731690" duration="1105000" />
+      <workItem from="1538122008932" duration="102000" />
+      <workItem from="1538158364292" duration="977000" />
+      <workItem from="1538224000925" duration="1325000" />
+      <workItem from="1538291136523" duration="1569000" />
+      <workItem from="1538389251528" duration="741000" />
+      <workItem from="1538416474431" duration="130000" />
+      <workItem from="1538681438815" duration="833000" />
+      <workItem from="1538721490202" duration="115000" />
+      <workItem from="1538721986449" duration="1293000" />
+      <workItem from="1538759800237" duration="1178000" />
+      <workItem from="1538767580027" duration="190000" />
+      <workItem from="1538777276752" duration="1130000" />
+      <workItem from="1538819983353" duration="768000" />
+      <workItem from="1538895873344" duration="656000" />
+      <workItem from="1538905044188" duration="354000" />
+      <workItem from="1538937045315" duration="578000" />
+      <workItem from="1539430506095" duration="1783000" />
     </task>
     <task id="LOCAL-00001" summary="update 1">
       <created>1536225268885</created>
@@ -633,32 +649,40 @@
       <option name="project" value="LOCAL" />
       <updated>1536687989488</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update 5.5 fix event">
+      <created>1537720303608</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1537720303608</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236674000" />
+    <option name="totallyTimeSpent" value="254724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="517" y="150" width="1905" height="1143" extended-state="0" />
+    <frame x="146" y="72" width="2313" height="1257" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16693506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16468516" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4830918" weight="0.3282588" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4057971" visible="true" weight="0.20076118" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4782342" weight="0.39598393" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4817261" weight="0.32703862" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.37956846" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5741964" weight="0.39570814" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49785408" weight="0.32931727" />
       <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49908033" weight="0.22329317" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.492336" weight="0.32931727" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5942029" side_tool="true" visible="true" weight="0.20076118" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.6006441" weight="0.29686013" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4918357" weight="0.32875538" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.62043154" side_tool="true" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.5719947" weight="0.29613733" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="make" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -706,7 +730,8 @@
     <MESSAGE value="update 5.2 add weapon knife and animated attack, add sprites hit-point" />
     <MESSAGE value="update 5.3 some fix and normineted all .c and .h file" />
     <MESSAGE value="update 5.4 fix arg" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 5.4 fix arg" />
+    <MESSAGE value="update 5.5 fix event" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 5.5 fix event" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
@@ -790,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/floor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="67" column="66" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sprite.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
@@ -811,72 +829,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weapon.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/init.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="151" column="23" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="23" />
-          <folding>
-            <element signature="e#1195#1214#0" expanded="true" />
-            <element signature="e#1539#1598#0" />
-            <element signature="e#2855#2985#0" />
-            <element signature="e#3332#3460#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/event_mix.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="645">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/set_struct.c">
+    <entry file="file://$PROJECT_DIR$/src/event_control.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="662">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer.c">
+    <entry file="file://$PROJECT_DIR$/src/event.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/maker.c">
+    <entry file="file://$PROJECT_DIR$/src/drawing.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        <state relative-caret-position="1560">
+          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/maps/first_level.map">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/floor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -887,24 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/map.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="42" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/list.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" selection-start-line="23" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -922,24 +899,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/drawing.c">
+    <entry file="file://$PROJECT_DIR$/src/init.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+        <state relative-caret-position="509">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/event_control.c">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        <state relative-caret-position="375">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/event.c">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="380">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/wolf3d.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding>
+            <element signature="e#1539#1598#0" />
+            <element signature="e#3332#3460#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maker.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1061">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weapon.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/set_struct.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>

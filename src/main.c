@@ -6,7 +6,7 @@
 /*   By: istalevs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 10:54:01 by istalevs          #+#    #+#             */
-/*   Updated: 2018/09/08 10:54:01 by istalevs         ###   ########.fr       */
+/*   Updated: 2018/10/14 11:20:07 by istalevs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ void		ft_end(t_sdl *sdl_t)
 	}
 	while (i < 2)
 	{
-		Mix_FreeMusic(sdl_t->music[i]);
-		sdl_t->music[i] = NULL;
+        Mix_FreeMusic(sdl_t->music[i]);
+        sdl_t->music[i] = NULL;
 		i++;
 	}
 	TTF_Quit();

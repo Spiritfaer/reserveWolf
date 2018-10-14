@@ -50,8 +50,8 @@ CMakeFiles/wolf3d.dir/src/checks.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/checks.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/checks.c
 CMakeFiles/wolf3d.dir/src/drawing.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -101,8 +101,8 @@ CMakeFiles/wolf3d.dir/src/drawing.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/drawing.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/drawing.c
 CMakeFiles/wolf3d.dir/src/event.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -152,8 +152,8 @@ CMakeFiles/wolf3d.dir/src/event.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/event.c
 CMakeFiles/wolf3d.dir/src/event_control.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -203,8 +203,8 @@ CMakeFiles/wolf3d.dir/src/event_control.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event_control.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/event_control.c
 CMakeFiles/wolf3d.dir/src/event_mix.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -254,8 +254,8 @@ CMakeFiles/wolf3d.dir/src/event_mix.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/event_mix.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/event_mix.c
 CMakeFiles/wolf3d.dir/src/floor.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -305,8 +305,8 @@ CMakeFiles/wolf3d.dir/src/floor.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/floor.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/floor.c
 CMakeFiles/wolf3d.dir/src/foo.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -356,8 +356,8 @@ CMakeFiles/wolf3d.dir/src/foo.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/foo.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/foo.c
 CMakeFiles/wolf3d.dir/src/init.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -407,8 +407,8 @@ CMakeFiles/wolf3d.dir/src/init.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/init.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/init.c
 CMakeFiles/wolf3d.dir/src/list.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -458,8 +458,8 @@ CMakeFiles/wolf3d.dir/src/list.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/list.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/list.c
 CMakeFiles/wolf3d.dir/src/main.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -509,8 +509,8 @@ CMakeFiles/wolf3d.dir/src/main.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/main.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/main.c
 CMakeFiles/wolf3d.dir/src/maker.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -560,8 +560,8 @@ CMakeFiles/wolf3d.dir/src/maker.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/maker.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/maker.c
 CMakeFiles/wolf3d.dir/src/map.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -611,8 +611,8 @@ CMakeFiles/wolf3d.dir/src/map.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/map.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/map.c
 CMakeFiles/wolf3d.dir/src/pars.c.o
  ../libft/get_next_line.h
  ../libft/libft.h
@@ -663,8 +663,8 @@ CMakeFiles/wolf3d.dir/src/pars.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/pars.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/pars.c
 CMakeFiles/wolf3d.dir/src/raycast.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -714,8 +714,8 @@ CMakeFiles/wolf3d.dir/src/raycast.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/raycast.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/raycast.c
 CMakeFiles/wolf3d.dir/src/renderer.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -765,8 +765,8 @@ CMakeFiles/wolf3d.dir/src/renderer.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/renderer.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/renderer.c
 CMakeFiles/wolf3d.dir/src/set_struct.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -816,8 +816,8 @@ CMakeFiles/wolf3d.dir/src/set_struct.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/set_struct.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/set_struct.c
 CMakeFiles/wolf3d.dir/src/sprite.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -867,8 +867,8 @@ CMakeFiles/wolf3d.dir/src/sprite.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/sprite.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/sprite.c
 CMakeFiles/wolf3d.dir/src/weapon.c.o
  ../libft/libft.h
  /Users/istalevs/.brew/Cellar/sdl2/2.0.8/include/SDL2/SDL.h
@@ -918,5 +918,5 @@ CMakeFiles/wolf3d.dir/src/weapon.c.o
  /Users/istalevs/.brew/Cellar/sdl2_image/2.0.3/include/SDL2/SDL_image.h
  /Users/istalevs/.brew/Cellar/sdl2_mixer/2.0.2_3/include/SDL2/SDL_mixer.h
  /Users/istalevs/.brew/Cellar/sdl2_ttf/2.0.14/include/SDL2/SDL_ttf.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/includes/wolf3d.h
- /Users/istalevs/CLionProjects/wolf3d_V1.3/reserveWolf/src/weapon.c
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/includes/wolf3d.h
+ /Users/istalevs/CLionProjects/WOLF3D_GIT/src/weapon.c
